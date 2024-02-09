@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "ZdravkoHr",
+  "risk": "2",
+  "title": "Transfer of ownership in Neuron.sol does not update admin rights correctly",
+  "issueId": 2,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/2"
+}
