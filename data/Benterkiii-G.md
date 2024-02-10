@@ -1,19 +1,19 @@
+# Improvements to `createPhysicalAttributes` Function
 
-## the function variable should be declared before the array
+ **Variable Declaration Order:**
+The function variable `attributesLength` should be declared before the array `finalAttributeProbabilityIndexes`.
 
-the ´attributesLength´ should be declared before the ´finalAttributeProbabilityIndexes´ and use is instead of ´.length´ to save 12 gas every time the ´createPhysicalAttributes´ function get executed.
+```solidity
+   uint256 attributesLength = attributes.length;
+   uint256[] memory finalAttributeProbabilityIndexes = new uint[](attributesLength);
+```
 
-the array:
-https://github.com/code-423n4/2024-02-ai-arena/blob/1d18d1298729e443e14fea08149c77182a65da32/src/AiArenaHelper.sol#L96
+by doing this we save 12 gas every time the function get executed.
 
-the variable:
-https://github.com/code-423n4/2024-02-ai-arena/blob/1d18d1298729e443e14fea08149c77182a65da32/src/AiArenaHelper.sol#L98
+Updated function:
 
-make the function look like this.
-
-    <html>
-      <head>
-    function createPhysicalAttributes(
+```solidity
+function createPhysicalAttributes(
         uint256 dna, 
         uint8 generation, 
         uint8 iconsType, 
@@ -26,10 +26,9 @@ make the function look like this.
         if (dendroidBool) {
             return FighterOps.FighterPhysicalAttributes(99, 99, 99, 99, 99, 99);
         } else {
+            uint256[] memory finalAttributeProbabilityIndexes = new uint[](attributes.length);
+
             uint256 attributesLength = attributes.length;
-
-            uint256[] memory finalAttributeProbabilityIndexes = new uint[](attributesLength);
-
             for (uint8 i = 0; i < attributesLength; i++) {
                 if (
                   i == 0 && iconsType == 2 || // Custom icons head (beta helmet)
@@ -53,5 +52,4 @@ make the function look like this.
             );
         }
     }
-      </head>
-    </html>
+```
