@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Eurovickk",
+  "risk": "2",
+  "title": ". If the private key associated with the delegatedAddress is compromised, it could result in unauthorized minting of tokens.",
+  "issueId": 30,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/30"
+}
