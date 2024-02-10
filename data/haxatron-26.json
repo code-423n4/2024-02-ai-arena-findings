@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "haxatron",
+  "risk": "3",
+  "title": "Non-transferable game items can be transferred by ERC1155 `safeBatchTransferFrom`",
+  "issueId": 26,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/26"
+}
