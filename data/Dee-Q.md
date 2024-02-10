@@ -1,0 +1,1 @@
+There are soo many places in the code where a require statement is used to check if the `msg.sender` is `owner`, repetition is prone to error which might be hard to debug.. it is advisable to use a modifier as best practise and to better improve the readibility of the code
