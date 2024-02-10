@@ -9,6 +9,8 @@ https://github.com/code-423n4/2024-02-ai-arena/blob/1d18d1298729e443e14fea08149c
 the variable:
 https://github.com/code-423n4/2024-02-ai-arena/blob/1d18d1298729e443e14fea08149c77182a65da32/src/AiArenaHelper.sol#L98
 
+make the function look like this.
+
     <html>
       <head>
     function createPhysicalAttributes(
