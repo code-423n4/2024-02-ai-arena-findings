@@ -1,4 +1,4 @@
-[L01]: Users can accidentally waste a voltage battery even if the voltage is fully replenished after the replenish time is over
+# [L01]: Users can accidentally waste a voltage battery even if the voltage is fully replenished after the replenish time is over
 
 Observe the following code:
 
