@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "t0x1c",
+  "risk": "2",
+  "title": "Constraints of dailyAllowanceReplenishTime and allowanceRemaining during mint() can be bypassed by using alias accounts & safeTransferFrom()",
+  "issueId": 43,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/43"
+}
