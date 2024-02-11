@@ -67,9 +67,59 @@ The ERC-20 Permit feature introduces a more gas-efficient way for token holders 
 
 By leveraging the ERC-20 Permit feature, you can make your game's token interactions more efficient and user-friendly, even when choosing to stick with separate ERC-721 and ERC-20 contracts. This approach combines the benefits of ERC-20's flexibility with optimizations that reduce gas costs and simplify token management​​.
 
-***In the link below there is a guide that will walk you through on how to use ERC-20 permit approvals.***
+***In the link below there is a guide that will walk you through on how to use ERC-20 permit approvals:***
 
 https://www.quicknode.com/guides/ethereum-development/transactions/how-to-use-erc20-permit-approval
+
+## [G-04] Calldata is cheaper than memory in external functions
+
+Using calldata for function inputs in external functions is cheaper than using memory. This is because accessing data from calldata involves fewer operations and gas costs compared to loading from memory. The Solidity language and the Ethereum Virtual Machine (EVM) are designed in a way that makes calldata access more efficient for read-only operations.
+
+When a function is declared as external, its parameters are stored in calldata, which is a non-modifiable, non-persistent area where the function arguments are passed through. This mechanism is especially gas-efficient for complex data types like arrays and structs when passed as arguments to external functions.
+
+The key reason behind the efficiency of calldata over memory is related to the EVM's gas pricing mechanism. Calldata is cheaper to access because it is read-only and passed along with the transaction or call data. This contrasts with memory, which is a temporary, writable storage area that gets cleared after the transaction execution, requiring more computational resources to manage.
+
+> function addAttributeDivisor(uint8[] memory attributeDivisors) external  
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/AiArenaHelper.sol#L68
+
+## [G-05] Always use Named Returns
+
+Named returns are preferred over anonymous returns primarily due to the way the Solidity compiler handles variable declaration and memory allocation. When a function's return variables are named in the function definition, it allows the compiler to optimize memory usage by directly manipulating these variables in the function's execution context. 
+
+In contrast, anonymous returns require the compiler to handle return values more generically. This could involve additional steps to package the return values at the end of the function execution, potentially leading to less efficient use of memory and gas.
+
+  function incrementGeneration(uint8 fighterType) external returns (uint8) {
+        require(msg.sender == _ownerAddress);
+        generation[fighterType] += 1;
+        maxRerollsAllowed[fighterType] += 1;
+        return generation[fighterType];
+    }
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/FighterFarm.sol#L129-L134
+
+function doesTokenExist(uint256 tokenId) external view returns (bool) {
+        return _exists(tokenId);
+    }
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/FighterFarm.sol#L298-L301
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
 
   
 
