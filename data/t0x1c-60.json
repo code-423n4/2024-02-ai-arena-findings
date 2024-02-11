@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "t0x1c",
+  "risk": "2",
+  "title": "Incorrect check in pickWinner() to verify isSelectionComplete[ roundId ]",
+  "issueId": 60,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/60"
+}
