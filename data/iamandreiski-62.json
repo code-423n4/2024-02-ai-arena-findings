@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "iamandreiski",
+  "risk": "2",
+  "title": "If AI Arena amasses millions of players, the protocol can reach a state of permanent DoS due to storing all training sessions in a uint32",
+  "issueId": 62,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/62"
+}
