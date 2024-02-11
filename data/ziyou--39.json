@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "ziyou-",
+  "risk": "2",
+  "title": "The function addAttributeDivisor lacks a check for the value of attributeDivisors[i] being 0. ",
+  "issueId": 39,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/39"
+}
