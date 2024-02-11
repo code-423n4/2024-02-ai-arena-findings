@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "radin100",
+  "risk": "2",
+  "title": "'GameItems.sol::mint' allows users to mint as much ERC1155 tokens as there are with no daily limits via malicious contracts",
+  "issueId": 80,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/80"
+}
