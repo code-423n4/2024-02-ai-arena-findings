@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "dgnnn",
+  "risk": "2",
+  "title": "Missing controls can cause panic and voltage expenditure will fail",
+  "issueId": 79,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/79"
+}
