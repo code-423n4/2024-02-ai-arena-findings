@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "aslanbek",
+  "risk": "2",
+  "title": "Sophisticated users can bruteforce create2 salt to get better traits from reroll",
+  "issueId": 53,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/53"
+}
