@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "matejdb",
+  "risk": "2",
+  "title": "User can bypass minting limit (MAX_FIGHTERS_ALLOWED) by transferring the Fighter NFT in onERC721Received function.",
+  "issueId": 63,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/63"
+}
