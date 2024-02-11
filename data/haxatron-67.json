@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "haxatron",
+  "risk": "3",
+  "title": "User can pick and select stats of a fighter in `claimRewards` due to missing verification mechanism",
+  "issueId": 67,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/67"
+}
