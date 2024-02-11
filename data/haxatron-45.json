@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "haxatron",
+  "risk": "3",
+  "title": "Fighters cannot be minted after the initial generation due to uninitialized `numElements` mapping",
+  "issueId": 45,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/45"
+}
