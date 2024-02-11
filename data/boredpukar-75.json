@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "boredpukar",
+  "risk": "2",
+  "title": "Insufficient Validation in spendVoltage Function Could Lead to DoS and Potential Underflow Risk",
+  "issueId": 75,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/75"
+}
