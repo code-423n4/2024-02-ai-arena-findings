@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "n1punp",
+  "risk": "2",
+  "title": "`claimMintPass` can fail when `numToMint[0] + claimMintPass[1]` is more than 256.",
+  "issueId": 134,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/134"
+}
