@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "boredpukar",
+  "risk": "3",
+  "title": "The claimFighters Function is vulnerable to Signature Replay Attacks",
+  "issueId": 115,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/115"
+}
