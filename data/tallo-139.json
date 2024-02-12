@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "tallo",
+  "risk": "2",
+  "title": "Game items can still be transferred when transfers should be blocked",
+  "issueId": 139,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/139"
+}
