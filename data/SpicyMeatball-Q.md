@@ -164,6 +164,9 @@ https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/StakeAtRisk.sol#L14
 ```
 
 ### The user risks receiving an OOG error if he doesn't claim NRN rewards for too long.
+
+NOT MENTIONED IN https://github.com/code-423n4/2024-02-ai-arena/blob/main/bot-report.md#l-05-external-calls-in-an-un-bounded-for-loop-may-result-in-a-dos
+
 https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/RankedBattle.sol#L299-L305
 `claimNRN` function iterates through all rounds in which user didn't claim to calculate the final reward, if a substantial number of rounds has passed since the last claim, the function can revert with an out of gas error.
 ```solidity
