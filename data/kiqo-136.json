@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "kiqo",
+  "risk": "3",
+  "title": "Users that staked tokens in RankedBattle can frontrun updateBattleRecord call and remove or add stake depending on outcome",
+  "issueId": 136,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/136"
+}
