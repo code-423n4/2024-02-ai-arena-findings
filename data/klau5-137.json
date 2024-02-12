@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "klau5",
+  "risk": "3",
+  "title": "NFTs can be transferred even if StakeAtRisk remains, so the user's win cannot be recorded on the chain due to underflow, and can recover past losses that can't be recovered(steal protocol's token)",
+  "issueId": 137,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/137"
+}
