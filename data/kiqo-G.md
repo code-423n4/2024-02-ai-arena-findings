@@ -1,4 +1,4 @@
-## Summary
+## VoltageManager
 In `VoltageManager.sol` changing the following mappings and event in the following fashion, leads to gas savings.
 
 https://github.com/code-423n4/2024-02-ai-arena/blob/f2952187a8afc44ee6adc28769657717b498b7d4/src/VoltageManager.sol#L36
@@ -29,7 +29,8 @@ And running
 We get a gas saving of 463 gas when calling `VoltManager::spendVoltage`
 
 
-## Gas Saving in `FighterOps.sol`
+## FighterOps
+
 In [`FighterOps.sol`](https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/FighterOps.sol) , [`FighterPhysicalAttributes`](https://github.com/code-423n4/2024-02-ai-arena/blob/f2952187a8afc44ee6adc28769657717b498b7d4/src/FighterOps.sol#L26) are defined as
 ``` 
     struct FighterPhysicalAttributes {
@@ -85,3 +86,12 @@ struct Fighter {
     }
 ```
 For further gas savings in storage
+
+## AiArenaHelper
+In [`AiArenaHelper.sol`](https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/AiArenaHelper.sol)
+We can change the following [mapping](https://github.com/code-423n4/2024-02-ai-arena/blob/f2952187a8afc44ee6adc28769657717b498b7d4/src/AiArenaHelper.sol#L33)
+```diff
+-    mapping(string => uint8) public attributeToDnaDivisor;
++    mapping(string => uint256) public attributeToDnaDivisor;
+```
+And running `forge test --mt testClaimFighters --gas-report` we observe a saving of 36 gas when calling `FighterFarm::claimFighters`
