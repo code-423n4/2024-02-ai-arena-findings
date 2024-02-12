@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "t0x1c",
+  "risk": "2",
+  "title": "Malicious user can stake an amount which causes zero curStakeAtRisk on a loss but equal rewardPoints to a fair user on a win",
+  "issueId": 116,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/116"
+}
