@@ -95,3 +95,12 @@ We can change the following [mapping](https://github.com/code-423n4/2024-02-ai-a
 +    mapping(string => uint256) public attributeToDnaDivisor;
 ```
 And running `forge test --mt testClaimFighters --gas-report` we observe a saving of 36 gas when calling `FighterFarm::claimFighters`
+
+## GameItems
+In [`GameItems.sol`](https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/GameItems.sol), when calling `mint` the internal [`_mint()`](https://github.com/code-423n4/2024-02-ai-arena/blob/70b73ce5acaf10bc331cf388d35e4edff88d4541/src/GameItems.sol#L173) function takes as argument `bytes memory` which is set to a consant `bytes(random)`, changing this
+```diff
+-            _mint(msg.sender, tokenId, quantity, bytes("random"));
++            _mint(msg.sender, tokenId, quantity, "");
+```
+and running `forge test --mt testAdjustTransferabilityFromOwner --gas-report` we observe a gas saving of 133 when using `mint`
+
