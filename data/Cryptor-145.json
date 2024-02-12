@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Cryptor",
+  "risk": "2",
+  "title": "A bad actor can front run rewards winners and other users by transferring them a fighter that they do not want",
+  "issueId": 145,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/145"
+}
