@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Fitro",
+  "risk": "2",
+  "title": "MergingPool.sol :: getFighterPoints() will always revert if maxId > 1.",
+  "issueId": 146,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/146"
+}
