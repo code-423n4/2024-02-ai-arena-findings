@@ -1,6 +1,82 @@
-## [G-01] Use vanity addresses as function arguments (safely!)
+## [G-01] Using assembly to revert with an error message
 
-In the **FighterFarm** contract there are several functions that receive as arguments new contract addresses. It is cheaper to use vanity addresses with leading zeros, this saves calldata gas cost.
+In the AI Arena protocol, the developers chose to use requirement statements, which are heavily utilized in several contracts such as: 
+
+> . AiArenaHelper.sol 
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/AiArenaHelper.sol
+
+> . FighterFarm.sol
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/FighterFarm.sol 
+
+> . GameItems.sol
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/GameItems.sol 
+
+> . MergingPool.sol 
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/MergingPool.sol
+
+> . Neuron.sol 
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/Neuron.sol
+
+> . RankedBattle.sol 
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/RankedBattle.sol
+
+> . StakeAtRisk.sol 
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/StakeAtRisk.sol 
+
+> . VoltageManager.sol 
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/VoltageManager.sol
+
+In the automated findings, the bot recommended using custom errors, as they are more gas-efficient than requirement statements. However, this approach can be further optimized by using a modifier with assembly to revert with the error message.
+
+I develop a strategy to optimize gas usage in the AI Arena protocol involves a nuanced approach that leverages both custom errors and inline assembly for reverting transactions. This approach aims to balance readability, maintainability, and gas efficiency.
+
+For highly repetitive requirements such as "only owner" checks, i suggest using inline assembly to revert, others unique requirements can fallow the bot report suggestion to use custom errors.
+
+***Here’s an example:***
+
+//SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.18;
+
+contract Teste {
+
+    address private owner;
+
+    constructor() {
+        owner = msg.sender;
+    }
+
+    modifier OnlyOwner {
+ 
+       assembly {
+            if sub(caller(), sload(owner.slot)) {
+                mstore(0x00, 0x20) // store offset to where length of revert message is stored
+                mstore(0x20, 0x13) // store length (19)
+                mstore(0x40, 0x63616c6c6572206973206e6f74206f776e657200000000000000000000000000) // store hex representation of message
+                revert(0x00, 0x60) // revert with data
+            }
+        }
+  
+
+        _;
+    }
+
+    function getAddress() public view OnlyOwner returns(address) {
+        return owner;
+    }
+}
+
+## [G-02] Use vanity addresses as function arguments (safely!)
+
+In the **FighterFarm** contract there are several functions that receive new contract addresses as arguments. It is cheaper to use vanity addresses with leading zeros, this saves calldata gas cost.
 
 ***A good example is OpenSea Seaport contract with this address:***  
 > 0x00000000000000ADc04C56Bf30aC9d3c0aAF14dC.
@@ -35,7 +111,7 @@ https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/FighterFarm.sol#L17
 
 When these addresses are used as function arguments, the overall gas cost could be reduced.
 
-## [G-02] ERC1155 can provide significant optimizations over using separate ERC-721 and ERC-20 contracts
+## [G-03] ERC1155 can provide significant optimizations over using separate ERC-721 and ERC-20 contracts
 
 https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/FighterFarm.sol
 
@@ -59,7 +135,7 @@ Using ERC-1155 for a game where players mint their NFT fighters ***(FighterFarm.
 
 By adopting ERC-1155 for your game, you can achieve a more gas-efficient, flexible, and streamlined asset management system that benefits both the developers and the players.
 
-## [G-03] Use ERC20-Permit to batch the approval and transfer step in on transaction
+## [G-04] Use ERC20-Permit to batch the approval and transfer step in on transaction
 
 If the developers still choose to use ERC-721 and ERC-20 instead of ERC-1155, they can implement ERC-721A (Recommended in the bot report) and ERC20-Permit.
 
@@ -71,7 +147,7 @@ By leveraging the ERC-20 Permit feature, you can make your game's token interact
 
 https://www.quicknode.com/guides/ethereum-development/transactions/how-to-use-erc20-permit-approval
 
-## [G-04] Calldata is cheaper than memory in external functions
+## [G-05] Calldata is cheaper than memory in external functions
 
 Using calldata for function inputs in external functions is cheaper than using memory. This is because accessing data from calldata involves fewer operations and gas costs compared to loading from memory. The Solidity language and the Ethereum Virtual Machine (EVM) are designed in a way that makes calldata access more efficient for read-only operations.
 
@@ -83,7 +159,7 @@ The key reason behind the efficiency of calldata over memory is related to the E
 
 https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/AiArenaHelper.sol#L68
 
-## [G-05] Always use Named Returns
+## [G-06] Always use Named Returns
 
 Named returns are preferred over anonymous returns primarily due to the way the Solidity compiler handles variable declaration and memory allocation. When a function's return variables are named in the function definition, it allows the compiler to optimize memory usage by directly manipulating these variables in the function's execution context. 
 
@@ -103,6 +179,11 @@ function doesTokenExist(uint256 tokenId) external view returns (bool) {
     }
 
 https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/FighterFarm.sol#L298-L301
+
+
+
+
+
 
 
 
