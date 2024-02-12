@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "SpicyMeatball",
+  "risk": "3",
+  "title": "numElements is not updated when generation is incremented",
+  "issueId": 130,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/130"
+}
