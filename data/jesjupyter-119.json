@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "jesjupyter",
+  "risk": "2",
+  "title": "The setups of privileged roles for multi-contracts are uni-lateral and can not be revoked.",
+  "issueId": 119,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/119"
+}
