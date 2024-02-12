@@ -52,4 +52,4 @@ In order to move the round forward we require `totalAccumulatedPoints[roundId] >
         rankedNrnDistribution[roundId] = rankedNrnDistribution[roundId - 1];
     }
 ``` 
-In the extreme scenario where no one has accumulated any points and also has `stakeAtRisk`, admin cannot move round forward as `totalAccumulatedPoints[roundId] > 0`
+In the extreme scenario where no one has accumulated any points and also has `stakeAtRisk`, admin cannot move round forward as `totalAccumulatedPoints[roundId] = 0`
