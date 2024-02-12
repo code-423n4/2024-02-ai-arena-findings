@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "haxatron",
+  "risk": "2",
+  "title": "Fighters with stakeAtRisk can be transferred to another user which can lead to the updateBattleRecord to fail causing the server to waste considerable amounts of gas",
+  "issueId": 121,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/121"
+}
