@@ -104,3 +104,6 @@ In [`GameItems.sol`](https://github.com/code-423n4/2024-02-ai-arena/blob/main/sr
 ```
 and running `forge test --mt testAdjustTransferabilityFromOwner --gas-report` we observe a gas saving of 133 when using `mint`
 
+## RankedBattle
+
+[`RankedBattle.sol`](https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/RankedBattle.sol) has a duplicate storage variable named [`_stakeAtRiskAddress`](https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/RankedBattle.sol#L69), which value is equal to [`_stakeAtRiskInstance`](https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/RankedBattle.sol#L94)
