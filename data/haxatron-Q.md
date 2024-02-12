@@ -37,3 +37,19 @@ The function `deleteAttributeProbabilities` is redundant because an admin can al
 ```
 
 Furthermore, it can cause additional problems if accidentally called. For instance if the admin calls `deleteAttributeProbabilities` on an active generation the `attrProbabilities` array will be set to 0. This will cause the output of `dnaToIndex` to be 0 which is invalid and can cause issues with the offchain mechanisms.
+
+#[L03]: `totalAccumulatedPoints[roundId] > 0` in order to move to next round.
+
+In order to move the round forward we require `totalAccumulatedPoints[roundId] > 0`
+```solidity
+    /// @notice Sets a new round, making claiming available for that round.
+    /// @dev Only admins are authorized to move the round forward.
+    function setNewRound() external {
+        require(isAdmin[msg.sender]);
+        require(totalAccumulatedPoints[roundId] > 0);
+        roundId += 1;
+        _stakeAtRiskInstance.setNewRound(roundId);
+        rankedNrnDistribution[roundId] = rankedNrnDistribution[roundId - 1];
+    }
+``` 
+In the extreme scenario where no one has accumulated any points and also has `stakeAtRisk`, admin cannot move round forward as `totalAccumulatedPoints[roundId] > 0`
