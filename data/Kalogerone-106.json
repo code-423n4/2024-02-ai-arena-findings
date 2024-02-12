@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Kalogerone",
+  "risk": "2",
+  "title": "Transferring contracts ownership doesn't remove the ADMIN role from the old owner",
+  "issueId": 106,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/106"
+}
