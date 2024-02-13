@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xRiO",
+  "risk": "3",
+  "title": "Potential Incompatibility while calculating StakingFactor in RankedBattle with Weird ERC20 Tokens of Different Decimals.",
+  "issueId": 219,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/219"
+}
