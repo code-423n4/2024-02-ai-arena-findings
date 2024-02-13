@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "haxatron",
+  "risk": "3",
+  "title": "A user can DoS the battle record update to prevent losing points via spending all their voltage just before a match ends",
+  "issueId": 221,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/221"
+}
