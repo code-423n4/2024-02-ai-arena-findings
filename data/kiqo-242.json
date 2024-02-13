@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "kiqo",
+  "risk": "2",
+  "title": "Lack of Input Validation in MergingPool claimRewards lets user get NFT with invalid properties",
+  "issueId": 242,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/242"
+}
