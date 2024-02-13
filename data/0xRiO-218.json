@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xRiO",
+  "risk": "3",
+  "title": "RankedBattle::stakeNRN can be called before game_server updates the battle score, which can  impact on pool share distribution",
+  "issueId": 218,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/218"
+}
