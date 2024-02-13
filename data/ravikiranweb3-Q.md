@@ -30,3 +30,8 @@ Duplicate initialization of attributeProbabilities mapping, once via the addAttr
     } 
 
 ```
+
+
+### GameItems::mint() 0 NFT is battery
+The documentation does not provide clear outline for what is tokenId = 0 is battery. This can be derived only from VoltageManager contract and test cases.
+The explanation can be improved.
