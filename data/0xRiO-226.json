@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xRiO",
+  "risk": "2",
+  "title": "While claiming custom fighter won in Merging pool, passing 100 in as first element in customAttributes will result in getting a random Regular Fighter",
+  "issueId": 226,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/226"
+}
