@@ -7,8 +7,9 @@ The function variable `attributesLength` should be declared before the array `fi
    uint256 attributesLength = attributes.length;
    uint256[] memory finalAttributeProbabilityIndexes = new uint[](attributesLength);
 ```
-
 by doing this we save 12 gas every time the function get executed.
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/AiArenaHelper.sol#L96
 
 Updated function:
 
@@ -53,3 +54,18 @@ function createPhysicalAttributes(
         }
     }
 ```
+
+# Functions whom being called inside the Contract should default to internal
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/FighterOps.sol#L67
+```solidity
+function getFighterAttributes(Fighter storage self) public view returns (uint256[6] memory) {
+        return [
+            self.physicalAttributes.head,
+            self.physicalAttributes.eyes,
+            self.physicalAttributes.mouth,
+            self.physicalAttributes.body,
+            self.physicalAttributes.hands,
+            self.physicalAttributes.feet
+        ];
+}
