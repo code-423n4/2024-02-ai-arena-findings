@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xRiO",
+  "risk": "3",
+  "title": "Gas Cost Inefficiency for New Users in MergingPool::claimRewards Function, high gas costs for looping through full round history of winners.",
+  "issueId": 181,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/181"
+}
