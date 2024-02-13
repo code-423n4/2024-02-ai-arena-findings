@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "klau5",
+  "risk": "3",
+  "title": "claimRewards: Reentrancy attack is possible so that attacker can get more NFT rewards",
+  "issueId": 201,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/201"
+}
