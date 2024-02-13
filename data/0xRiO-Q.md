@@ -1,4 +1,4 @@
-# Analysis Report: Issue in `mint` Function
+# Issue in `mint` Function
 
 ## Description
 The `mint` function in the contract has a comparison operator issue in the `require` statement, where it checks if the total supply plus the minted amount exceeds the maximum supply.
