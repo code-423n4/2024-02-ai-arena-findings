@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "BARW",
+  "risk": "2",
+  "title": "In ` GameItems` the amount of items a user can buy per day is not the `dailyAllowance` set in the `GameItemAttributes` but depends on the time the user buys the first item each day",
+  "issueId": 215,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/215"
+}
