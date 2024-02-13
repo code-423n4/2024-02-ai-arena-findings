@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xlemon",
+  "risk": "3",
+  "title": "User can have more that the MAX_FIGHTERS_ALLOWED and also tranfer a staking fighter",
+  "issueId": 233,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/233"
+}
