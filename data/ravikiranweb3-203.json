@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "ravikiranweb3",
+  "risk": "3",
+  "title": "Resetting the NRN distribution limit in the middle of rounds can lead to users potentially loosing NRN tokens",
+  "issueId": 203,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/203"
+}
