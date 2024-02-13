@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "BARW",
+  "risk": "2",
+  "title": "In `VoltageManager` the amount of voltage available per day is not 100 but depends on the time the user spends voltage the first time in the day",
+  "issueId": 204,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/204"
+}
