@@ -35,3 +35,23 @@ Duplicate initialization of attributeProbabilities mapping, once via the addAttr
 ### GameItems::mint() 0 NFT is battery
 The documentation does not provide clear outline for what is tokenId = 0 is battery. This can be derived only from VoltageManager contract and test cases.
 The explanation can be improved.
+
+
+### RankedBattle::constructor  & setRankedNrnDistribution
+The value set for Ranked NRN distribution for round 0 can be overwritten.
+It would be nice to use roundId while initialising for round 0. Also, prevent overriding for round 0.
+```
+   constructor(
+      address ownerAddress, 
+      address gameServerAddress,
+      address fighterFarmAddress,
+      address voltageManagerAddress
+    ) {
+        _ownerAddress = ownerAddress;
+        _gameServerAddress = gameServerAddress;
+        _fighterFarmInstance = FighterFarm(fighterFarmAddress);
+        _voltageManagerInstance = VoltageManager(voltageManagerAddress);
+        isAdmin[_ownerAddress] = true;
+   ===> rankedNrnDistribution[0] = 5000 * 10**18;
+    }
+```
