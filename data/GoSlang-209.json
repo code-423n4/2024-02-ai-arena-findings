@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "GoSlang",
+  "risk": "3",
+  "title": "If transfer fails when calling unstakeNRN user will lose funds",
+  "issueId": 209,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/209"
+}
