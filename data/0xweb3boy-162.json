@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xweb3boy",
+  "risk": "3",
+  "title": "Unclaimed rewards from `MergingPool.sol` will be stuck forever in the contract",
+  "issueId": 162,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/162"
+}
