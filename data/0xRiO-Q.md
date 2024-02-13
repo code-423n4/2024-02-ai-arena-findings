@@ -18,3 +18,14 @@ The cause of the issue is the incorrect usage of the comparison operator in the 
 
 ## Correction
 To address this issue, the comparison operator in the `require` statement should be changed from `<` to `<=` to correctly validate if the total supply plus the minted amount is less than or equal to the maximum supply.
+
+# User can never lose stake even if they have very little points
+
+## Instance 
+- This check in RankedBattle::addBalance function make it impossible to lose on their stake if they have very little points which let them perform poorly with some player which will let the opponents to have a high elo and to get high share on Pool.
+[These opponents can also be their different Id, which will be end up in a win situation for the user]
+```
+                if (points > accumulatedPointsPerFighter[tokenId][roundId]) {
+                    points = accumulatedPointsPerFighter[tokenId][roundId];
+                }
+```
