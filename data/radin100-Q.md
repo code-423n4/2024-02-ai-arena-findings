@@ -58,3 +58,39 @@ Add check at the beginning of 'VoltageManager.sol::useVoltageBattery' that makes
         ownerVoltage[msg.sender] = 100;
         emit VoltageRemaining(msg.sender, ownerVoltage[msg.sender]);
     }
+
+## [NC-1] 'FighterOps.sol::viewFighterInfo' could return wrong owner
+### Poc
+Scenario:
+If user calls 'FighterOps.sol::viewFighterInfo' directly from 'FighterOps.sol' and give address that's not the NFT's owner, function will return the given address
+
+### Recommendation
+Consider changing 'FighterOps.sol::viewFighterInfo' to only accept 'Fighter storage self' as an input and make it return FighterFarm.ownerOf(self.id) instead of given owner
+
+    function viewFighterInfo(
+        Fighter storage self,
+        - address owner
+    )
+        public
+        view
+        returns (
+            address,
+            uint256[6] memory,
+            uint256,
+            uint256,
+            string memory,
+            string memory,
+            uint16
+        )
+    {
+        return (
+            - owner,
+            + FighterFarm.ownerOf(self.id)
+            getFighterAttributes(self),
+            self.weight,
+            self.element,
+            self.modelHash,
+            self.modelType,
+            self.generation
+        );
+    }
