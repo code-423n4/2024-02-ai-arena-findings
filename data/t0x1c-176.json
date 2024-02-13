@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "t0x1c",
+  "risk": "2",
+  "title": "Attacker can forge signature and call claimFighters()",
+  "issueId": 176,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/176"
+}
