@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "DMoore",
+  "risk": "2",
+  "title": "GameItems can still be transferred when GameItemAttributes.transferable set to false",
+  "issueId": 191,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/191"
+}
