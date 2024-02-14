@@ -59,6 +59,11 @@ Add check at the beginning of 'VoltageManager.sol::useVoltageBattery' that makes
         emit VoltageRemaining(msg.sender, ownerVoltage[msg.sender]);
     }
 
+## [L-2] 'FighterFarm.sol::redeemMintPass' has iconsTypes.length validation missing
+
+### Code Snipped:
+https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/FighterFarm.sol#L233-L262
+
 ## [NC-1] 'FighterOps.sol::viewFighterInfo' could return wrong owner
 ### Poc
 Scenario:
