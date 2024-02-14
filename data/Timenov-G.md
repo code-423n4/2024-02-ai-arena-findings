@@ -1,4 +1,4 @@
-# AI Arena QA report by Timenov
+# AI Arena Gas report by Timenov
 
 ## Summary
 
