@@ -64,6 +64,12 @@ Add check at the beginning of 'VoltageManager.sol::useVoltageBattery' that makes
 ### Code Snipped:
 https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/FighterFarm.sol#L233-L262
 
+## [L-3] 'AiArenaHelper.sol::constructor' and 'AiArenaHelper.sol::addAttributeProbabilities' missing validation for probabilities[i].length
+
+### Code Snipped:
+https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/AiArenaHelper.sol#L41-L52
+https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/AiArenaHelper.sol#L131-L139
+
 ## [NC-1] 'FighterOps.sol::viewFighterInfo' could return wrong owner
 ### Poc
 Scenario:
