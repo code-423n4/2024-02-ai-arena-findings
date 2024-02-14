@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xShitgem",
+  "risk": "2",
+  "title": "User can \"unstake\" 0 amount leading to not being able stake in the same round and potential DoS to offchain server",
+  "issueId": 316,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/316"
+}
