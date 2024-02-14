@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xShitgem",
+  "risk": "3",
+  "title": "Incorrect type of tokenId would stop users from using reRoll function inside FirgherFarm if their tokenId is above 256",
+  "issueId": 298,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/298"
+}
