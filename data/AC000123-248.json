@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "AC000123",
+  "risk": "2",
+  "title": "`updateBattleRecord` can always be frontrun for player to get more profit by increasing stake amount depend on the battleResult(win or lost)",
+  "issueId": 248,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/248"
+}
