@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xweb3boy",
+  "risk": "3",
+  "title": "`RankedBattle.sol::unstakeNRN` Fighters will lose their staked NRNs while unstaking even if the amount is still staked",
+  "issueId": 260,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/260"
+}
