@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "y4y",
+  "risk": "2",
+  "title": "`useVoltageBattery` could use other game items instead of battery if item is added out of order",
+  "issueId": 301,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/301"
+}
