@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "jesjupyter",
+  "risk": "2",
+  "title": "If fighterTypes generation are different, reRoll can still be used for the fighterType with smaller generation even if its numRerolls has reached maxRerollsAllowed",
+  "issueId": 302,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/302"
+}
