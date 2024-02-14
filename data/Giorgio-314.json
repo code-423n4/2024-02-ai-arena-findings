@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Giorgio",
+  "risk": "2",
+  "title": "The `GameItems` contract is not ERC 1155 compliant",
+  "issueId": 314,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/314"
+}
