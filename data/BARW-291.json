@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "BARW",
+  "risk": "3",
+  "title": "In `FighterFarm: redeemMintPass()` a missing check for the input variables allows user to mint champion with the PhysicalAttributes he wants",
+  "issueId": 291,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/291"
+}
