@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xAlix2",
+  "risk": "2",
+  "title": "getFighterPoints is not callable and will always revert",
+  "issueId": 325,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/325"
+}
