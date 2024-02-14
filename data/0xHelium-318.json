@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xHelium",
+  "risk": "2",
+  "title": "Cross contract signature replay in claimFighters() function of fighterFarm.sol",
+  "issueId": 318,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/318"
+}
