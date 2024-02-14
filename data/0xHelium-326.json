@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xHelium",
+  "risk": "2",
+  "title": "Potential DoS on unstaking due to an underflow happening during function call",
+  "issueId": 326,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/326"
+}
