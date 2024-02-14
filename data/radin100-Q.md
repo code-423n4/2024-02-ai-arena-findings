@@ -94,3 +94,11 @@ Consider changing 'FighterOps.sol::viewFighterInfo' to only accept 'Fighter stor
             self.generation
         );
     }
+## [NC-2] 'AiArenaHelper.sol::dnaToIndex' implements uint256 variable with erroneous name
+
+### Details
+cumProp is better to be named sumProp
+
+### Code Snipped
+https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/AiArenaHelper.sol#L169-L187
+
