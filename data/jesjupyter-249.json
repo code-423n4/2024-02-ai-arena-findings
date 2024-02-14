@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "jesjupyter",
+  "risk": "2",
+  "title": "numElements is never set for generation larger than 0, causing DoS for _createFighterBase",
+  "issueId": 249,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/249"
+}
