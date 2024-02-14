@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xAleko",
+  "risk": "3",
+  "title": "Winner of MergingPool can't claim all of his rewards. MergingPool.sol:claimRewards()",
+  "issueId": 313,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/313"
+}
