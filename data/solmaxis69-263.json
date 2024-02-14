@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "solmaxis69",
+  "risk": "3",
+  "title": "Reentrancy in _safeMint function allows users claim more rewards in MergingPool contract",
+  "issueId": 263,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/263"
+}
