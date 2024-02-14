@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "inmarelibero",
+  "risk": "3",
+  "title": "Possible arithmetic underflow or overflow when minting",
+  "issueId": 277,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/277"
+}
