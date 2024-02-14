@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "klau5",
+  "risk": "2",
+  "title": "No way to set numElements, so NFTs cannot be minted or rerolled if generation is increased",
+  "issueId": 290,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/290"
+}
