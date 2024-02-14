@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Daniel526",
+  "risk": "2",
+  "title": "claimFighters function could be called even if the number of available fighters is depleted",
+  "issueId": 254,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/254"
+}
