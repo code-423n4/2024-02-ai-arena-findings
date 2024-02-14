@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xShitgem",
+  "risk": "2",
+  "title": "Misleading natspec inside claimRewards function can lead to wrong modelHash inside Fighter NFT",
+  "issueId": 317,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/317"
+}
