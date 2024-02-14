@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "BARW",
+  "risk": "3",
+  "title": "When calling `FighterFarm: redeemMintPass()`, the user can mint rare dendroied even though only normal champions should be mintable form mintPasses",
+  "issueId": 292,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/292"
+}
