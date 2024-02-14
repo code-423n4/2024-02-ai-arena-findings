@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "dimulski",
+  "risk": "2",
+  "title": "Owners of NFTs with tokenIds bigger than 255 won't be able to utilize the reRoll function",
+  "issueId": 310,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/310"
+}
