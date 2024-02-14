@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "pa6kuda",
+  "risk": "2",
+  "title": "`MergingPool.getFighterPoints` out of bound if maxId more then 1",
+  "issueId": 333,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/333"
+}
