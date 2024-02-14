@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "djxploit",
+  "risk": "2",
+  "title": "Non-transferable game assets can be transferred using safeBatchTransferFrom method",
+  "issueId": 324,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/324"
+}
