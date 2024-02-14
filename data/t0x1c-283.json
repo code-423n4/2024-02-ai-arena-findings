@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "t0x1c",
+  "risk": "2",
+  "title": "Any new generation of fighters will have zero numElements since protocol has no function to initialize it",
+  "issueId": 283,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/283"
+}
