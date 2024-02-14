@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "iamandreiski",
+  "risk": "2",
+  "title": "Malicious user can receive a bigger reward ratio if they stake after a win, but before the record is updated",
+  "issueId": 280,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/280"
+}
