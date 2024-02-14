@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "solmaxis69",
+  "risk": "2",
+  "title": "Items with transferable == false can be still transferred in GameItems.sol via safeBatchTransferFrom function of the ERC1155 standard.",
+  "issueId": 287,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/287"
+}
