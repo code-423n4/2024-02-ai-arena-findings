@@ -586,7 +586,7 @@ VoltageManager is part of the game ecosystem for managing a resource called "vol
 
 - **Contract Upgradability:** The contract does not appear to be upgradable. If any issues are found or improvements are needed, a new contract must be deployed and the state must be migrated.
 
-###### 9 -VoltageManager.sol
+###### 9 - VoltageManager.sol
 
 
 **Potential Security Flaws and Considerations**:
@@ -820,6 +820,16 @@ The VoltageManager contract is designed to manage a voltage system for the game,
 7 - ***Input Validation:*** Validate inputs where necessary. For example, in `transferOwnership` and `adjustAdminAccess`, ensure that the `newOwnerAddress` and `adminAddress` are not zero addresses.
 
 By implementing these recommendations, the contract can be more secure, efficient, and easier to maintain.
+
+## 6 - Previous and Futures Audits
+
+Given the lack of information on previous audits for the AI Arena project, it is highly advisable to seek out an audit firm experienced in smart contract security or to initiate a bug bounty program. Engaging with an audit firm can provide a thorough review and identification of potential security vulnerabilities, ensuring the integrity and security of the smart contracts. A bug bounty program, on the other hand, incentivizes the community to find and report issues, further enhancing the project's security posture. Both strategies are crucial for mitigating risks and safeguarding user assets in decentralized projects.
+
+## 7 - Conclusion
+
+This analisys report provides a comprehensive overview of the AI Arena project, detailing the functionalities, security considerations, and recommendations for improvement across various smart contracts integral to the platform. The AI Arena is as a blockchain-based PvP fighting game that incorporates NFTs, cryptocurrency, and a range of web3 technologies into its gameplay and reward systems. 
+
+The report thoroughly examines contracts related to fighter management, gameplay mechanics, in-game economics, tokenization, and reward distribution. It identifies potential security risks such as centralization, reentrancy, lack of input validation, and suggests enhancements like using OpenZeppelin's contracts for better access control, optimizing gas usage, implementing event emission for transparency, and ensuring compliance with ERC standards. The report emphasizes improving contract security, efficiency, and maintainability through architectural and design modifications.
 
 
 
