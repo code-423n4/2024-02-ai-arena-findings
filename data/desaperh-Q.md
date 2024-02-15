@@ -1,6 +1,6 @@
 
 ### Low risks
-Total **7 instances** over **1 risk**<br>
+Total **1 instances** over **1 risk**<br>
   
 
 |ID|Risk|Instances|Gas Savings|
