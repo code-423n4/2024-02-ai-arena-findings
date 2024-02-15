@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "klau5",
+  "risk": "2",
+  "title": "reRoll: NFTs with tokenId > 255 cannot be rerolled due to type of tokenId parameter",
+  "issueId": 407,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/407"
+}
