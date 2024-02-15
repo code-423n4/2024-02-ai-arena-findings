@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xweb3boy",
+  "risk": "2",
+  "title": "``VoltageManager.sol::useVoltageBattery()` Minted battery will be of no use if it is transferred to a new address with no allowance",
+  "issueId": 404,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/404"
+}
