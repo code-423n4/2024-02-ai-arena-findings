@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "kutugu",
+  "risk": "3",
+  "title": "safeBatchTransferFrom is not restricted by transferable variable",
+  "issueId": 369,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/369"
+}
