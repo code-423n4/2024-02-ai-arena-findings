@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "DimaKush",
+  "risk": "2",
+  "title": "Any user could mint any amount of mintPasses if delegatedAddress is zero",
+  "issueId": 359,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/359"
+}
