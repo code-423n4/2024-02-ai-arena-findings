@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "zhaojohnson",
+  "risk": "2",
+  "title": "burnFrom() in Neuron may change expected allowance behavior in transferFrom()",
+  "issueId": 385,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/385"
+}
