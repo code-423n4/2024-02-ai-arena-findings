@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "desaperh",
+  "risk": "2",
+  "title": "Game can be stuck forever under some specific victory/ties combination",
+  "issueId": 399,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/399"
+}
