@@ -78,3 +78,37 @@ claimableNRN +=(accumulatedPointsPerAddress[msg.sender][currentRound] * nrnDistr
     }
 ```
 
+[QA-3] - Check-Effect-Interaction is not followed properly in `StakeAtRisk.sol::reclaimNRN()` function properly which could lead to re-entrancy if the game server is hacked or compromised.
+
+In `RankedBattle.sol::updateBattleRecord()` function is calling ``_addResultPoints()` internally which is further calling `reclaimNRN()` in Case 2) Win + stake-at-risk = Reclaim some of the stake that is at risk.
+
+```solidity
+ if (curStakeAtRisk > 0) {
+                _stakeAtRiskInstance.reclaimNRN(curStakeAtRisk, tokenId, fighterOwner); 
+                amountStaked[tokenId] += curStakeAtRisk;
+            }
+```
+
+Now the reclaimNRN is not actually following CEI if you see
+
+```solidity
+ function reclaimNRN(uint256 nrnToReclaim, uint256 fighterId, address fighterOwner) external { 
+        require(msg.sender == _rankedBattleAddress, "Call must be from RankedBattle contract");
+        require(
+            stakeAtRisk[roundId][fighterId] >= nrnToReclaim, 
+            "Fighter does not have enough stake at risk"
+        );
+
+     @>   bool success = _neuronInstance.transfer(_rankedBattleAddress, nrnToReclaim);
+        if (success) {
+            stakeAtRisk[roundId][fighterId] -= nrnToReclaim;
+            totalStakeAtRisk[roundId] -= nrnToReclaim;
+            amountLost[fighterOwner] -= nrnToReclaim;
+            emit ReclaimedStake(fighterId, nrnToReclaim);
+        }
+    }
+```
+
+So there could be a chance of unfair advantage here.
+
+
