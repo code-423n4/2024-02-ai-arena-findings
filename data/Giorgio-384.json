@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Giorgio",
+  "risk": "2",
+  "title": "fighters earned through mergePools can have weights and elements with any uint256 number",
+  "issueId": 384,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/384"
+}
