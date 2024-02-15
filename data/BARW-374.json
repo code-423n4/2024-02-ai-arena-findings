@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "BARW",
+  "risk": "2",
+  "title": "The limitation of being able to hold only 10 fighters per wallet can be bypassed using the right `safeTransferFrom` function",
+  "issueId": 374,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/374"
+}
