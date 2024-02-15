@@ -1,4 +1,4 @@
-# Remove unnecessary storage read from `VoltageManager.useVoltageBattery` when emmiting event `VoltageRemaining`
+# Unnecessary storage read in `VoltageManager.useVoltageBattery` when emitting event `VoltageRemaining`
 
 ### Relevant GitHub Links
 
