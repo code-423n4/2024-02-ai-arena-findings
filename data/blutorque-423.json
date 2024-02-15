@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "blutorque",
+  "risk": "2",
+  "title": "Attacker can `reRoll` with opposite fighterType, increases the chance of getting more rare fighter nft",
+  "issueId": 423,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/423"
+}
