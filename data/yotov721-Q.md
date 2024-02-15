@@ -37,3 +37,14 @@ Set array size to `maxId` instead of 1
         return points;
     }
 ```
+
+## [L-2] Add 0 check in `AiArenaHelper::addAttributeDivisor()`
+ Recommended to add 0 checks for `defaultAttributeDivisor[i]` in `AiArenaHelper::addAttributeDivisor` since it can lead to division by 0 error and  block users from creating new fighters or rerolling existing ones. The `attributeToDnaDivisor` is used to calculate the rarity rank by dividing the dna.
+
+## [L-3] PUSH0 opcode not supported on Arbitrum
+The contracts use solidity version `>=0.8.0 <0.9.0`, but in version `0.8.20` the PUSH0 opcode is introduced. This opcode is not present on Arbitrum.
+It is recommended to set the compiler version to
+`0.8.19` or earlier, to prevent any mistakes with the evm version in the future.
+
+## [L-4] Set max Bps loss in `RankedBattle::setBpsLostPerLoss`
+The max value of basis points by default is 10_000 and is currently set to 0.1 % = 10 bps. This can be changes in `RankedBattle::setBpsLostPerLoss()` only by the admin. It would be really nice to have a check that the new bsp lost per round are less than 10_000. 
