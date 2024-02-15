@@ -112,3 +112,26 @@ Now the reclaimNRN is not actually following CEI if you see
 So there could be a chance of unfair advantage here.
 
 
+[NC-1] - `_addResultPoints()` has redundant code block.
+
+In Case 3) Lose + positive point balance = Deduct from the point balance
+                /// If the fighter has a positive point balance for this round, deduct points
+
+There is an if condition here :
+https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/RankedBattle.sol#L476C13-L478C14
+```solidity
+if (curStakeAtRisk > amountStaked[tokenId]) {
+                curStakeAtRisk = amountStaked[tokenId];
+            }
+```
+
+There is no need to check this since the user is only losing points and not staked NRNs in the case 3 which is already taken care of here :
+https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/RankedBattle.sol#L482-L484
+
+```solidity
+if (points > accumulatedPointsPerFighter[tokenId][roundId]) {
+                    points = accumulatedPointsPerFighter[tokenId][roundId];
+                }
+```
+
+
