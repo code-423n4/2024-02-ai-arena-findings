@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Bigsam",
+  "risk": "2",
+  "title": "Loss of fund from user in form of Gas fee because of the absence o the Require check for a scenario when Voltage spent is greater than ownervoltage",
+  "issueId": 343,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/343"
+}
