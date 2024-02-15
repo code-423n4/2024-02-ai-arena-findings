@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "blutorque",
+  "risk": "2",
+  "title": "`hasUnstaked` does not handle an edge case, allowing a fighter owner to skip the points update for a lost battle",
+  "issueId": 381,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/381"
+}
