@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "sobieski",
+  "risk": "2",
+  "title": "User can be locked from their rewards due to OOG in `MergingPool::claimRewards()`",
+  "issueId": 392,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/392"
+}
