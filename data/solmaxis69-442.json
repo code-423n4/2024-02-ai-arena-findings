@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "solmaxis69",
+  "risk": "2",
+  "title": "Bypassing the _ableToTransfer invariant by winning a fight after the fighter was staked, lost and unstaked",
+  "issueId": 442,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/442"
+}
