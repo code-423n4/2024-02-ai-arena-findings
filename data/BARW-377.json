@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "BARW",
+  "risk": "2",
+  "title": "When calling `FighterFarm:reRoll()` there is no check if the fighter type provided is the actual fighter type of the fighter that should be rerolled",
+  "issueId": 377,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/377"
+}
