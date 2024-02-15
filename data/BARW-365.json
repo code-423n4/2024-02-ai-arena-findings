@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "BARW",
+  "risk": "3",
+  "title": "When rerolling a fighter by calling `FighterFarm:reroll()`, the user can determine the outcome by sending the fighter to a specific address he owns",
+  "issueId": 365,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/365"
+}
