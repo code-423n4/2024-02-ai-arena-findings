@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Bigsam",
+  "risk": "3",
+  "title": "There is no fallback value or scenario to handle the situation where the loop never breaks the condition to ensure that attributeProbabilityIndex gets a meaningful value. ",
+  "issueId": 347,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/347"
+}
