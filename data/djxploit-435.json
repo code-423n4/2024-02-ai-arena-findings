@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "djxploit",
+  "risk": "3",
+  "title": "Users will be permanently DOSed from claiming NFTs if they have more than 2 unclaimed NFTs",
+  "issueId": 435,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/435"
+}
