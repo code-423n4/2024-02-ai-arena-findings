@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Daniel526",
+  "risk": "2",
+  "title": "claimRewards Function May Unfairly Distribute NFTs, Resulting in Unequal Rewards for Winners",
+  "issueId": 357,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/357"
+}
