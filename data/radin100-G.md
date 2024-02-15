@@ -15,30 +15,28 @@
         );
     }
 
- with 'FighterOps.sol::Fighter::generetion' type uint8 we got this output:
+### [G-2] 'MergingPool.sol::pickWinner' provides unnecessary require:
+Details:
+isSelectionComplete[roundId] will always return false, because after this require there is nothing that can stop roundId to get incremented. And removing this require saves 295 gas to the caller
 
-[PASS] testGetAllFighterInfo() (gas: 439097)
-Logs:
-  Gas used for getting AI generation:  12113
+Code Snipped:
+https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/MergingPool.sol#L118-L132
 
+Recommendation: 
+Remove the unnecessary require to save gas as shown below
 
-But when type is changed to uint16 we got output:
-
-[PASS] testGetAllFighterInfo() (gas: 439089)
-Logs:
-  Gas used for getting AI generation:  12099
-
-Which means that changing 'FighterOps.sol::Fighter::generetion' from uint8 to uint16 safes 14 gas to the users who would like to execute 'FighterFarm.sol::getAllFighterInfo'
-
-    struct Fighter {
-        uint256 weight;
-        uint256 element;
-        FighterPhysicalAttributes physicalAttributes;
-        uint256 id;
-        string modelHash;
-        string modelType;
-        - uint16 generation;
-        + uint8 generation;
-        uint8 iconsType;
-        bool dendroidBool;
+      function pickWinner(uint256[] calldata winners) external {
+        require(isAdmin[msg.sender]);
+        require(winners.length == winnersPerPeriod, "Incorrect number of winners");
+        -require(!isSelectionComplete[roundId], "Winners are already selected");
+        uint256 winnersLength = winners.length;
+        address[] memory currentWinnerAddresses = new address[](winnersLength);
+        for (uint256 i = 0; i < winnersLength; i++) {
+            currentWinnerAddresses[i] = _fighterFarmInstance.ownerOf(winners[i]);
+            totalPoints -= fighterPoints[winners[i]];
+            fighterPoints[winners[i]] = 0;
+        }
+        winnerAddresses[roundId] = currentWinnerAddresses;
+        isSelectionComplete[roundId] = true;
+        roundId += 1;
     }
