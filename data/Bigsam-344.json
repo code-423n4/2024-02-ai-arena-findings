@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Bigsam",
+  "risk": "3",
+  "title": " Array returns one value for a loop instead of the maxid points because length was set to 1 instead of maxid",
+  "issueId": 344,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/344"
+}
