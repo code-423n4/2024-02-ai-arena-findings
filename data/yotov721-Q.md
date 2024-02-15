@@ -48,3 +48,8 @@ It is recommended to set the compiler version to
 
 ## [L-4] Set max Bps loss in `RankedBattle::setBpsLostPerLoss`
 The max value of basis points by default is 10_000 and is currently set to 0.1 % = 10 bps. This can be changes in `RankedBattle::setBpsLostPerLoss()` only by the admin. It would be really nice to have a check that the new bsp lost per round are less than 10_000. 
+
+## [N-1] Do not pass random bytes in mint function as it can lead to unexpected behavior
+The `GameItems::mint` function is used to mint game items. After some checks and operations in calls the default `_mint` function and passes 'random' bytes `_mint(msg.sender, tokenId, quantity, bytes("random"));`
+### Recomendation:
+Use `_mint(msg.sender, tokenId, quantity, "");` instead
