@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Abdessamed",
+  "risk": "2",
+  "title": "Users have complete freedom to customize the fighter NFT when calling `redeemMintPass` and can redeem fighters of types Dendroid as long as they have mintPasses",
+  "issueId": 366,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/366"
+}
