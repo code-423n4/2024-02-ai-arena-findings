@@ -1,0 +1,2 @@
+- L01: Missing input parameter check in redeemMintPass()
+  **Description**: In function redeemMintPass(), we will check input parameters' length to make sure these parameters' length are the same. However, we miss parameter iconsTypes.
