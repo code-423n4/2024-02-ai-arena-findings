@@ -137,39 +137,16 @@ This contract enables users to stake NRN tokens on fighters, monitor battle hist
 ![points calculation](https://github.com/0xWeb3boy/photo/assets/113019033/d0c9eaba-f57f-4186-9972-21e484aee5cd)
 
 
-### AuctionHouse Contract
+### FighterFarm Contract
 
 #### Architecture
 
-![ActionHouse](https://gist.github.com/assets/58845085/e7dff48e-1ad6-47c0-bb55-6f0bf510754f)
+![FighterFarm](https://github.com/0xWeb3boy/photo/assets/113019033/7e521c12-f61f-4491-9fde-e4c63f865277)
 
-#### AuctionHouse Intraction Flow
+#### FighterFarm Intraction Flow
 
-![AuctionHouse](https://gist.github.com/assets/58845085/8f61b2ff-6c35-4e47-bac8-48126883fde7)
+Within this contractual framework, oversight is provided for the initiation, possession, and retrieval processes of AI Arena Fighter NFTs, encompassing the capability to generate fresh NFTs originating from a consolidation reservoir or via the utilization of redemption mechanisms inherent in mint passes.
 
-![AuctionHouseIntraction](https://gist.github.com/assets/58845085/adde9417-a15f-499c-a345-bc58c2685b12)
-
-The AuctionHouse contract in a DeFi protocol typically manages the auctioning of assets, often used for liquidating collateral from defaulted loans or for other decentralized governance purposes. It allows users to place bids on assets, handles the logic for determining winning bids, and ensures the transfer of both assets and payment according to the auction rules. The contract is designed to be transparent, fair, and efficient, providing a decentralized mechanism for asset liquidation or sales within the ecosystem
-
-### LendingTerm Contract
-
-#### Architecture
-
-![LendingTerm1](https://gist.github.com/assets/58845085/aa5a454b-dba4-4977-a632-095fa65e1b54)
-
-#### LendingTerm Intraction Flow
-
-![LendingTerm](https://gist.github.com/assets/58845085/b90b6079-6f1b-4d0e-88ae-db3aee2c5665)
-
-The LendingTerm contract in a DeFi protocol is designed to define and manage the terms of lending operations.
-
-``Setting Loan Parameters``: It specifies the conditions for loans, such as interest rates, collateral requirements, maximum debt per collateral, and repayment schedules.
-
-``Loan Origination``: Facilitates the creation of new loans under the specified terms, handling collateralization and issuance of debt.
-
-``Repayment and Liquidation``: Manages loan repayments and enforces liquidation in case of defaults, ensuring compliance with the set terms.
-
-``Governance Integration``: Often integrated with governance mechanisms for modifying terms or adding new ones, reflecting the decentralized decision-making process.
 
      
 ## Testing Analysis
@@ -243,6 +220,8 @@ Maintain detailed documentation for each contract, describing its purpose, funct
 
 ### Time spent:
 30 hours
+
+
 
 ### Time spent:
 30 hours
