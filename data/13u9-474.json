@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "13u9",
+  "risk": "3",
+  "title": "mergingPool.sol{claimRewards function} player cant claim reward after larger than winning 2 rounds",
+  "issueId": 474,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/474"
+}
