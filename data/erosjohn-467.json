@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "erosjohn",
+  "risk": "3",
+  "title": "GameItems.sol#allGameItemAttributes[tokenId].transferable check can be bypassed, causing the voltage or other proprietary items to be transferred",
+  "issueId": 467,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/467"
+}
