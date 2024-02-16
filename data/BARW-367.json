@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "BARW",
+  "risk": "2",
+  "title": "When claiming a fighter from the merge pool by calling `FighterFarm:mintFromMeregingPool` the user can determine the stats of his new fighter by timing the call right",
+  "issueId": 367,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/367"
+}
