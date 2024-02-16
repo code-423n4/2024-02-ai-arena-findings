@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Bauchibred",
+  "risk": "2",
+  "title": " Users are wrongly limited to own `MAX_FIGHTERS_ALLOWED - 1` fighters instead of `MAX_FIGHTERS_ALLOWED`",
+  "issueId": 503,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/503"
+}
