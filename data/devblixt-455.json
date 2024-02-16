@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "devblixt",
+  "risk": "3",
+  "title": "FighterFarm contract is rendered unusable if the generation of a fighter is incremented",
+  "issueId": 455,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/455"
+}
