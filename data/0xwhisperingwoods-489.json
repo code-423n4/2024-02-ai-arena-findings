@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xwhisperingwoods",
+  "risk": "3",
+  "title": "No restrictions in `AiArenaHelper:addAttributeDivisor`, causing a gas exhaustion denial of service (DoS)",
+  "issueId": 489,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/489"
+}
