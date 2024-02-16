@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "jesjupyter",
+  "risk": "2",
+  "title": "If an NFT is transferred with funds at-risk, all subsequent updateBattleRecord call in this round will cause unintended behavior",
+  "issueId": 446,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/446"
+}
