@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "niser93",
+  "risk": "3",
+  "title": "Validation in FighterFarm.claimFighter() is not enough strong to avoid player arbitrarily choosing parameters of new fighter",
+  "issueId": 519,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/519"
+}
