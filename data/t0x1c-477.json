@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "t0x1c",
+  "risk": "2",
+  "title": "Admin can incorrectly wipe out players' fighterPoints for the current round if they call pickWinner() after setNewRound()",
+  "issueId": 477,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/477"
+}
