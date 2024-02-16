@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "djxploit",
+  "risk": "2",
+  "title": "A player can lose less points compared to other players when he loses in a battle, leading to loss for protocol",
+  "issueId": 512,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/512"
+}
