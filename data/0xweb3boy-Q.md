@@ -111,7 +111,7 @@ Now the reclaimNRN is not actually following CEI if you see
 
 So there could be a chance of unfair advantage here.
 
-[QA-1] - `GameItems.sol::remainingSupply()` function will return value of `itemsRemaining` everytime it is called for infinite supply gameItem type.
+[QA-4] - `GameItems.sol::remainingSupply()` function will return value of `itemsRemaining` everytime it is called for infinite supply gameItem type.
 
 The function `remainingSupply()` returns the remaining supply of a game item with the specified tokenId which is taken from the i/p of `createGameItem()` while creating the gameItem.
 
