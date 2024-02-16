@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Bauchibred",
+  "risk": "2",
+  "title": "The AiArenaHelper.sol's current implementation of `createPhysicalAttributes()` wrongly limits the amount of possible generations",
+  "issueId": 494,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/494"
+}
