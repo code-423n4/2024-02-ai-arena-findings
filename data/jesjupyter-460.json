@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "jesjupyter",
+  "risk": "2",
+  "title": "stakingFactor is calculated via sqrt, meaning two different staking amount may share the same staking Factor.",
+  "issueId": 460,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/460"
+}
