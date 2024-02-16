@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "devblixt",
+  "risk": "3",
+  "title": "Users being able to spend their voltage through VoltageManager#spendVoltage presents unintended side effects",
+  "issueId": 501,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/501"
+}
