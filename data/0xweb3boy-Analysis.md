@@ -19,176 +19,33 @@ The AI Arena fosters a competitive gaming atmosphere, where players can showcase
 
 ## Project’s Risk Model
 
-## Risks of using forgive() function
+## With the help of `updateAtRiskRecords()` function it updates stake at risk records for a fighter avoiding the risks of unintentional loss of points or NRNs.
 
 ```solidity
 
- function forgive(bytes32 loanId) external {
-        // this view function will revert if the auction is not started,
-        // or if the auction is already ended.
-        (, uint256 creditAsked) = getBidDetail(loanId);
-        require(creditAsked == 0, "AuctionHouse: ongoing auction");
-
-        // close the auction in state
-        auctions[loanId].endTime = block.timestamp;
-        nAuctionsInProgress--;
-
-        // notify LendingTerm of auction result
-        address _lendingTerm = auctions[loanId].lendingTerm;
-        LendingTerm(_lendingTerm).onBid(
-            loanId,
-            msg.sender,
-            0, // collateralToBorrower
-            0, // collateralToBidder
-            0 // creditFromBidder
-        );
-
-        // emit event
-        emit AuctionEnd(
-            block.timestamp,
-            loanId,
-            LendingTerm(_lendingTerm).collateralToken(),
-            0, // collateralSold
-            0 // debtRecovered
-        );
-    }
+function updateAtRiskRecords(
+        uint256 nrnToPlaceAtRisk, 
+        uint256 fighterId, 
+        address fighterOwner
+    ) 
+        external 
+    {
+        require(msg.sender == _rankedBattleAddress, "Call must be from RankedBattle contract");
+        stakeAtRisk[roundId][fighterId] += nrnToPlaceAtRisk;
+        totalStakeAtRisk[roundId] += nrnToPlaceAtRisk;
+        amountLost[fighterOwner] += nrnToPlaceAtRisk;
+        emit IncreasedStakeAtRisk(fighterId, nrnToPlaceAtRisk);
+    }   
 
 ```
-### Technical Implications
-
-``Debt Obligation Erasure``: The borrower’s debt is erased without any repayment or collateral recovery, leading to a direct financial loss for the protocol.
-
-``CreditMultiplier Impact``: In protocols where a creditMultiplier affects loan calculations, such losses might necessitate adjustments to this multiplier, impacting all borrowers and the tokenomics.
-
-### Protocol's Risk Exposure
-
-``Financial Health``: Accumulation of such losses can strain the protocol's financial reserves.
-
-``Risk Management``: It highlights potential gaps in the risk assessment framework, particularly in collateral valuation and liquidity.
-
-``Tokenomics and Inflationary Pressure``:
-- If the protocol compensates for losses by minting new tokens (e.g., CREDIT), it could lead to inflationary pressure.
-- Impacts the trust and stability of the native token.
-
-### Example Scenario
-Suppose a borrower has a loan of 5,000 CREDIT against a certain crypto-asset as collateral. A significant market event renders the asset worthless. The auction fails to attract bidders, leading to the invocation of forgive.
 
 
-## Systemic risks
 
-### gUSDC Value Fluctuations Risks
-
-- gUSDC, being pegged to USDC, should ideally maintain a stable value. However, if its value deviates significantly from USDC (due to market dynamics, liquidity issues, or rebasing mechanics), this could impact the borrowing and lending operations.
-
-#### Impact on Lending and Borrowing Operations
-
-``Loan-to-Value (LTV) Ratio Volatility``:
-
-- gUSDC fluctuations directly impact LTV ratios in lending protocols.
-A drop in gUSDC value could suddenly increase LTVs, signaling higher risk for lenders.
-- Conversely, an increase might lower LTVs, potentially underutilizing collateral.
-
-``Under-collateralization and Liquidations``:
-
-- A significant decrease in gUSDC value may lead to loans becoming under-collateralized.
-- Protocols typically monitor LTV ratios to manage risk; breached thresholds trigger liquidations.
-- Forced liquidations can create additional market pressure, exacerbating price instability.
-
-``Impact on Borrower's Position``:
-
-- Borrowers might be forced to provide additional collateral or repay part of the loan to avoid liquidation.
-- Unanticipated market movements can result in financial losses or margin calls for borrowers.
-
-``Market Sentiment``:
-
-- Persistent instability in gUSDC could erode user confidence in the peg mechanism.
-- Potential contagion effects in interconnected DeFi ecosystems where gUSDC is widely used.
-
-### GUILD Tokens and Gauge Voting Risk
-
-- GUILD tokens are used for governance decisions, including voting on LendingTerms. Significant changes in the GUILD value could influence voter behavior, potentially skewing decision-making towards short-term gains rather than long-term protocol health.
-- If GUILD's value increases significantly, it might attract speculative voting behavior, while a decrease in value could lead to apathy or reduced participation among stakeholders.
-
-
-### Rebasing and gUSDC Stability Risk
-
-- The ERC20RebaseDistributor mechanism might be involved in maintaining gUSDC’s peg to USDC. If rebasing is not accurately aligned with market conditions, it could lead to either inflationary or deflationary pressures on gUSDC.
-- Inaccurate rebasing can affect users' trust in gUSDC's stability, which is crucial for its function as a credit token.
-
-#### Impacts of Inaccurate Rebasing
-
-``Inflationary/Deflationary Pressures``:
-
-- Inflationary rebasing (increasing supply) can dilute token value, potentially leading to a loss in purchasing power.
-- Deflationary rebasing (decreasing supply) can create scarcity, potentially leading to an unsustainable increase in token value.
-
-### Collateral Auction Dynamics in AuctionHouse 
-
-- The AuctionHouse contract presumably handles liquidations of collateral. Fluctuations in gUSDC or the collateral’s value could impact the efficacy of these auctions.
-- In a scenario where gUSDC’s value drops, the proceeds from liquidation auctions might not cover the outstanding loans, leading to bad debt.
-
-#### Risks and Impact
-
-``Bid Dynamics``:
-- The attractiveness of the auction to bidders depends on the perceived value of the collateral and the stability of gUSDC.
-- In a volatile market, bidder hesitation or low turnout can impact the auction’s success.
-
-### Impact on Credit Ceiling and Lending Terms 
-
-- Changes in gUSDC value could necessitate adjustments in global debt ceilings and other parameters within LendingTerms to manage the protocol's overall risk exposure.
-- If gUSDC devalues, the protocol might need to reduce its debt ceiling to maintain a healthy collateralization ratio across its loan portfolio.
 
 ### Minting and Staking Dynamics
 
 The mechanism for staking gUSDC to mint GUILD, and the reverse process, might be influenced by the changing values of these tokens. A decline in GUILD's value, for instance, could reduce the incentive for users to stake gUSDC.
 
-## Technical risks
-
-### ERC20RebaseDistributor
-
-``Precision and Rounding Errors``: Complex rebasing calculations could lead to precision loss or rounding errors, affecting token balances.
-``Rebasing Side Effects``: Unintended side effects of rebasing on user balances, particularly if user interactions occur during the rebasing process.
-
-### AuctionHouse
-
-``Liquidation Logic Flaws``: Errors in implementing the liquidation logic could lead to inefficient or incorrect asset liquidation.
-``Smart Contract Interactions``: Vulnerabilities in how AuctionHouse interacts with other contracts, like token contracts or external DeFi platforms.
-
-### LendingTerm
-
-``Loan Parameters Handling``: Inaccuracies in setting or modifying loan parameters (interest rates, collateral ratios) could affect lending operations.
-``Loan Lifecycle Management``: Bugs in the management of loan states (active, defaulted, liquidated) could result in incorrect system behavior.
-
-### General Technical Risks
-
-``Parameter Adjustment Vulnerabilities``: Mismanagement or errors in adjusting critical protocol parameters could destabilize the system.
-
-``Reentrancy Attacks``: Functions that transfer funds or interact with external contracts could be vulnerable to reentrancy attacks.
-
-``Gas Limitations and Inefficiencies``: Functions, particularly those with complex logic, might consume excessive gas, leading to high transaction costs or failures.
-
-``Inter-Contract Dependency Risks``: Given the interconnected nature of the contracts, a bug or failure in one contract (e.g., ERC20RebaseDistributor) could adversely affect others (like LendingTerm).
-
-``Front-Running in AuctionHouse``: Potential for front-running in auction bids, where miners or other users could exploit the transaction ordering for their benefit.
-
-## Integration risks
-
-``Inter-Contract Financial Calculations``: Any financial calculations in other contracts (like yield farming rewards, fee distributions, etc.) relying on token balances might yield incorrect results post-rebase.
-
-``Consistency in Asset Valuation`` : The value of assets transferred during the auction needs to be consistent with their valuation in other parts of the system. Discrepancies here can affect the protocol's financial accuracy.
-
-``Collateralization and Loan Agreements``: In lending scenarios, where the rebased token might be used as collateral, changes in token quantity could affect collateralization ratios. This might inadvertently trigger liquidations or alter loan terms.
-
-``Liquidity Pools and DeFi Protocols``: If the rebased token is used in liquidity pools or other DeFi protocols, a rebase event can change the value or quantity of tokens in these pools. This could lead to issues like imbalanced pools, affecting staking, lending, or swapping operations.
-
-``Rebase Impact on Other Contracts``
-The rebasing mechanism could have unintended impacts on contracts that interact with the rebased token. For example, if other contracts are not designed to handle rebasing tokens correctly, users’ balances or contract states might become inconsistent after a rebase event.
-
-``Governance Decisions Propagation``: Decisions made through the governance process, particularly by the GOVERNOR, might involve changes in multiple contracts. Ensuring that these changes are synchronized and do not create conflicts or inconsistencies is a significant integration concern.
-
-``Role Changes and Access Control``: Adjustments in roles or permissions must be propagated correctly across all affected contracts to avoid access control breaches or functional discrepancies.
-
-``Data Synchronization``: Ensuring that all relevant contracts have up-to-date and synchronized information regarding loan terms, active loans, and borrower details is crucial.
 
 
 ## Admin abuse risks
@@ -503,6 +360,8 @@ The handling of losses (negative values) is complex and involves multiple state 
 
 ### Time spent:
 30 hours
+
+
 
 ### Time spent:
 30 hours
