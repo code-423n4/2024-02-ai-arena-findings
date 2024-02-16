@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "erosjohn",
+  "risk": "3",
+  "title": "FighterFarm.sol#reroll uses predictable and controllable traits, resulting in dna that is not random",
+  "issueId": 481,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/481"
+}
