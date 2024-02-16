@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "jesjupyter",
+  "risk": "2",
+  "title": "Potential out-of-gas for MergingPool::claimRewards due to nested-for-loop",
+  "issueId": 473,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/473"
+}
