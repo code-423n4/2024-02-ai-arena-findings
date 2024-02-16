@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "t0x1c",
+  "risk": "2",
+  "title": "Players lose their stakeAtRisk if bpsLostPerLoss is set to zero",
+  "issueId": 487,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/487"
+}
