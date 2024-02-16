@@ -2,7 +2,7 @@
 |-|:-|:-:|:-:|
 | [[G-01](#g-01)] | The burnFrom function evaluates the value of allowance(account, msg.sender) multiple times | 1| 237|
 
-### [G-01]<a name="g-01"></a> The burnFrom function evaluates the value of allowance(account, msg.sender) multiple times
+### [G-01] The burnFrom function evaluates the value of allowance(account, msg.sender) multiple times
 The burnFrom function evaluates the value of allowance(account, msg.sender) multiple times. It can be replaced by uint256 allow to avoid double calculations
 
 ```solidity
