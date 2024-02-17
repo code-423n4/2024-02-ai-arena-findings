@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "inmarelibero",
+  "risk": "2",
+  "title": "Functions adjustAdminAccess() should revert when msg.sender is trying to change admin status for himself",
+  "issueId": 654,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/654"
+}
