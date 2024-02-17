@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "WoolCentaur",
+  "risk": "3",
+  "title": "Unstaking at-risk fighters breaks core logic and results in NRN recovery issues and battle restrictions",
+  "issueId": 637,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/637"
+}
