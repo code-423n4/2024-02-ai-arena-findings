@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Rolezn",
+  "risk": "2",
+  "title": "`FighterFarm.doesTokenExist()` will no longer work on newer OpenZeppelin versions",
+  "issueId": 610,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/610"
+}
