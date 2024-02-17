@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "iamandreiski",
+  "risk": "3",
+  "title": "Users with tokenIds higher than 255 will never be able to re-roll their fighter due to overflow",
+  "issueId": 579,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/579"
+}
