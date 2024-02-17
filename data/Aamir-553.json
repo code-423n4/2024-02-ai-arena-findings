@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Aamir",
+  "risk": "2",
+  "title": "`MergingPool::getFighterPoints(...)` can fetch points for the first fighter only due to a bug.",
+  "issueId": 553,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/553"
+}
