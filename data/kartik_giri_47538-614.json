@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "kartik_giri_47538",
+  "risk": "2",
+  "title": "The RankedBattle::unstakeNRN function is allowing user to unstake 0 amount. ",
+  "issueId": 614,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/614"
+}
