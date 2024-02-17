@@ -24,7 +24,7 @@ File: src/Neuron.sol
         _burn(account, amount);
         _approve(account, msg.sender, decreasedAllowance);
     }
-
+```
 
 https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/Neuron.sol#L196-L204
 
@@ -61,6 +61,7 @@ File: src/RankedBattle.sol
             emit Claimed(msg.sender, claimableNRN);
         }
     }
+```
 https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/RankedBattle.sol#L294-L311
 
 Before making changes
