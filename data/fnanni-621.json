@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "fnanni",
+  "risk": "2",
+  "title": "There is no input validation for weight and element when claiming fighters from the MergingPool",
+  "issueId": 621,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/621"
+}
