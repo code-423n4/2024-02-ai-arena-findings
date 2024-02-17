@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Tekken",
+  "risk": "3",
+  "title": "A function call to `FighterFarm::reRoll(tokenId, fighterType=1)` results in a `FighterPhysicalAttributes{ head: 1, eyes: 1, mouth: 1, body: 1, hands: 1, feet: 1 })`",
+  "issueId": 632,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/632"
+}
