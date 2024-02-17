@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "kartik_giri_47538",
+  "risk": "2",
+  "title": " Incorrect Array Initialization in MergingPool::getFighterPoints function which lead to incorrect output or revert.",
+  "issueId": 616,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/616"
+}
