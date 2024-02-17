@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Aamir",
+  "risk": "2",
+  "title": "`FighterFarm::incrementGeneration(...)`  does not add element by generation in `FighterFarm::numElements` mapping Causes DoS in New NFT Minting.",
+  "issueId": 556,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/556"
+}
