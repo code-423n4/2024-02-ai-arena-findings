@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Kow",
+  "risk": "2",
+  "title": "Player may be unable to reclaim fighter's stake at risk due to `amountLost` underflow",
+  "issueId": 657,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/657"
+}
