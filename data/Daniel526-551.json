@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Daniel526",
+  "risk": "2",
+  "title": "useVoltageBattery can be abused by users to replenish more than enough voltage",
+  "issueId": 551,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/551"
+}
