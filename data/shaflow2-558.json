@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "shaflow2",
+  "risk": "2",
+  "title": "In certain cases, the GameServer calling the updateBattleRecord function may result in revert.",
+  "issueId": 558,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/558"
+}
