@@ -53,3 +53,10 @@ The max value of basis points by default is 10_000 and is currently set to 0.1 %
 The `GameItems::mint` function is used to mint game items. After some checks and operations in calls the default `_mint` function and passes 'random' bytes `_mint(msg.sender, tokenId, quantity, bytes("random"));`
 ### Recomendation:
 Use `_mint(msg.sender, tokenId, quantity, "");` instead
+
+## [N-2] Wrong natspec
+In `MergingPool.sol`  The mapping is actually tokenId to fighter points
+```
+/// @notice Mapping of address to fighter points. 
+mapping(uint256 => uint256) public fighterPoints;
+```
