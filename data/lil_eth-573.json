@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "lil_eth",
+  "risk": "2",
+  "title": "Inaccurate Tracking of NFT Claims Due to Missing Increments in redeemMintPass and mintFromMergingPool",
+  "issueId": 573,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/573"
+}
