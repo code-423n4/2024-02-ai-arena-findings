@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "erosjohn",
+  "risk": "3",
+  "title": "RankedBattle.sol#_getStakingFactor When stakingFactor_ is 0, assign it a value of 1, which will lead to unfairness",
+  "issueId": 608,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/608"
+}
