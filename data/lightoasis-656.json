@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "lightoasis",
+  "risk": "3",
+  "title": "Transferring before minting will result in less game items being minted to the users",
+  "issueId": 656,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/656"
+}
