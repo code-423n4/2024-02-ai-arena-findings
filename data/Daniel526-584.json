@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Daniel526",
+  "risk": "2",
+  "title": "getStakeAtRisk function always returns the stake amount instead of the expected stake at risk amount.",
+  "issueId": 584,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/584"
+}
