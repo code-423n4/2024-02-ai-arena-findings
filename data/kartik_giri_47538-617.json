@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "kartik_giri_47538",
+  "risk": "3",
+  "title": "In FighterFarm::reRoll function the type of parameter tokenId is mismatched which can lead the function to revert.",
+  "issueId": 617,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/617"
+}
