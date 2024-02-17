@@ -60,3 +60,4 @@ In `MergingPool.sol`  The mapping is actually tokenId to fighter points
 /// @notice Mapping of address to fighter points. 
 mapping(uint256 => uint256) public fighterPoints;
 ```
+
