@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Tekken",
+  "risk": "3",
+  "title": "Predictable outcome of a fighter based on predictable `dna` inside `FighterFarm::claimFighters`, `FighterFarm::mintFromMergingPool` and `FighterFarm::reRoll`.",
+  "issueId": 635,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/635"
+}
