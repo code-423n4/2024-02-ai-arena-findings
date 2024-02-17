@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "t0x1c",
+  "risk": "2",
+  "title": "Incomplete implementation of check present in _ableToTransfer() hampers players' ability to transfer their fighter NFT",
+  "issueId": 620,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/620"
+}
