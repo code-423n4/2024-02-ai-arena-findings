@@ -20,7 +20,7 @@ Total **63 instances** over **5 risks**<br>
 |[[DOW-INF](#DOW-INF)]|Large or complicated code bases should implement invariant tests|25|0|
 
 ### Gas risks
-Total **146 instances** over **8 risks**<br>
+Total **146 instances** over **7 risks**<br>
   
 
 |ID|Risk|Instances|Gas Savings|
@@ -32,7 +32,6 @@ Total **146 instances** over **8 risks**<br>
 |[[GAS-CUE](#GAS-CUE)]|Use custom errors|19|19|
 |[[GAS-SRS](#GAS-SRS)]|Splitting *require()* statements that use *&&* saves gas|1|3|
 |[[GAS-IUL](#GAS-IUL)]|Increments can be unchecked in for-loops|13|455|
-|[[GAS-12](#GAS-12)]|Use *abi.encodePacked()* instead of *abi.encode()*|4|3588|
 
 ## Details contents
 
@@ -951,21 +950,3 @@ Use *unchecked{++i/i++}* or *unchecked{--i/i--}*<br>
 <br>
 </details>
 
-### [GAS-12]<a name="GAS-12"></a> Use *abi.encodePacked()* instead of *abi.encode()*
-**Description:**<br>abi.encode() is less efficient than abi.encodePacked().<br>See for more information:<br>https://github.com/ConnorBlockchain/Solidity-Encode-Gas-Comparison<br>**Recommendation:**<br>
-Use *abi.encodePacked()* on Uint and String type instead<br>
-*There are 4 instances of this risk:*
-<details><summary>see instances</summary>File: FighterFarm.sol
-
-
-```solidity
-214: abi.encode(msg.sender, fighters.length)))
-254: abi.encode(mintPassDnas[i])))
-324: abi.encode(msg.sender, fighters.length)))
-379: abi.encode(msg.sender, tokenId, numRerolls[tokenId])))
-
-```
-*GitHub* : [L214](/FighterFarm.sol#L214) [L254](/FighterFarm.sol#L254) [L324](/FighterFarm.sol#L324) [L379](/FighterFarm.sol#L379) 
-
-<br>
-</details>
