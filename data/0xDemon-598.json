@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xDemon",
+  "risk": "3",
+  "title": "The receiver can drain all NFTs owned by the sender using Reentrancy Attack",
+  "issueId": 598,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/598"
+}
