@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "lil_eth",
+  "risk": "2",
+  "title": "Malicious Seller could front-run a sell and re-roll just before to sell a totally different fighter ",
+  "issueId": 582,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/582"
+}
