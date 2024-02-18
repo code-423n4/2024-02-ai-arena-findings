@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "EagleSecurity",
+  "risk": "3",
+  "title": "Previous owner of the contract continues to have admin access in MergingPool.sol",
+  "issueId": 688,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/688"
+}
