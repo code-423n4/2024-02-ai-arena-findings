@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "bhilare_",
+  "risk": "3",
+  "title": "A malicious user can claim more number of rewards/fighters from Merging Pool than intended by implementing a  re-entrancy attack",
+  "issueId": 692,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/692"
+}
