@@ -87,6 +87,8 @@ For example in: https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40
 
 https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/RankedBattle.sol#L493-L497
 
+## [L-7] Item allowance remaining could return mischievous values
+The `GameItems::getAllowanceRemaining` function returns the allowance of a specific item remaining. For an item that does not exist it would return 0, instead of reverting. The user may think he has 0 items remaining. Would recommend to revert if the item does not exist.  
 
 ## [N-1] Do not pass random bytes in mint function as it can lead to unexpected behavior
 The `GameItems::mint` function is used to mint game items. After some checks and operations in calls the default `_mint` function and passes 'random' bytes `_mint(msg.sender, tokenId, quantity, bytes("random"));`
