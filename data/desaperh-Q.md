@@ -30,7 +30,7 @@ Total **146 instances** over **7 risks**<br>
 |[[GAS-PIN](#GAS-PIN)]|Pre-increments and pre-decrements are cheaper than post-increments and post-decrements|21|105|
 |[[GAS-CUE](#GAS-CUE)]|Use custom errors|19|19|
 |[[GAS-SRS](#GAS-SRS)]|Splitting *require()* statements that use *&&* saves gas|1|3|
-|[[GAS-IUL](#GAS-IUL)]|Increments can be unchecked in for-loops|13|455|
+
 
 ## Details contents
 
@@ -849,77 +849,3 @@ Use multiple require statements with one condition<br>
 
 <br>
 </details>
-
-### [GAS-IUL]<a name="GAS-IUL"></a> Increments can be unchecked in for-loops
-**Description:**<br>
-Use ++i or --i in **solidity version 0.8.0**, should be unchecked{++i}/unchecked{--i} when it is not possible for them to overflow, as is the case when used in FOR and WHILE loops The unchecked keyword is new in solidity version 0.8.0, so this only applies to that version or higher, which these instances are. This saves 30-40 gas PER LOOP
-<br>
-<br>**Recommendation:**<br>
-Use *unchecked{++i/i++}* or *unchecked{--i/i--}*<br>
-<br>
-<br>
-*There are 13 instances of this risk:*
-<details><summary>see instances</summary>File: AiArenaHelper.sol
-
-
-```solidity
-48: for (uint8 i = 0; i < attributesLength; i++)
-73: for (uint8 i = 0; i < attributesLength; i++)
-99: for (uint8 i = 0; i < attributesLength; i++)
-136: for (uint8 i = 0; i < attributesLength; i++)
-148: for (uint8 i = 0; i < attributesLength; i++)
-178: for (uint8 i = 0; i < attrProbabilitiesLength; i++)
-
-```
-*GitHub* : [L48](/AiArenaHelper.sol#L48) [L73](/AiArenaHelper.sol#L73) [L99](/AiArenaHelper.sol#L99) [L136](/AiArenaHelper.sol#L136) [L148](/AiArenaHelper.sol#L148) [L178](/AiArenaHelper.sol#L178) 
-
-<br>File: MergingPool.sol
-
-
-```solidity
-124: for (uint256 i = 0; i < winnersLength; i++)
-207: for (uint256 i = 0; i < maxId; i++)
-
-```
-*GitHub* : [L124](/MergingPool.sol#L124) [L207](/MergingPool.sol#L207) 
-
-<br>File: FighterFarm.sol
-
-
-```solidity
-211: for (uint16 i = 0; i < totalToMint; i++)
-249: for (uint16 i = 0; i < mintpassIdsToBurn.length; i++)
-
-```
-*GitHub* : [L211](/FighterFarm.sol#L211) [L249](/FighterFarm.sol#L249) 
-
-<br>File: RankedBattle.sol
-
-
-```solidity
-390: for (uint32 i = lowerBound; i < roundId; i++)
-
-```
-*GitHub* : [L390](/RankedBattle.sol#L390) 
-
-<br>File: Neuron.sol
-
-
-```solidity
-131: for (uint32 i = 0; i < recipientsLength; i++)
-
-```
-*GitHub* : [L131](/Neuron.sol#L131) 
-
-<br>File: AAMintPass.sol
-
-
-```solidity
-130: for (uint16 i = 0; i < totalToMint; i++)
-
-```
-*GitHub* : [L130](/AAMintPass.sol#L130) 
-
-<br>
-</details>
-
