@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "cats",
+  "risk": "2",
+  "title": "Malicious user can monopolize an item by bypassing the daily item allowance limit with multiple addresses",
+  "issueId": 726,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/726"
+}
