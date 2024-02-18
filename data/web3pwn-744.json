@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "web3pwn",
+  "risk": "2",
+  "title": "The getFighterPoints function does not work",
+  "issueId": 744,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/744"
+}
