@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "devblixt",
+  "risk": "3",
+  "title": "AAMintPass#claimMintPass does not associate any mint pass with a fighter type and results in unintended consequences",
+  "issueId": 756,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/756"
+}
