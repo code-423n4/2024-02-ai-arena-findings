@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "lsaudit",
+  "risk": "2",
+  "title": "Function `reRoll()` is deterministic - it's possible to calculate what figheter's traits we will re-roll",
+  "issueId": 721,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/721"
+}
