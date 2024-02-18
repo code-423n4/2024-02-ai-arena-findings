@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Aamir",
+  "risk": "2",
+  "title": "Inadequate Override of `FighterFarm::safeTransferFrom(...)` Variants Allows Unauthorized Token Transfers",
+  "issueId": 739,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/739"
+}
