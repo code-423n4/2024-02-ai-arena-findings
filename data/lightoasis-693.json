@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "lightoasis",
+  "risk": "3",
+  "title": "Reentrancy in function safeTransferFrom",
+  "issueId": 693,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/693"
+}
