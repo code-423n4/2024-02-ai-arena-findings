@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "lsaudit",
+  "risk": "2",
+  "title": "It's possible to pick the same winner multiple of times during the same round",
+  "issueId": 715,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/715"
+}
