@@ -49,9 +49,48 @@ It is recommended to set the compiler version to
 ## [L-4] Set max Bps loss in `RankedBattle::setBpsLostPerLoss`
 The max value of basis points by default is 10_000 and is currently set to 0.1 % = 10 bps. This can be changes in `RankedBattle::setBpsLostPerLoss()` only by the admin. It would be really nice to have a check that the new bsp lost per round are less than 10_000. 
 
+## [L-5] Add arrays length check in `MergingPool::claimRewards`
+The function is used to claim multiple rewards and arrays of NFT fighter traits and parameters are passed, such as custom attributes, model type, model URI, but it is not checked that the array sizes are the same and also equal to the unclaimed rewards count. 
+### Recommendation: 
+Add the following checks
+```diff
+        uint256 winnersLength;
+        uint32 claimIndex = 0;
+        uint32 lowerBound = numRoundsClaimed[msg.sender];
+
+
++        require(modelURIs.length == modelTypes.length);
++        require(modelTypes.length == customAttributes[2].length);
++        require(customAttributes[2].length == this.getUnclaimedRewards(msg.sender));
+
+        for (uint32 currentRound = lowerBound; currentRound < roundId; currentRound++) {
+            numRoundsClaimed[msg.sender] += 1;
+            winnersLength = winnerAddresses[currentRound].length;
+            for (uint32 j = 0; j < winnersLength; j++) {
+                if (msg.sender == winnerAddresses[currentRound][j]) {
+                    _fighterFarmInstance.mintFromMergingPool(
+                        msg.sender,
+                        modelURIs[claimIndex],
+                        modelTypes[claimIndex],
+                        customAttributes[claimIndex]
+                    );
+                    claimIndex += 1;
+                }
+            }
+        }
+```
+
+## [L-6] False return value of ERC20 transfer not handled - multiple occurrences
+Would recommend to add an else clause which reverts. This would not be a problem, but in some cases there are state changes done before the transfer which would persist while the ones done in the if clause would not execute and the whole transaction would succeed leaving the protocol in an undesired state. 
+
+For example in: https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/RankedBattle.sol#L283-L289 it would update the user and token staked amounts, but funds would not be transferred and the transaction would succeed, user loosing funds.
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/RankedBattle.sol#L493-L497
+
+
 ## [N-1] Do not pass random bytes in mint function as it can lead to unexpected behavior
 The `GameItems::mint` function is used to mint game items. After some checks and operations in calls the default `_mint` function and passes 'random' bytes `_mint(msg.sender, tokenId, quantity, bytes("random"));`
-### Recomendation:
+### Recommendation:
 Use `_mint(msg.sender, tokenId, quantity, "");` instead
 
 ## [N-2] Wrong natspec
