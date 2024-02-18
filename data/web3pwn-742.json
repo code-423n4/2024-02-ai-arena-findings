@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "web3pwn",
+  "risk": "2",
+  "title": "Possibility of unlimited fighter claiming in case _delegateAddress was set to zero address",
+  "issueId": 742,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/742"
+}
