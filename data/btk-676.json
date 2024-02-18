@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "btk",
+  "risk": "2",
+  "title": "Attacker can DoS the updateModel preventing all users from updating their models",
+  "issueId": 676,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/676"
+}
