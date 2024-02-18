@@ -51,19 +51,19 @@ AI Arena is a unique project that blends several exciting areas: play-to-earn ga
 ### 1 . AI Arena Architecture 
 
 
-![Arena Architecture](https://github.com/kaveyjoe/w01/blob/main/Ai%20Arena%20Architecture.jpg)
+![Arena Architecture](https://github.com/kaveyjoe/w01/blob/main/Ai%20Arena%20Architecture.png)
 
 
 
 ### 2 . Battle Decision 
 
 
-![Battle Decision](https://github.com/kaveyjoe/w01/blob/main/Arena%20Battle%20desicion%20Tree.jpg)
+![Battle Decision](https://github.com/kaveyjoe/w01/blob/main/Arena%20Battle%20desicion%20Tree.png)
 
 
 ### 3 . Staking/Unstaking,Claiming & Buying Mechanism
 
-![Stake/Unstake,Claim & Buying Mechanism](https://github.com/kaveyjoe/w01/blob/main/StakeUnstake%2CClaim%20%20and%20Buying%20mechanism.jpg)
+![Stake/Unstake,Claim & Buying Mechanism](https://github.com/kaveyjoe/w01/blob/main/StakeUnstake%2CClaim%20%20and%20Buying%20mechanism.png)
 
 
 
@@ -592,6 +592,8 @@ I am impressed by the depth and thoughtfulness of your economic model, which ref
 As you move forward on your journey, I encourage you to continue embracing feedback, iterating on your designs, and fostering a collaborative spirit within your community. Your success is not only a testament to your hard work and dedication but also an inspiration to others in the blockchain and gaming industries.
 
 May the AI Arena project continue to thrive, bringing joy, excitement, and innovation to players around the world. Here's to your continued success and the bright future that lies ahead!
+
+
 
 
 
