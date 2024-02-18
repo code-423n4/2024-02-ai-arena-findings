@@ -13,7 +13,6 @@ Total **63 instances** over **5 risks**<br>
 
 |ID|Risk|Instances|Gas Savings|
 | :---: | :---: | :---: | :---: |
-|[[DOW-RVA](#DOW-RVA)]|Return values of `approve()` not checked|4|0|
 |[[DOW-UCO](#DOW-UCO)]|Constants should be defined rather than using magic numbers|12|0|
 |[[SWC-103](#SWC-103)]|*Lock pragmas* to specific compiler version|2|0|
 |[[DOW-ICI](#DOW-ICI)]|Incorrect comparison implementation|20|0|
@@ -71,32 +70,6 @@ The value 1 can be set to a more suitable value for rewards calculation
 
 Other
 ## Non-Critical/Quality risks
-
-### [DOW-RVA]<a name="DOW-RVA"></a> Return values of `approve()` not checked
-**Description:**<br>
-Not all IERC20 implementations `revert()` when there's a failure in `approve()`. The function signature has a boolean return value and they indicate errors that way instead. By not checking the return value, operations that should have marked as failed, may potentially go through without actually approving anything<br>
-https://medium.com/coinmonks/missing-return-value-bug-at-least-130-tokens-affected-d67bf08521ca<br>**Recommendation:**<br>
-It might be useful to check the return value, even if it is gas costs. if the approval fails, the transaction would revert to initial state. <br>
-<br>
-*There are 4 instances of this risk:*
-<details><summary>see instances</summary>File: Neuron.sol
-
-
-```solidity
-131: 
-            _approve(
-175: 
-        _approve(
-188: 
-        _approve(
-202: 
-        _approve(
-
-```
-*GitHub* : [L131-L132](/Neuron.sol#L131-L132) [L175-L176](/Neuron.sol#L175-L176) [L188-L189](/Neuron.sol#L188-L189) [L202-L203](/Neuron.sol#L202-L203) 
-
-<br>
-</details>
 
 ### [DOW-UCO]<a name="DOW-UCO"></a> Constants should be defined rather than using magic numbers
 **Description:**<br>
