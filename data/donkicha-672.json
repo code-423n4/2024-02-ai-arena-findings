@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "donkicha",
+  "risk": "2",
+  "title": "Precision Loss in Division Operation in ` createPhysicalAttributes `  function of ` AiArenaHelper `  contract",
+  "issueId": 672,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/672"
+}
