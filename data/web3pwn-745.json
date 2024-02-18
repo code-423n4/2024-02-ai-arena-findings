@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "web3pwn",
+  "risk": "3",
+  "title": "Winner can claim multiple fighters through reentrancy",
+  "issueId": 745,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/745"
+}
