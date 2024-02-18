@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "bhilare_",
+  "risk": "2",
+  "title": "MergingPool::getFighterPoints function will always revert if a user has more than one fighter because of array out of bound access.",
+  "issueId": 697,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/697"
+}
