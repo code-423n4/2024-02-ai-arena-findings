@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xLogos",
+  "risk": "3",
+  "title": "Reentrancy vulnerability in MergingPool#claimRewards allows attacker to claim more fighter than he elligible",
+  "issueId": 719,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/719"
+}
