@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "cats",
+  "risk": "2",
+  "title": "Fighter owner can unstake with amount 0 before transferring to another user to grief them from participating in points battles until the end of the current round",
+  "issueId": 730,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/730"
+}
