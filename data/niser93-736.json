@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "niser93",
+  "risk": "3",
+  "title": "Lack of input validation in FighterFarm.redeemMintPass() allows player to arbitrarily choose parameters redeeming new fighter",
+  "issueId": 736,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/736"
+}
