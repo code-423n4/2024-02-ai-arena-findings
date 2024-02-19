@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "nuthan2x",
+  "risk": "3",
+  "title": "Game items can be transfered even if `GameItemAttributes[tokenId].transferable == false`",
+  "issueId": 856,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/856"
+}
