@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xvj",
+  "risk": "2",
+  "title": "if a user provides wrong fighter type in reroll function he will ruin his fighter",
+  "issueId": 793,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/793"
+}
