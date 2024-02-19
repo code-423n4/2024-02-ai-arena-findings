@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "_eperezok",
+  "risk": "2",
+  "title": "Signatures can be reused in `FighterFarm::claimFighters`",
+  "issueId": 774,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/774"
+}
