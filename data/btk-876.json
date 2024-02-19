@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "btk",
+  "risk": "2",
+  "title": "Winners cannot mint the same chosen NFT if it was a Dendroid or Icon",
+  "issueId": 876,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/876"
+}
