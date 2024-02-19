@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "eta",
+  "risk": "2",
+  "title": "3.The value of `FighterPhysicalAttributes` is set to 0 despite high rarity in the `AiArenaHelper::dnaToIndex` and `AiArenaHelper::createPhysicalAttributes`",
+  "issueId": 770,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/770"
+}
