@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "eta",
+  "risk": "3",
+  "title": "Neuron::_setupRole()` has been deprecated by `Access Control` in favor of `_grantRole()`",
+  "issueId": 806,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/806"
+}
