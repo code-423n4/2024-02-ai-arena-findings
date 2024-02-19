@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "swizz",
+  "risk": "2",
+  "title": "Users can't stake again during same round even if they un-stake 0 amount",
+  "issueId": 810,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/810"
+}
