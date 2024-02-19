@@ -33,6 +33,8 @@ When a player loses a battle whilst having staked `$NRN` but has no points accum
         }
 ```
 
+Currently no function uses this variable so it's only low, but this is bad if in the future the variable is used in a function.
+
 # [L-02] Wrong comparison operator in function `Neuron#mint()`
 The mint function in the `Neuron.sol` contract makes a wrong check:
 
