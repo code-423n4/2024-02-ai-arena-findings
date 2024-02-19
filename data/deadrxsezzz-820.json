@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "deadrxsezzz",
+  "risk": "3",
+  "title": "Users can transfer non-transferable game items due to not overwritten `safeBatchTransferFrom`",
+  "issueId": 820,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/820"
+}
