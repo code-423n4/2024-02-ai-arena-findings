@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "lil_eth",
+  "risk": "3",
+  "title": "Once incrementGeneration() is called ,minting a fighter without custom Attributes is no longer possible",
+  "issueId": 815,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/815"
+}
