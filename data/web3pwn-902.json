@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "web3pwn",
+  "risk": "2",
+  "title": "The missing randomness allow anyone to build the fighter with specified DNA",
+  "issueId": 902,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/902"
+}
