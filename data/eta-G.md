@@ -1,4 +1,4 @@
-# Redundant Code Optimization for Gas Efficiency in `AiArenaHelper::constructor`
+# Unnecessary Loop for Gas Efficiency in `AiArenaHelper::constructor`
 
 The function `addAttributeProbabilities(0, probabilities)` has already set up the initial values for the generation of the `addAttributeProbabilities` mapping based on the provided probabilities for attributes.
 
