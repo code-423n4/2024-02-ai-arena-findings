@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xWallSecurity",
+  "risk": "2",
+  "title": "Users can transfer GameItems after they have been marked as intransferable",
+  "issueId": 898,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/898"
+}
