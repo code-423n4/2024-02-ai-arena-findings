@@ -297,7 +297,7 @@ Consider deducting the totalStakeAtRisk from globalStakedAmount when the setNewR
 Currently, Dendroid NFTs are intended to share the same DNA, but this consistency is not maintained in the codebase.
 
 > [!NOTE]  
-> redeemMintPass function have the same issue.
+> redeemMintPass and mintFromMergingPool functions have the same issue.
 
 ## Description
 
