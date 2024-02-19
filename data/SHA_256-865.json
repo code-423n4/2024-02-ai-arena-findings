@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "SHA_256",
+  "risk": "2",
+  "title": "Malicious user misusing the ` RankedBattle::unstakeNrn `  function causing poor user experience .",
+  "issueId": 865,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/865"
+}
