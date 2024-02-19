@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "btk",
+  "risk": "2",
+  "title": "redeemMintPass misses to validate the fighterTypes",
+  "issueId": 878,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/878"
+}
