@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "ahmedaghadi",
+  "risk": "2",
+  "title": "Only a portion of fighters can call `FighterFarm::reRoll` function as token id in parameter is in uint8.",
+  "issueId": 869,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/869"
+}
