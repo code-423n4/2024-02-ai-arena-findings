@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xvj",
+  "risk": "2",
+  "title": "Users will lose their existing voltage if they call useBattery function ",
+  "issueId": 789,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/789"
+}
