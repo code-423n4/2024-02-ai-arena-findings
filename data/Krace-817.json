@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Krace",
+  "risk": "3",
+  "title": "Users can possess more fighter NFTs than the defined limit `MAX_FIGHTERS_ALLOWED` and are able to transfer staked fighter NFTs",
+  "issueId": 817,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/817"
+}
