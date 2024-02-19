@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "ahmedaghadi",
+  "risk": "2",
+  "title": "DoS in `MergingPool::claimRewards` function and potential DoS in `RankedBattle::claimNRN` function if called after a significant amount of rounds passed.",
+  "issueId": 868,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/868"
+}
