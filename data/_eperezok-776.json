@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "_eperezok",
+  "risk": "2",
+  "title": "Roles cannot be revoked in the `Neuron` token contract",
+  "issueId": 776,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/776"
+}
