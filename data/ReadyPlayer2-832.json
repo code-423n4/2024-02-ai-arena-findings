@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "ReadyPlayer2",
+  "risk": "2",
+  "title": "Users can frontrun a battle record server update in order to withdraw their current stake in case of a loss",
+  "issueId": 832,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/832"
+}
