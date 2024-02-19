@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xvj",
+  "risk": "3",
+  "title": "Non-transferable gameItems can be transferred using safeBatchTransferFrom function",
+  "issueId": 785,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/785"
+}
