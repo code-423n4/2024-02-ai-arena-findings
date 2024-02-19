@@ -14,6 +14,11 @@ AI Arena is a PvP platform where human-trained AI fighters are tokenized via Fig
 | [L-06] | claimRewards may result in OOG error                             |
 | [L-07] | Inability to remove roles in the Neuron contract                 |
 | [L-08] | globalStakedAmount will not reflect the  overall staked amount   |
+| [L-09] | Dendroid nfts should have the same dna                           |
+| [L-10] | GameItems breaks ERC1155 specifications                          |
+| [L-11] | Users can bypass GameItems allowances using mutiple addresses    |
+| [L-12] | User nft may be stuck when all his amountStaked is slashed       |
+| [L-13] | Inability to remove staker role in the FighterFarm contract      |
 
 ## [L-01] Missing setter function for rerollCost  
 
@@ -155,7 +160,9 @@ Use _safeTransfer in transferFrom instead of _transfer:
 
 ## Impact
 
-NFT tokens lacking a tokenURI will disrupt off-chain tools reliant on this information, potentially leading to broken functionality or malformed data display. Furthermore, NFT marketplaces utilize the URI to showcase the associated NFT, rendering NFTs with empty URIs unsellable in such platforms.
+NFT tokens lacking a tokenURI will disrupt off-chain tools reliant on this information, potentially leading to broken functionality or malformed data display. 
+
+Furthermore, providing asset metadata allows applications like OpenSea to pull in rich data for digital assets and easily display them in-app. Digital assets on a given smart contract are typically represented solely by a unique identifier (e.g., the tokenId in ERC721), so metadata allows these assets to have additional properties, such as a name, description, and image. Thus, NFTs with empty URIs will be unsellable in such platforms.
 
 ## Description
 
@@ -175,6 +182,9 @@ _tokenURIs[tokenId] = "";
 ```
 
 As a result, all URIs will be invalid.
+
+> [!CAUTION]
+> This issue also breaks the EIP-721: The URI may point to a JSON file that conforms to the "ERC721 Metadata JSON Schema".
 
 ## Recommended Mitigation Steps
 
@@ -280,3 +290,191 @@ Consequently, even after setNewRound is called and totalStakeAtRisk is transferr
 
 Consider deducting the totalStakeAtRisk from globalStakedAmount when the setNewRound is called.
 
+## [L-09] Dendroid nfts should have the same dna
+
+## Impact
+
+Currently, Dendroid NFTs are intended to share the same DNA, but this consistency is not maintained in the codebase.
+
+> [!NOTE]  
+> redeemMintPass function have the same issue.
+
+## Description
+
+Within Ai Arena, there exist two types of fighters: champions (type 0) and dendroids (type 1). Dendroids are meant to be rarer than champions and should all exhibit identical physical traits, at least on-chain. However, during the creation process in the _createFighterBase function:
+
+```solidity
+    function _createFighterBase(
+        uint256 dna, 
+        uint8 fighterType
+    ) 
+        private 
+        view 
+        returns (uint256, uint256, uint256) 
+    {
+        uint256 element = dna % numElements[generation[fighterType]];
+        uint256 weight = dna % 31 + 65;
+        uint256 newDna = fighterType == 0 ? dna : uint256(fighterType);
+        return (element, weight, newDna);
+    }
+```
+
+If fighterType is not equal to 0, the new DNA is set to that fighterType. However, when users claim a dendroid fighter through claimFighters:
+
+```solidity
+        for (uint16 i = 0; i < totalToMint; i++) {
+            _createNewFighter(
+                msg.sender, 
+                uint256(keccak256(abi.encode(msg.sender, fighters.length))),
+                modelHashes[i], 
+                modelTypes[i],
+                i < numToMint[0] ? 0 : 1,
+                0,
+                [uint256(100), uint256(100)]
+            );
+        }
+```
+
+The DNA is treated the same as champions when it should be set to the fighterType.
+
+## Recommended Mitigation Steps
+
+Consider updating the claimFighters function to:
+
+```solidity
+        for (uint16 i = 0; i < totalToMint; i++) {
+            _createNewFighter(
+                msg.sender, 
+                i < numToMint[0] ? uint256(keccak256(abi.encode(msg.sender, fighters.length))) : 1,
+                modelHashes[i], 
+                modelTypes[i],
+                i < numToMint[0] ? 0 : 1,
+                0,
+                [uint256(100), uint256(100)]
+            );
+        }
+```
+
+## [L-10] GameItems breaks ERC1155 specifications
+
+## Impact
+
+GameItems breaks [ERC1155](https://eips.ethereum.org/EIPS/eip-1155) specifications.
+
+## Description
+
+GameItems implements the setTokenURI function to update the URI:
+
+```solidity
+    function setTokenURI(uint256 tokenId, string memory _tokenURI) public {
+        require(isAdmin[msg.sender]);
+        _tokenURIs[tokenId] = _tokenURI;
+    }
+```
+
+Whenever there is a URI update, the standard requires emitting an event: 
+
+> MUST emit when the URI is updated for a token ID.
+
+Thus, by not emitting an event, GameItems contract does not adhere to ERC1155.
+
+## Recommended Mitigation Steps
+
+Consider emitting an event whenever there is a URI update.
+
+## [L-11] Users can bypass GameItems allowances using mutiple addresses
+
+## Impact
+
+GameItems contract can be exploited by utilizing multiple addresses to mint unlimited items, thus bypassing the intended allowances system.
+
+## Description
+
+The GameItems contract incorporates an allowances mechanism designed to restrict users from instantly minting all available items. Each user is allocated a daily allowance for each game item, which can be replenished daily. For instance, if the daily allowance for a specific game item is set to 5, each user is entitled to acquire up to 5 items daily. However, the issue arises when users exploit this system by utilizing multiple addresses, allowing them to circumvent the imposed limitations and mint any desired quantity of items.
+
+## Recommended Mitigation Steps
+
+Consider implementing a whitelist of authorized addresses that are permitted to purchase items. By doing so, users will be required to utilize authenticated addresses, mitigating the ability to create random addresses for purchasing items.
+
+## [L-12] User nft may be stuck when all his amountStaked is slashed
+
+## Impact
+
+When all of a fighter's staked amount is slashed, they are unable to transfer their NFT, even if they are no longer staking.
+
+## Description
+
+In the RankedBattle contract, the function updateFighterStaking is called when fighters stake NRN tokens:
+
+```solidity
+    function updateFighterStaking(uint256 tokenId, bool stakingStatus) external {
+        require(hasStakerRole[msg.sender]);
+        fighterStaked[tokenId] = stakingStatus;
+        if (stakingStatus) {
+            emit Locked(tokenId);
+        } else {
+            emit Unlocked(tokenId);
+        }
+    }
+```
+
+The fighter's staking status is set to true to prevent them from transferring their NFTs while staking. When they unstake and their amountStaked reaches 0, updateFighterStaking is called again to set the status to false.
+
+However, the RankedBattle contract implements a mechanism to slash losers:
+
+```solidity
+            } else {
+                bool success = _neuronInstance.transfer(_stakeAtRiskAddress, curStakeAtRisk);
+                if (success) {
+                    _stakeAtRiskInstance.updateAtRiskRecords(curStakeAtRisk, tokenId, fighterOwner);
+                    amountStaked[tokenId] -= curStakeAtRisk;
+                }
+```
+
+The issue arises when all of the fighter's amountStaked is slashed. In this case, updateFighterStaking is not called, leaving the fighter's NFT stuck and unable to be transferred.
+
+## Recommended Mitigation Steps
+
+Consider checking if amountStaked is 0 and call updateFighterStaking accordingly:
+
+```solidity
+            } else {
+                bool success = _neuronInstance.transfer(_stakeAtRiskAddress, curStakeAtRisk);
+                if (success) {
+                    _stakeAtRiskInstance.updateAtRiskRecords(curStakeAtRisk, tokenId, fighterOwner);
+                    amountStaked[tokenId] -= curStakeAtRisk;
+                    if (amountStaked[tokenId] == 0) {
+                        _fighterFarmInstance.updateFighterStaking(tokenId, false);
+                    }   
+                }
+```
+
+## [L-13] Inability to remove staker role in the FighterFarm contract
+
+## Impact
+
+Inability to remove staker role in the FighterFarm contract.
+
+## Description
+
+The hasStakerRole mapping keeps track of addresses allowed to stake fighters. New addresses get added by the contract owner using this function:
+
+```solidity
+    function addStaker(address newStaker) external {
+        require(msg.sender == _ownerAddress);
+        hasStakerRole[newStaker] = true;
+    }
+```
+
+Once added, they gain access to the updateFighterStaking function. However, there's a flaw: once added, a newStaker can't be removed.
+
+## Recommended Mitigation Steps
+
+Consider updating the addStaker function like this:
+
+```solidity
+    function addStaker(address newStaker, bool staker) external {
+        require(msg.sender == _ownerAddress);
+        hasStakerRole[newStaker] = staker;
+    }
+```
