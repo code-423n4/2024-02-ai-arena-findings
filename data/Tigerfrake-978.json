@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Tigerfrake",
+  "risk": "2",
+  "title": "Possible DoS due to OOG in Neuron::setupAirdrop() ",
+  "issueId": 978,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/978"
+}
