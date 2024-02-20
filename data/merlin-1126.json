@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "merlin",
+  "risk": "2",
+  "title": "DOS of the stakeNRN function caused by calling unstakeNRN first in the round",
+  "issueId": 1126,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1126"
+}
