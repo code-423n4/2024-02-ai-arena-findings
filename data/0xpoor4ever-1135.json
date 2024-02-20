@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xpoor4ever",
+  "risk": "3",
+  "title": "The untransferable item can be transferred via safeBatchTransferFrom()",
+  "issueId": 1135,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1135"
+}
