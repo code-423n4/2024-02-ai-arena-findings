@@ -19,7 +19,7 @@
 | [QA&#x2011;16](#QA&#x2011;16) | `VoltageManager.spendVoltage()` can be called by the player.
 | [QA&#x2011;17](#QA&#x2011;17) | Use a `constant` for `NRN` decimals
 | [QA&#x2011;18](#QA&#x2011;18) | Staked `NRN` on a fighter can be lost when NFT is transferred to another address
-
+| [QA&#x2011;19](#QA&#x2011;19) | `MergingPool.pickWinner()` is susceptible to manual mistake calls
 
 ### <a href="#qa-summary">[QA&#x2011;1]</a><a name="QA&#x2011;1"> Max rerolls can be increased until max `uint8`
 
@@ -541,3 +541,30 @@ https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/RankedBattle.sol#L1
 
 When transferring the NFT fighter to a different address via `FighterFarm.transferFrom()` or `FighterFarm.safeTransferFrom()`, the staked will not transfer to the previous owner.
 There should be a warning regarding this when transferring NFT fighters.
+
+
+
+### <a href="#qa-summary">[QA&#x2011;19]</a><a name="QA&#x2011;19"> `MergingPool.pickWinner()` is susceptible to manual mistake calls
+
+`MergingPool.pickWinner()` is a used by an admin to manually call the function in order to pick winners for the current round.
+When the winners are picked, each of the winner's points are deducted to 0 value and then the `roundId` is increased by 1.
+
+```solidity
+
+roundId += 1;
+
+```
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/MergingPool.sol#L131
+
+Since this is function is called manually by an admin, there is a possibly where an admin may mistakenly call it twice and as a result there will be no way to revert the selection of winners since the `roundId` is increased by 1 and there is no way to decrease it by 1 in the `MergingPool` contract.
+
+```solidity
+
+winnerAddresses[roundId] = currentWinnerAddresses;
+        isSelectionComplete[roundId] = true;
+        roundId += 1;
+
+```
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/MergingPool.sol#L129-L131
