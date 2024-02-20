@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xCiphky",
+  "risk": "2",
+  "title": "Failed Transfer Causes Round Discrepancy and Lost Stakes When Setting New Round",
+  "issueId": 935,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/935"
+}
