@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "KmanOfficial",
+  "risk": "2",
+  "title": "If unstakeNRN() is called with an amount of zero and there is more than 0 NRN tokens staked with a fighter nft, the user can no longer stake anymore NRN despite the end result being zero assets unstaked for the current round.",
+  "issueId": 1240,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1240"
+}
