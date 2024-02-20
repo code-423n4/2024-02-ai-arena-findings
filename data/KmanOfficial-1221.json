@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "KmanOfficial",
+  "risk": "2",
+  "title": "User can avoid losing points or having initially staked NRN put at risk in a battle by removing their NRN stake whilst their NFT is in the middle of a battle on the game server just before the results are posted to the blockchain.",
+  "issueId": 1221,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1221"
+}
