@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "YouCrossTheLineAlfie",
+  "risk": "2",
+  "title": "The calculation of (`curStakeAtRisk`)[https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/RankedBattle.sol#L439] results in unwanted loss of staked NRNs.",
+  "issueId": 1133,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1133"
+}
