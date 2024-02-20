@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "FastChecker",
+  "risk": "2",
+  "title": "`FighterFarm.sol#function claimFighter()` creates only `fighters` with `iconstype = 0`. `FighterFarm.sol#function claimFighters()` creates only `fighters` with `iconstype=0`. So using`function claimFighters()` will cause players to only create ‘fighters’ with the same type.",
+  "issueId": 1110,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1110"
+}
