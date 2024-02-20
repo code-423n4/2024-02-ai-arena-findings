@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "petro_1912",
+  "risk": "3",
+  "title": "Points calculation uses incorrect accuracy, so it can cause significant loss in terms of staked amount. ",
+  "issueId": 1002,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1002"
+}
