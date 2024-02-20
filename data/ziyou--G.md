@@ -105,4 +105,4 @@ After making changes
 [PASS] testgetUnclaimedNRN() (gas: 963070)
 [PASS] testUpdateBattleRecordPlayerLossBattle() (gas: 854430)
 [PASS] testUpdateBattleRecordPlayerTiedBattle() (gas: 754173)
-[PASS] testUpdateBattleRecordPlayerWonBattle() (gas: 958705)
+[PASS] testUpdateBattleRecordPlayerWonBattle() (gas: 958705).
