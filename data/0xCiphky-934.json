@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xCiphky",
+  "risk": "2",
+  "title": "Incorrect Sequence in UnstakeNRN Causes NRN Loss on Failed Transfers",
+  "issueId": 934,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/934"
+}
