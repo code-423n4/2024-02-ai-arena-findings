@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "foxb868",
+  "risk": "2",
+  "title": "State change before external call risks reentrancy, draining funds.",
+  "issueId": 1147,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1147"
+}
