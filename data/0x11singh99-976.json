@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0x11singh99",
+  "risk": "2",
+  "title": "In `VoltageManager::useVoltageBattery` function if owner's previous voltage is **1-99** then they will be lost and overwritten by new 100 voltage.",
+  "issueId": 976,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/976"
+}
