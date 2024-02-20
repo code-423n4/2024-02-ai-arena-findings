@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "FastChecker",
+  "risk": "3",
+  "title": "There is no slippage control in the `AiArenaHelper.sol#dnaToIndex` function.",
+  "issueId": 1106,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1106"
+}
