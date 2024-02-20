@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0x11singh99",
+  "risk": "2",
+  "title": "Crucial Even emitting missing in `GameItems::createGameItem` while adding `GameItemAttributes` to `allGameItemAttributes` array when `transferable` is true.",
+  "issueId": 960,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/960"
+}
