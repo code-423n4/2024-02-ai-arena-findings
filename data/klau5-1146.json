@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "klau5",
+  "risk": "2",
+  "title": "Race conditions can occur during game execution and result processing. NFTs can be transferred and consume victim's voltage or give a loss penalty to victim",
+  "issueId": 1146,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1146"
+}
