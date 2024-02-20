@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "klau5",
+  "risk": "2",
+  "title": "Voltage limit and item purchase limit per day don't work since 2106 because timestamp is cast to uint32",
+  "issueId": 1168,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1168"
+}
