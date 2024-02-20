@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Krace",
+  "risk": "3",
+  "title": "Permanent DoS in `_createFighterBase` when the generation is greater than zero",
+  "issueId": 1052,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1052"
+}
