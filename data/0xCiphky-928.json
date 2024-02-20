@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xCiphky",
+  "risk": "2",
+  "title": "globalStakedAmount Invariant Violation Due to Missing Stake Updates",
+  "issueId": 928,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/928"
+}
