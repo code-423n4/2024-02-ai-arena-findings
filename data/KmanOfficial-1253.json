@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "KmanOfficial",
+  "risk": "2",
+  "title": "Add Chain ID to msg_hash/signature verification when claiming fighters to stop replay attacks in the event that the game/protocol is deployed on another chain in the future",
+  "issueId": 1253,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1253"
+}
