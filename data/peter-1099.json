@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "peter",
+  "risk": "2",
+  "title": "Malicious actors can abuse 'MAX_FIGHTERS_ALLOWED' rule to prevent users from receiving or minting new fighters",
+  "issueId": 1099,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1099"
+}
