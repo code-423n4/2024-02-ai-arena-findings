@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "forkforkdog",
+  "risk": "2",
+  "title": "RUG VECTOR: updatable Neuron token contract address in RankedBattle allows to steal all staked tokens",
+  "issueId": 1070,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1070"
+}
