@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Bube",
+  "risk": "3",
+  "title": "User with `STAKER_ROLE` could approve large amounts of tokens ",
+  "issueId": 1241,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1241"
+}
