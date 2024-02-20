@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "_eperezok",
+  "risk": "2",
+  "title": "Fighters can have arbitrary `weight` and `element` attributes when minting through the `MergingPool`",
+  "issueId": 1252,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1252"
+}
