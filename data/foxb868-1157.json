@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "foxb868",
+  "risk": "2",
+  "title": "Unchecked stake sizes allow draining NRN supply, crashing value.",
+  "issueId": 1157,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1157"
+}
