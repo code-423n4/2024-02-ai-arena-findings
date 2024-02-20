@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "dharma09",
+  "risk": "2",
+  "title": "safeTransferFrom does not comply with the ERC1155 standard",
+  "issueId": 1076,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1076"
+}
