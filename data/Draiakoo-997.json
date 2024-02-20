@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Draiakoo",
+  "risk": "3",
+  "title": "The result of a battle can be frontrunned to make an `updateBattleRecord` revert",
+  "issueId": 997,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/997"
+}
