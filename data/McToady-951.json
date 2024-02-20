@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "McToady",
+  "risk": "2",
+  "title": "When a winner calls `MergingPool::claimRewards` there are no limitations on their custom attributes",
+  "issueId": 951,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/951"
+}
