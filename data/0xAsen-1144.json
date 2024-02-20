@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xAsen",
+  "risk": "3",
+  "title": "In redeemMintPass() - a user can mint whatever type of fighter he wants, regardless of the mint pass type",
+  "issueId": 1144,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1144"
+}
