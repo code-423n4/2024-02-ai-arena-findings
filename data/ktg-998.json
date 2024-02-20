@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "ktg",
+  "risk": "2",
+  "title": "Stake and unstake could be front run to gain more points or reduce the points deducted",
+  "issueId": 998,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/998"
+}
