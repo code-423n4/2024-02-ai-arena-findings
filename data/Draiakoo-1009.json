@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Draiakoo",
+  "risk": "2",
+  "title": "Calling `MergingPool::claimRewards` only works for 2 rounds due to error in code",
+  "issueId": 1009,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1009"
+}
