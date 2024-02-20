@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "ladboy233",
+  "risk": "2",
+  "title": "first time when user claim the reward, he has to pay a lot of gas and this can even DoS user claim and make transaction run out of gas",
+  "issueId": 1222,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1222"
+}
