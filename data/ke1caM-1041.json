@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "ke1caM",
+  "risk": "2",
+  "title": "`reRoll` function uses most recent generation to get physical attributes but does not update the generation itself.",
+  "issueId": 1041,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1041"
+}
