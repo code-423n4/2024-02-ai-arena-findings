@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xabhay",
+  "risk": "3",
+  "title": "Array Initialization Out-of-Bounds Access in `MergingPool.sol::getFighterPoints` Function",
+  "issueId": 970,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/970"
+}
