@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "BigVeezus",
+  "risk": "2",
+  "title": "## [M-4] `numToMint` parameter in `FighterFarm::claimFighters` function could be used to potentially mint alot of tokens and can cause DOS attack",
+  "issueId": 1055,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1055"
+}
