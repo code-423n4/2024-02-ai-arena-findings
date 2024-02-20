@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "BigVeezus",
+  "risk": "2",
+  "title": "Functions could lead to a possible DOS attack and use alot of gas if user attempts to claim alot of rounds",
+  "issueId": 1020,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1020"
+}
