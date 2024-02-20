@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "merlinboii",
+  "risk": "3",
+  "title": "The overload `ERC721::safeTransferFrom()` can bypass the transfer of staking fighters",
+  "issueId": 1084,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1084"
+}
