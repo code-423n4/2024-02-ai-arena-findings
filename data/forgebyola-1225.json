@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "forgebyola",
+  "risk": "2",
+  "title": "RankedBattle.setNewRound would fail in certain scenarios preventing new rounds from being started.",
+  "issueId": 1225,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1225"
+}
