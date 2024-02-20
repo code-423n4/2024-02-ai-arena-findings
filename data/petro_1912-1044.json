@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "petro_1912",
+  "risk": "3",
+  "title": "approveSpender and approveStaker can act like airdrops due to their lack of owner parameter verification.",
+  "issueId": 1044,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1044"
+}
