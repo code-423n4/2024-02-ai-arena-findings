@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Draiakoo",
+  "risk": "2",
+  "title": "`MergingPool::getFighterPoints` does not work as intended",
+  "issueId": 1016,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1016"
+}
