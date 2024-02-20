@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Draiakoo",
+  "risk": "3",
+  "title": "Players that started playing long time after the protocol started will NOT be able to call `RankedBattle::claimNRN()` nor `MergingPool::claimRewards()`",
+  "issueId": 999,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/999"
+}
