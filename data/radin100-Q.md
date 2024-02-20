@@ -70,6 +70,11 @@ https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223
 https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/AiArenaHelper.sol#L41-L52
 https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/AiArenaHelper.sol#L131-L139
 
+## [L-4] 'FighterFarm.sol::getFighterPoints' will always revert if there is more than 1 fighter in 'FighterFarm.sol::fighterPoints' array and maxId passed is more than 1 too, because new uint256[] points has permanent length of 1 given
+ 
+### Code Snipped:
+https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/MergingPool.sol#L205C5-L211C6
+
 ## [NC-1] 'FighterOps.sol::viewFighterInfo' could return wrong owner
 ### Poc
 Scenario:
