@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Aymen0909",
+  "risk": "3",
+  "title": "Game Item Transferability Check can be bypassed via `safeBatchTransferFrom`",
+  "issueId": 1254,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1254"
+}
