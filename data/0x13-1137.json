@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0x13",
+  "risk": "2",
+  "title": "Function ERC721::safeTransferFrom() is not overrided in the contract FighterFarm",
+  "issueId": 1137,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1137"
+}
