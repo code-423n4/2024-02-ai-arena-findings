@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "forkforkdog",
+  "risk": "2",
+  "title": "Bad source of randomness in FighterFarm:reRoll() allows user to get unfair advantage in the game",
+  "issueId": 1048,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1048"
+}
