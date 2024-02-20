@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "AlexCzm",
+  "risk": "2",
+  "title": "Users may be unable to claimNRN() rewards due to looping over unbounded roundId",
+  "issueId": 1142,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1142"
+}
