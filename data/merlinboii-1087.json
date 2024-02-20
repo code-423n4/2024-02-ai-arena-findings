@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "merlinboii",
+  "risk": "3",
+  "title": "The `UNSTAKED` fighters can have a staking balance, bypassing the condition check in staking and fighter transfer verification.",
+  "issueId": 1087,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1087"
+}
