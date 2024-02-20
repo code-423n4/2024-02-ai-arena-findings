@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "zhanmingjing",
+  "risk": "3",
+  "title": "a StakerRole user could set staking status of other users' tokens",
+  "issueId": 1025,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1025"
+}
