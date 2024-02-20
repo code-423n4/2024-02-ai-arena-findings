@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "ziyou-",
+  "risk": "2",
+  "title": "The function mint() lacks a check for the quantity parameter",
+  "issueId": 940,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/940"
+}
