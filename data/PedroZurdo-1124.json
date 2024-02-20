@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "PedroZurdo",
+  "risk": "3",
+  "title": "Missing override of the safeBatchTransferFrom of the ERC1155 Openzeppelin contract cause a bypass of the business logic",
+  "issueId": 1124,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1124"
+}
