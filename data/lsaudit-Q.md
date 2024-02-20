@@ -319,7 +319,7 @@ The same line is inside `adjustAdminAccess()` function:
 ```
 
 To improve the code quality, it would be much better idea to implement a single modifier, which can be used both for `transferOwnership()` and `adjustAdminAccess()` functions.
-This issue occurs across the whole code-base. E.g., in `AAMintPass.sol`, multiple of functions check: `require(msg.sender == founderAddress);`.
+This issue occurs across the whole code-base. E.g., in `RankedBattle.sol`, multiple of functions check: `require(msg.sender == _ownerAddress);`.
 To make the QA report clear and easy to read - we decided to report this as an overall issue, without listing all the affected instances.
 Our recommendation is to run `grep require  -ri . | grep "msg.sender =="` over the whole code-base (it returns 46 instances) and consider implement modifier for those results.
 
@@ -462,3 +462,51 @@ The QA report contains the list of functions which do not emit events
 73:     function adjustAdminAccess(address adminAddress, bool access) external { 
 82:     function adjustAllowedVoltageSpenders(address allowedVoltageSpender, bool allowed) external {
 ```
+
+# [17] Use `_grantRole()` instead of deprecated `_setupRole()`
+
+**File:** `Neuron.sol`
+
+
+According to OZ's `AccessControl` implementation, function `_setupRole()` is deprecated:
+
+```
+* NOTE: This function is deprecated in favor of {_grantRole}.
+```
+
+However, `Neuron.sol` uses it in multiple of functions.
+
+Our recommendation is to use `_grantRole()` in the below instances:
+
+[File: src/Neuron.sol](https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/Neuron.sol#L93)
+```solidity
+093:     function addMinter(address newMinterAddress) external {
+094:         require(msg.sender == _ownerAddress);
+095:         _setupRole(MINTER_ROLE, newMinterAddress);
+096:     }
+[...]
+101:     function addStaker(address newStakerAddress) external {
+102:         require(msg.sender == _ownerAddress);
+103:         _setupRole(STAKER_ROLE, newStakerAddress);
+104:     }
+[...]
+109:     function addSpender(address newSpenderAddress) external {
+110:         require(msg.sender == _ownerAddress);
+111:         _setupRole(SPENDER_ROLE, newSpenderAddress);
+112:     }
+```
+
+
+# [18] Use `uint256` instead of `uint`
+
+**File:** `RankedBattle.sol`
+
+Even though `uint` is a shorter form of `uint256` - using `uint256` increases the code readability. 
+We have detected that `uint256` is used across the whole code-base. The only exception was noticed in the below instance:
+
+
+[File: src/RankedBattle.sol](https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/RankedBattle.sol#L19)
+```solidity
+19:     using FixedPointMathLib for uint;
+```
+
