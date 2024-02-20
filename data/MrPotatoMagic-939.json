@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "MrPotatoMagic",
+  "risk": "3",
+  "title": "Missing validation in redeemMintPass() allows gamer to obtain any fighter type and custom attributes",
+  "issueId": 939,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/939"
+}
