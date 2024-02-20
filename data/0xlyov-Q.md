@@ -21,3 +21,16 @@ https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/GameItems.sol#L164-
 https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/Neuron.sol#L139-L142
 https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/Neuron.sol#L197-L200
 
+## Recommended Mitigation Steps
+Consider deleting redundant checks.
+
+# [03] Redundant function 
+
+## Impact
+In the `AiArenaHelper` contract the admin can set attribute probabilities using the `addAttributeProbabilities` and remove the probabilities using the `deleteAttributeProbabilities`. However, the second function is redundant because the admin can just use the first function to set the probabilities to 0.
+
+## Lines of code
+https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/AiArenaHelper.sol#L131-L151
+
+## Recommended Mitigation Steps
+Remove the deleteAttributeProbabilities function and instead use the addAttributeProbabilities function by putting 0 in the `probabilities` argument to the function.
