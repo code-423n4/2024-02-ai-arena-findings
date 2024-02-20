@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "petro_1912",
+  "risk": "2",
+  "title": "When rerolling a fighter, fighterType - dendroidBool is not represented correctly.",
+  "issueId": 972,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/972"
+}
