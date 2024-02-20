@@ -1,4 +1,4 @@
-[QA-1] - ClaimNRN will revert when everybody send their 100% points to the Merging Pool
+# [L-1] - ClaimNRN will revert when everybody send their 100% points to the Merging Pool
 
 ```solidity
 function claimNRN() external {
@@ -52,7 +52,7 @@ claimableNRN +=(accumulatedPointsPerAddress[msg.sender][currentRound] * nrnDistr
 ```
 
 
-[QA-2] - Check-Effect-Interaction is not followed properly in `RankedBattle.sol::stakeNRN()` function properly
+# [L-2] - Check-Effect-Interaction is not followed properly in `RankedBattle.sol::stakeNRN()` function properly
 
 ```solidity
  function unstakeNRN(uint256 amount, uint256 tokenId) external {
@@ -78,7 +78,7 @@ claimableNRN +=(accumulatedPointsPerAddress[msg.sender][currentRound] * nrnDistr
     }
 ```
 
-[QA-3] - Check-Effect-Interaction is not followed properly in `StakeAtRisk.sol::reclaimNRN()` function properly which could lead to re-entrancy if the game server is hacked or compromised.
+# [L-3] - Check-Effect-Interaction is not followed properly in `StakeAtRisk.sol::reclaimNRN()` function properly which could lead to re-entrancy if the game server is hacked or compromised.
 
 In `RankedBattle.sol::updateBattleRecord()` function is calling ``_addResultPoints()` internally which is further calling `reclaimNRN()` in Case 2) Win + stake-at-risk = Reclaim some of the stake that is at risk.
 
@@ -111,7 +111,7 @@ Now the reclaimNRN is not actually following CEI if you see
 
 So there could be a chance of unfair advantage here.
 
-[QA-4] - `GameItems.sol::remainingSupply()` function will return value of `itemsRemaining` everytime it is called for infinite supply gameItem type.
+# [L-4] - `GameItems.sol::remainingSupply()` function will return value of `itemsRemaining` everytime it is called for infinite supply gameItem type.
 
 The function `remainingSupply()` returns the remaining supply of a game item with the specified tokenId which is taken from the i/p of `createGameItem()` while creating the gameItem.
 
@@ -130,7 +130,7 @@ It is updated in `mint()` function but with a condition of a finite supply type 
             }
 ```
 
-[NC-1] - `_addResultPoints()` has redundant code block.
+# [NC-1] - `_addResultPoints()` has redundant code block.
 
 In Case 3) Lose + positive point balance = Deduct from the point balance
                 /// If the fighter has a positive point balance for this round, deduct points
