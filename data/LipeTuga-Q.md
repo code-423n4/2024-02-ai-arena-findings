@@ -23,3 +23,58 @@ Additionally, incomplete documentation can lead to developer errors, further com
 2. **Correct Documentation**: Update the NatSpec comments to include the missing `@param iconsTypes` documentation. This ensures clarity and completeness in the function's interface specification, aiding developers in the correct usage of the function.
 
 3. **Comprehensive Testing**: Implement additional unit tests and integration tests that specifically test edge cases related to array length mismatches. This should include scenarios where the `iconsTypes` array length is both less than and greater than the lengths of other input arrays.
+
+The following diff shows the required changes to ensure that the `redeemMintPass` function correctly checks the length of all input arrays, including `iconsTypes`, to mitigate the identified vulnerability.
+
+```diff
+    /// @notice Burns multiple mint passes in exchange for fighter NFTs.
+    /// @dev This function requires the length of all input arrays to be equal.
+    /// @dev Each input array must correspond to the same index, i.e., the first element in each 
+    /// array belongs to the same mint pass, and so on.
+    /// @param mintpassIdsToBurn Array of mint pass IDs to be burned for each fighter to be minted.
+    /// @param mintPassDnas Array of DNA strings of the mint passes to be minted as fighters.
+    /// @param fighterTypes Array of fighter types corresponding to the fighters being minted.
++   /// @param iconTypes Array of icon types corresponding to the fighters being minted
+    /// @param modelHashes Array of ML model hashes corresponding to the fighters being minted. 
+    /// @param modelTypes Array of ML model types corresponding to the fighters being minted.
+function redeemMintPass(
+    uint256[] calldata mintpassIdsToBurn,
+    uint8[] calldata fighterTypes,
+    uint8[] calldata iconsTypes,
+    string[] calldata mintPassDnas,
+    string[] calldata modelHashes,
+    string[] calldata modelTypes
+) external {
+-   require(
+-       mintpassIdsToBurn.length == mintPassDnas.length &&
+-           mintPassDnas.length == fighterTypes.length &&
+-           fighterTypes.length == modelHashes.length &&
+-           modelHashes.length == modelTypes.length,
+-       "Array lengths mismatch"
+-   );
++   uint256 arrayLength = mintpassIdsToBurn.length;
++   require(
++       arrayLength == mintPassDnas.length &&
++       arrayLength == fighterTypes.length &&
++       arrayLength == iconsTypes.length && // Include missing check
++       arrayLength == modelHashes.length &&
++       arrayLength == modelTypes.length,
++       "Array lengths mismatch"
++   );
+
+    for (uint16 i = 0; i < mintpassIdsToBurn.length; i++) {
+        require(
+            msg.sender == _mintpassInstance.ownerOf(mintpassIdsToBurn[i])
+        );
+        _mintpassInstance.burn(mintpassIdsToBurn[i]);
+        _createNewFighter(
+            msg.sender,
+            uint256(keccak256(abi.encode(mintPassDnas[i]))),
+            modelHashes[i],
+            modelTypes[i],
+            fighterTypes[i],
+            iconsTypes[i],
+            [uint256(100), uint256(100)]
+        );
+    }
+}
