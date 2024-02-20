@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "petro_1912",
+  "risk": "2",
+  "title": "Lack of validation for `customAttributes` may result in incorrect fighters being lighter or heavier than those provided by the protocol.",
+  "issueId": 1131,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1131"
+}
