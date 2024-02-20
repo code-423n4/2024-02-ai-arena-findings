@@ -135,6 +135,25 @@ Consider adding a require check for `tokenId` to every function that takes a `to
     require(doesTokenExist(tokenId), "Token ID does not exist");
 ```
 
+## [L-06] `FighterFarm::reRoll()` is not callable due to an error in parameter types
+
+### Relevant Github Links
+https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/FighterFarm.sol#L370
+
+### Details
+Throughout the entire protocol code base, `tokenId` is of type `uint256` but the `reRoll()` function, which allows a user to re-roll one of their NFT fighters into a new one, takes the `tokenId` as a `uint8`. It's very unlikely a user will be able to successfully call this function given that the tokenId value needs to be within 0-255.
+
+### Impact
+Users will not be able to re-roll a new fighter NFT, leaving them stuck with the current fighters they have.
+
+### Recommended Mitigation Steps
+Consider changing the type of `tokenId` to a uint256
+
+```diff
+-    function reRoll(uint8 tokenId, uint8 fighterType) public {
++    function reRoll(uint256 tokenId, uint8 fighterType) public {
+```
+
 ## Informational Findings
 
 ## [I-01] Incorrect mapping notice in `MergingPool.sol`
