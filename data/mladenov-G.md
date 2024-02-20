@@ -1,12 +1,15 @@
-# [G-01] The redeemMintPass function can be executed with more than 10 mint pass IDs
+# [G-01] The `redeemMintPass` function can be executed with more than 10 mint pass IDs
 
 ### Description
 
-User is able to call `FighterFarm.sol::redeemMintPass` function with more than 10 ids in `mintpassIdsToBurn` array. The function will revert since there's a check in `FighterFarm.sol::_createNewFighter` for how many NFTs user can mint, but user will pay high gas fees.
+User is able to call `redeemMintPass` function with more than 10 ids in `mintpassIdsToBurn` array. The function will revert since there's a check in `_createNewFighter` for how many NFTs user can mint, but user will pay high gas fees.
 
 According to the EVM documentation no matter regardless of whether a transaction succeeds or fails user will pay gas fees.
 
 `The gas fee is the amount of gas used to do some operation, multiplied by the cost per unit gas. The fee is paid regardless of whether a transaction succeeds or fails.`
+
+### Context
+[FighterFarm.sol#L233](https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/FighterFarm.sol#L233)
 
 ### Recommendtaion
 Add a require statement to check how many mint passes the user wants to redeem. This way, if the user tries to redeem more than 10 mint passes, the function will revert, and the user will pay less gas.
@@ -56,6 +59,11 @@ function redeemMintPass(
 
 ### Description
 Since we **don't** use `recipients.length` multiple times in the `setupAirdrop` function, it's cheaper to use `recipients.length` directly in the for loop without creating a separate variable. This way, the execution of the function will be cheaper.
+
+### Context
+
+[Neuron.sol#L127](https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/Neuron.sol#L127)
+
 ### Recommendtaion
 Use `recipients.length` directly in for loop
 ```javascript
