@@ -37,3 +37,5 @@ Consider to replace the amount of transferred NRN from `_sweepLostStake` functio
 +       return _neuronInstance.transfer(treasuryAddress, totalBalance);
     }
 ```
+
+The protocol designed to always sweep the lost stake at `StakeAtRisk` contract before every new round. So it does not need to check only the completed round's lost stake as every new round the `StakeAtRisk` balance should be 0.
