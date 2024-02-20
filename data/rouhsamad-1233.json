@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "rouhsamad",
+  "risk": "3",
+  "title": "a reentrancy in MergingPool::claimRewards allows an address to claim more Fighters than intended",
+  "issueId": 1233,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1233"
+}
