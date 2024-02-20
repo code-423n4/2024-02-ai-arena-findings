@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "offside0011",
+  "risk": "2",
+  "title": "Incorrect implementation of adding two uint8 to a target uint16",
+  "issueId": 959,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/959"
+}
