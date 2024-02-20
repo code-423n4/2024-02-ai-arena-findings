@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "SUPERMAN_I4G",
+  "risk": "2",
+  "title": "claimRewards (in mergingPool) does not check if array length matches the no of rounds to claim which could lead to minting unwanted/unexpected NFT fighter.",
+  "issueId": 1189,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1189"
+}
