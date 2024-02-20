@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "ke1caM",
+  "risk": "3",
+  "title": "The user's fighter NFT can have a positive `amountStaked` and not be staked in the `FighterFarm` contract.",
+  "issueId": 1031,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1031"
+}
