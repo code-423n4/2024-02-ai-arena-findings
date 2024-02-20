@@ -1,0 +1,1 @@
+https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/FighterFarm.sol#L147
