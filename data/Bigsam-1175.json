@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Bigsam",
+  "risk": "3",
+  "title": "SetupAirdrop function does not have a require check to keep the amounts within the required Treasury balance thus based on the test Admin can send excess funds as airdrop then neccessary",
+  "issueId": 1175,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1175"
+}
