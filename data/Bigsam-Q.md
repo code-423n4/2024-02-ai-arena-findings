@@ -1,5 +1,24 @@
 1. # Lines of code
 
+https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/AiArenaHelper.sol#L169-L186
+
+
+# Vulnerability details
+
+it's a good practice to handle the situation where the loop never breaks the condition to ensure that attributeProbabilityIndex gets a meaningful value.
+When such conditions arises attributeProbabilityindex is not set and function createPhysicalAttributes depends on this value
+
+ uint256 attributeIndex = dnaToIndex(generation, rarityRank, attributes[i]);
+                    finalAttributeProbabilityIndexes[i] = attributeIndex;
+
+No attributeProbabilityindex , no phsyical attributes can be created.
+If cumProb is always less than rarityRank for all iterations of the loop, it means that the loop never encounters a condition where cumProb becomes greater than or equal to rarityRank. In this case, the attributeProbabilityIndex will remain unset or be the default value (zero for an uninitialized uint256 variable).
+
+Solution: a value can be set to handle the situation after the loop.
+
+
+2. # Lines of code
+
 https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/AiArenaHelper.sol#L68-L76
 
 
@@ -14,7 +33,7 @@ introduction of a maxAttributeDivisor value  with a constant representing the ma
 
 A nested loop to check and ensure that each individual AttributeDivisor values do not surpass the specified maximum value.
 
-2. # Lines of code
+3. # Lines of code
 
 https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/AiArenaHelper.sol#L131-L138
 
