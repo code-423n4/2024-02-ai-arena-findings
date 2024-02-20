@@ -46,7 +46,7 @@ The `_neuronInstance::transfer` or `_neuronInstance::transferFrom` function alwa
 <details>
 
 <summary>
-There are three instances which only consider the `success` case but not the `failure` case:
+There are 5 instances which only consider the `success` case but not the `failure` case:
 
 </summary>
 
@@ -128,6 +128,57 @@ function _addResultPoints(
 
             }
         }
+    }
+}
+```
+
+#
+
+`FighterFarm::reRoll` function ( https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/FighterFarm.sol#L370 ):
+
+```solidity
+function reRoll(uint8 tokenId, uint8 fighterType) public {
+    require(msg.sender == ownerOf(tokenId));
+    require(numRerolls[tokenId] < maxRerollsAllowed[fighterType]);
+    require(_neuronInstance.balanceOf(msg.sender) >= rerollCost, "Not enough NRN for reroll");
+
+    _neuronInstance.approveSpender(msg.sender, rerollCost);
+@-> bool success = _neuronInstance.transferFrom(msg.sender, treasuryAddress, rerollCost);
+    if (success) {
+        numRerolls[tokenId] += 1;
+        uint256 dna = uint256(keccak256(abi.encode(msg.sender, tokenId, numRerolls[tokenId])));
+        (uint256 element, uint256 weight, uint256 newDna) = _createFighterBase(dna, fighterType);
+        fighters[tokenId].element = element;
+        fighters[tokenId].weight = weight;
+        fighters[tokenId].physicalAttributes = _aiArenaHelperInstance.createPhysicalAttributes(
+            newDna,
+            generation[fighterType],
+            fighters[tokenId].iconsType,
+            fighters[tokenId].dendroidBool
+        );
+        _tokenURIs[tokenId] = "";
+    }
+}
+```
+
+#
+
+`StakeAtRisk::reclaimNRN` function ( https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/StakeAtRisk.sol#L93 ):
+
+```solidity
+function reclaimNRN(uint256 nrnToReclaim, uint256 fighterId, address fighterOwner) external {
+    require(msg.sender == _rankedBattleAddress, "Call must be from RankedBattle contract");
+    require(
+        stakeAtRisk[roundId][fighterId] >= nrnToReclaim,
+        "Fighter does not have enough stake at risk"
+    );
+
+@-> bool success = _neuronInstance.transfer(_rankedBattleAddress, nrnToReclaim);
+    if (success) {
+        stakeAtRisk[roundId][fighterId] -= nrnToReclaim;
+        totalStakeAtRisk[roundId] -= nrnToReclaim;
+        amountLost[fighterOwner] -= nrnToReclaim;
+        emit ReclaimedStake(fighterId, nrnToReclaim);
     }
 }
 ```
