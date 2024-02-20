@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Krace",
+  "risk": "3",
+  "title": "Items marked as un-transferable can still be transferred using the `ERC1155.safeBatchTransferFrom` function",
+  "issueId": 966,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/966"
+}
