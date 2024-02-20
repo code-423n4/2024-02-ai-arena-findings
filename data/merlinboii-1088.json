@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "merlinboii",
+  "risk": "3",
+  "title": "Modulo zero revert on `FighterFarm::_createNewFighter()` for the next generations of fighters.",
+  "issueId": 1088,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1088"
+}
