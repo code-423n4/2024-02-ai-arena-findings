@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Krace",
+  "risk": "2",
+  "title": "`getFighterPoints` will consistently revert if the `maxId` is greater than ONE because the length of `points` is erroneously set to ONE.",
+  "issueId": 947,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/947"
+}
