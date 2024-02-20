@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "PedroZurdo",
+  "risk": "2",
+  "title": "Missing check of the allowanceRemaining when transferring ERC1155 token",
+  "issueId": 1122,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1122"
+}
