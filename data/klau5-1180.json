@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "klau5",
+  "risk": "2",
+  "title": "mintFromMergingPool: There is no validation for customAttributes values, so user can set invalid weights or elements",
+  "issueId": 1180,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1180"
+}
