@@ -10,9 +10,15 @@ https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223
 
 The updateWinnersPerPeriod function allows setting the winnersPerPeriod variable to zero, which can lead to issues in the contract logic.
 
-3. Functions allows duplication of addresses
+3. Functions allow duplication of addresses
 https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/Neuron.sol#L93C2-L112C6
 
 The addMinter, addStaker, and addSpender functions allow duplicate entries for the same address in their respective role.
 
 However, there is no check to prevent adding the same address multiple times. For example, calling addMinter(0x123) twice would add that address as a minter two times.
+
+4. Functions allow adding zero address to roles
+https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/Neuron.sol#L93C2-L112C6
+
+The addMinter, addStaker, and addSpender functions allow adding zero address. There should be a check against this.
+
