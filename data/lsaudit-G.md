@@ -438,8 +438,8 @@ When we found that `claimer == winnerAddresses[currentRound][j]` in loop at line
 
 ## Use `_grantRole()` instead of `_setupRole()`.
 
-Since, according to OZ's ERC-20 implementation, function `_setupRole()` is deprecated - `Neuron.sol` should use `_grantRole()` instead.
-The `_setupRole()` implementation in OZ's ERC-20 implementation, directly calls `_grantRole()`:
+Since, according to OZ's `AccessControl` implementation, function `_setupRole()` is deprecated - `Neuron.sol` should use `_grantRole()` instead.
+The `_setupRole()` implementation in OZ's `AcccessControl` implementation, directly calls `_grantRole()`:
 
 ```
     function _setupRole(bytes32 role, address account) internal virtual {
