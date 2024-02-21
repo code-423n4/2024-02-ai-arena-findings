@@ -138,8 +138,11 @@ address _ownerAddress;
 
 ## [L-09] Approval isn't revoked from the contract to spend user's funds if the `transferFrom` fails.
 
-https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/FighterFarm.sol#L376
-```solidity 
+There are many instances of this issue with different impacts.
+
+1. https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/FighterFarm.sol#L376
+
+```solidity
 function reRoll(uint8 tokenId, uint8 fighterType) public { //@note can you give this any fighter type that you want ?
         require(msg.sender == ownerOf(tokenId));
         require(numRerolls[tokenId] < maxRerollsAllowed[fighterType]);
@@ -150,10 +153,96 @@ function reRoll(uint8 tokenId, uint8 fighterType) public { //@note can you give 
 
 ```
 
+2. https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/RankedBattle.sol#L270
+
+```solidity
+    function unstakeNRN(uint256 amount, uint256 tokenId) external {
+        require(_fighterFarmInstance.ownerOf(tokenId) == msg.sender, "Caller does not own fighter");
+        if (amount > amountStaked[tokenId]) {
+            amount = amountStaked[tokenId];
+        }
+        amountStaked[tokenId] -= amount;
+        globalStakedAmount -= amount;
+        stakingFactor[tokenId] = _getStakingFactor(
+            tokenId,
+            _stakeAtRiskInstance.getStakeAtRisk(tokenId)
+        );
+        _calculatedStakingFactor[tokenId][roundId] = true;
+        hasUnstaked[tokenId][roundId] = true;
+@>        bool success = _neuronInstance.transfer(msg.sender, amount);
+        if (success) {
+            if (amountStaked[tokenId] == 0) {
+                _fighterFarmInstance.updateFighterStaking(tokenId, false);
+            }
+            emit Unstaked(msg.sender, amount);
+        }
+    }
+```
+
+3. https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/GameItems.sol#L163
+
+```solidity
+  _neuronInstance.approveSpender(msg.sender, price);
+@>        bool success = _neuronInstance.transferFrom(msg.sender, treasuryAddress, price);
+```
+
+4. https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/Neuron.sol#L138
+
+```solidity
+    function claim(uint256 amount) external {
+        require(
+            allowance(treasuryAddress, msg.sender) >= amount,
+            "ERC20: claim amount exceeds allowance"
+        );
+@>        transferFrom(treasuryAddress, msg.sender, amount); // @audit-info use safeTransferFrom
+        emit TokensClaimed(msg.sender, amount);
+    }
+```
+
+5. https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/RankedBattle.sol#L244
+
+```solidity
+function stakeNRN(uint256 amount, uint256 tokenId) external {
+        require(amount > 0, "Amount cannot be 0");
+        require(_fighterFarmInstance.ownerOf(tokenId) == msg.sender, "Caller does not own fighter");
+        require(_neuronInstance.balanceOf(msg.sender) >= amount, "Stake amount exceeds balance");
+        require(hasUnstaked[tokenId][roundId] == false, "Cannot add stake after unstaking this round");
+
+        _neuronInstance.approveStaker(msg.sender, address(this), amount);
+@>        bool success = _neuronInstance.transferFrom(msg.sender, address(this), amount);
+        if (success) {
+            if (amountStaked[tokenId] == 0) {
+                _fighterFarmInstance.updateFighterStaking(tokenId, true);
+            }
+            amountStaked[tokenId] += amount;
+            globalStakedAmount += amount;
+            stakingFactor[tokenId] = _getStakingFactor(
+                tokenId,
+                _stakeAtRiskInstance.getStakeAtRisk(tokenId)
+            );
+            _calculatedStakingFactor[tokenId][roundId] = true;
+            emit Staked(msg.sender, amount);
+        }
+```
+
+## [L-10] If `totalSupply()` is reached and no more NRN can be minted to fuel in the Games.
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/Neuron.sol#L155
+
+```
+    function mint(address to, uint256 amount) public virtual {
+        require(totalSupply() + amount < MAX_SUPPLY, "Trying to mint more than the max supply");
+        require(hasRole(MINTER_ROLE, msg.sender), "ERC20: must have minter role to mint");
+        _mint(to, amount);
+    }
+```
+
 ## [NC-01] Remove unnecessary inherits
-The `ERC721` contract does not need to be imported again if it is already imported in the `ERC721Enumerable` from Openzeppelin. 
- 
+
+The `ERC721` contract does not need to be imported again if it is already imported in the `ERC721Enumerable` from Openzeppelin.
+
 https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/FighterFarm.sol#L16
+
 ```solidity
 contract FighterFarm is ERC721, ERC721Enumerable {..}
 ```
