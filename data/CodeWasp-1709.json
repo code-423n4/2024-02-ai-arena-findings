@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "CodeWasp",
+  "risk": "3",
+  "title": "A locked fighter can be transferred; leads to game server unable to commit transactions, and unstoppable fighters",
+  "issueId": 1709,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1709"
+}
