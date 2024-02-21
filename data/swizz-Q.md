@@ -211,13 +211,14 @@ Consider changing the documentation to adhere to the source code values.
 https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/RankedBattle.sol#L283-L289
 
 **Description:**
-In `RankedBattle::unstakeNRN()`, there is an if-statement `if(success)` to check if `        bool success = _neuronInstance.transfer(msg.sender, amount);` returns true. This is unnecessary because if it returns false, the whole function will revert. If it's true, the code inside the if-statement will execute anyway.
+In `RankedBattle::unstakeNRN()`, there is an if-statement `if(success)` to check if `bool success = _neuronInstance.transfer(msg.sender, amount);` returns true. Instead of an if-statement, the function should have a require statement to check if `success` returns true or false. If it returns false, the function will revert and save us from mistakenly updating storage values.
 
 **Recommended Mitigation:**
-Delete these 2 lines of code:
+Change the following code like so:
 
 ```solidity
 -    if (success) {
++    require(success, "Token transfer failed");
             if (amountStaked[tokenId] == 0) {
                 _fighterFarmInstance.updateFighterStaking(tokenId, false);
             }
@@ -231,13 +232,13 @@ Delete these 2 lines of code:
 https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/RankedBattle.sol#L494
 
 ### Details
-In `RankedBattle::_addResultPoints()`, there is an if-statement `if(success)` to check if `bool success = _neuronInstance.transfer(_stakeAtRiskAddress, curStakeAtRisk);` returns true. This is unnecessary because if it returns false, the whole function will revert. If it's true, the code inside the if-statement will execute anyway.
+In `RankedBattle::_addResultPoints()`, there is an if-statement `if(success)` to check if `bool success = _neuronInstance.transfer(_stakeAtRiskAddress, curStakeAtRisk);` returns true. Instead of an if-statement, the function should have a require statement to check if `success` returns true or false. If it returns false, the function will revert and save us from mistakenly updating storage values.
 
 ### Recommended Mitigation Steps
-Delete these 2 lines of code:
-
+Change the following code:
 ```solidity
 -    if (success) {
++    require(success);
             _stakeAtRiskInstance.updateAtRiskRecords(curStakeAtRisk, tokenId, fighterOwner);
             amountStaked[tokenId] -= curStakeAtRisk;
 -       }
