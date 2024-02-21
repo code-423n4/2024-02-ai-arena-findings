@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "alexxander",
+  "risk": "2",
+  "title": "`Neuron.sol` has incorrect integration with OZ `AcessContol`",
+  "issueId": 1904,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1904"
+}
