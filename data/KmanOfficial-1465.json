@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "KmanOfficial",
+  "risk": "3",
+  "title": "If the user decides to use the safeTransferFrom selector that includes the data paramater, they circumvent the restrictions against a staked NFT or to an recipient who already has 10 fighter NFTs",
+  "issueId": 1465,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1465"
+}
