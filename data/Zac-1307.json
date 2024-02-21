@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Zac",
+  "risk": "2",
+  "title": "Lack of input validation when claiming rewards",
+  "issueId": 1307,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1307"
+}
