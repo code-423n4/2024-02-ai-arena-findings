@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "stakog",
+  "risk": "2",
+  "title": "Missing input validation checks in `FighterFarm::redeemMintPass`, users eligible to mint via the mint pass can choose the fighter's attributes.",
+  "issueId": 1503,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1503"
+}
