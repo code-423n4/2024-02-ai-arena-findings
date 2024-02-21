@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "MrPotatoMagic",
+  "risk": "3",
+  "title": "Attacker can use 1 wei of NRN to receive the same staking factor as users staking 3.99 NRN",
+  "issueId": 1371,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1371"
+}
