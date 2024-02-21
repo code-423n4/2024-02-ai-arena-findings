@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "thank_you",
+  "risk": "2",
+  "title": "Fighters can be transferred via alternative safeTransferFrom function",
+  "issueId": 1763,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1763"
+}
