@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Greed",
+  "risk": "3",
+  "title": "A user can frontrun the `updateBattleRecord()` function to mitigate a loss or maximize a win",
+  "issueId": 1669,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1669"
+}
