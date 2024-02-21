@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "rouhsamad",
+  "risk": "2",
+  "title": "Its possible to benefit unfairly from the game results by front-running \"RankedBattle::updateBattleRecord\"",
+  "issueId": 1829,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1829"
+}
