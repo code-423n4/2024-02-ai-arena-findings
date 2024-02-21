@@ -5,7 +5,7 @@ One of the main concerns I have is that users with zero or tiny stake can initia
 
 One other concern with the game system is that it might be vulnerable to 'point farming' via a low-elo NFT retraining to a very strong model, and then staking a large amount and winning the majority of the matches until the elo increases to the appropriate level, at which point the stake can be withdrawn and the points kept to earn a large portion of the NRN prize pool.
 
-## Good Points
+## Commentary- Good Things About the Protocol
 The sqrt calculation for user `stakingFactor`s is a very nice mechanism to provide diminishing returns for whales and create a more level playing field for the average user.
 
 Although I found many H/M issues in the contract, the majority of them are easily fixed. I don't see many intractable systemic issues or architecture problems in the codebase, which is very good.
@@ -26,6 +26,8 @@ There is also centralization risk regarding the game server and battle result su
 There are a few concerns that I have regarding the game balance of the protocol. The centralization risks can be mitigated to a large degree.
 
 I found the sqrt `stakingFactor` calculation to be a very nice mechanism, and other than the main area of systemic concern, I didn't spot any 'problem areas' in the codebase's architecture, which is very good. Most of the H/M issues I found are easily fixed and do not stem from deep design problems.
+
+
 
 
 
