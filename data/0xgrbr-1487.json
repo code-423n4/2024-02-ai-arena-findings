@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xgrbr",
+  "risk": "3",
+  "title": "Potential Forcible Revert Due to Attribute Mismatch in `_createNewFighter` Function",
+  "issueId": 1487,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1487"
+}
