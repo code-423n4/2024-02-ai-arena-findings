@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Greed",
+  "risk": "3",
+  "title": "Only the first **255** fighters can be rerolled in `FighterFarm` due to an incorrect typing",
+  "issueId": 1675,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1675"
+}
