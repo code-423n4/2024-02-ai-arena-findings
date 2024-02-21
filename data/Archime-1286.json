@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Archime",
+  "risk": "2",
+  "title": "The updateModel function in the FighterFarm.sol contract can be accessed arbitrarily. Users can modify the modelhash and modeltype of their fighter to gain advantages.",
+  "issueId": 1286,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1286"
+}
