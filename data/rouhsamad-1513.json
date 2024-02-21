@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "rouhsamad",
+  "risk": "3",
+  "title": "Players can avoid losing by manualy calling \"VoltageManager::spendVoltage\" and front-running game server transactions",
+  "issueId": 1513,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1513"
+}
