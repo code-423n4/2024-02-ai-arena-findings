@@ -25,6 +25,20 @@ https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/RankedBattle.sol#L3
         );
 ```
 
-The delay could lead to dodging point deduction to claim more NRN tokens for the current round. The loser fighter could also unstake NRN tokens during this window to have 0 `curStakeAtRisk` transferred to `_stakeAtRiskAddress` later. 
+The delay could possibly lead to dodging point deduction to claim more NRN tokens for the current round and be leveraged in the next round. The loser fighter could also facilitate unstaking NRN tokens during this window to have 0 `curStakeAtRisk` transferred to `_stakeAtRiskAddress` later that I have reported separately. 
 
 A proposed adjustment to the logic strictly enforces that a fighter's owner must have enough voltage upfront if they are initiating a battle, thereby ensuring that all participants meet the same prerequisites for engagement and maintaining the integrity of the battle system.
+
+## [L-03] Enhancing flexibility in permission management 
+`GameItems.setAllowedBurningAddresses()` should introduce a second boolean argument to dynamically grant or revoke burning permissions for addresses, streamlining the administrative process and reducing potential risks. This modification allows for more granular control over permissions, enabling administrators to respond swiftly to changing situations, such as addressing errors or security concerns. This approach not only simplifies the contract's interface but also enhances its adaptability and security, making it a robust solution for managing game item transactions in the AI Arena.
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/GameItems.sol#L185-L188
+
+```diff
+-    function setAllowedBurningAddresses(address newBurningAddress) public {
++    function setAllowedBurningAddresses(address newBurningAddress, bool isAllowed) public {
+        require(isAdmin[msg.sender]);
+-        allowedBurningAddresses[newBurningAddress] = true;
++        allowedBurningAddresses[newBurningAddress] = isAllowed;
+    }
+```
