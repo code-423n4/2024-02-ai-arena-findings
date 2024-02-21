@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "YouCrossTheLineAlfie",
+  "risk": "2",
+  "title": "Allows player at the start of each round to generate a risk free position by setting [`accumulatedPointsPerFighter`](https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/RankedBattle.sol#L479) greater than 0 by winning a few battles.",
+  "issueId": 2019,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/2019"
+}
