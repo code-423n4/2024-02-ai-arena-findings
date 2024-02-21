@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "pontifex",
+  "risk": "2",
+  "title": "A user won't be able claim rewards in case the amount of unclaimed rewards for the user exceeds `MAX_FIGHTERS_ALLOWED`",
+  "issueId": 1899,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1899"
+}
