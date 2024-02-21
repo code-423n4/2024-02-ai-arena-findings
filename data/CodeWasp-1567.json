@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "CodeWasp",
+  "risk": "3",
+  "title": "Narrow totalNumTrained integer type prone to halt entire system",
+  "issueId": 1567,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1567"
+}
