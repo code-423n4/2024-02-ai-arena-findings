@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "DarkTower",
+  "risk": "2",
+  "title": "`RankedBattle::_addResultPoints` Stake at risk gets rounded to 0 for low stakes",
+  "issueId": 1735,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1735"
+}
