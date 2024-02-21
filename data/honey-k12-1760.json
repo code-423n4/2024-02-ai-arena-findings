@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "honey-k12",
+  "risk": "2",
+  "title": "Possible race-condition in burnFrom function in Neuron.sol  can be exploitable",
+  "issueId": 1760,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1760"
+}
