@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xDetermination",
+  "risk": "2",
+  "title": "`Neuron.setupAirdrop()` will erase previous rewards if airdropping to an address that has not yet claimed a previous airdrop *better wording",
+  "issueId": 1791,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1791"
+}
