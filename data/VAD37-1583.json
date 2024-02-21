@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "VAD37",
+  "risk": "3",
+  "title": "`RankedBattle.sol` no minimum stake and rounding issue. Causing User whom stake lots of token earn same amount of points as user whom stake 1 wei token",
+  "issueId": 1583,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1583"
+}
