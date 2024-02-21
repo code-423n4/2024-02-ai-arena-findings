@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Honour",
+  "risk": "3",
+  "title": "`MergingPool::claimRewards` eventual DOS/OOG for new players",
+  "issueId": 1777,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1777"
+}
