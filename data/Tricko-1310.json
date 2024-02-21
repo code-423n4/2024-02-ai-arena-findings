@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Tricko",
+  "risk": "2",
+  "title": "Users can leverage the deterministic nature of `FighterFarm.reRoll()` to generate fighters with the desired attributes.",
+  "issueId": 1310,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1310"
+}
