@@ -5,7 +5,7 @@ You shouldn't call `addAttributeProbabilities(0, probabilities)` in the construc
 *Instances (1)*:
 
 ```solidity
-File: src/FighterFarm.sol
+File: src/AiArenaHelper.sol.sol
 
 41:    constructor(uint8[][] memory probabilities) {
 42:        _ownerAddress = msg.sender;
