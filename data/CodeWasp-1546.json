@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "CodeWasp",
+  "risk": "3",
+  "title": "Fighters with stake at risk can be transferred; may lead to the game server unable to commit transactions, and players unable to exit the losing zone",
+  "issueId": 1546,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1546"
+}
