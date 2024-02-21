@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "neocrao",
+  "risk": "2",
+  "title": "A user can stake a certain minimum amount to stay immune from stake being risked on losing, and yet earn points on wins, leading to risk free accumulation of points for merging pool",
+  "issueId": 1612,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1612"
+}
