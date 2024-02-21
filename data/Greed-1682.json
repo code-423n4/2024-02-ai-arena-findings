@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Greed",
+  "risk": "3",
+  "title": "Roles given in `Neuron.sol` contract can't ever be revoked because `ADMIN_ROLEs` are never assigned, leaving the ability for non-longer trusted parties to perform privileged actions",
+  "issueId": 1682,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1682"
+}
