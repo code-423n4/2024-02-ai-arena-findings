@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "sandy",
+  "risk": "2",
+  "title": "No any fallback mechanism for minting and spending tokens in case one of the contracts gets breached.",
+  "issueId": 1822,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1822"
+}
