@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Greed",
+  "risk": "2",
+  "title": "Rewards earned by a player can be stuck in the `RankedBattle` contract",
+  "issueId": 1680,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1680"
+}
