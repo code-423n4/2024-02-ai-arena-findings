@@ -247,3 +247,27 @@ All winning battles for the new owner will result in a revert. The new owner wil
 I'm not sure about the usage of the `amountLost[fighterOwner]` variable. If it's not needed, consider removing it because it will affect the transfers of token owners.
 
 https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/StakeAtRisk.sol#L93-L107
+
+### [L-09] `updateModel()` can be consistently called to increased the `numTrained[tokenId]`
+
+A user can constantly call `updateModel()` with the same modelHash and modelType to increase the `numTrained` variable.
+
+```
+    function updateModel(
+        uint256 tokenId, 
+        string calldata modelHash,
+        string calldata modelType
+    ) 
+        external
+    {
+        require(msg.sender == ownerOf(tokenId));
+        fighters[tokenId].modelHash = modelHash;
+        fighters[tokenId].modelType = modelType;
+        numTrained[tokenId] += 1;
+        totalNumTrained += 1;
+    }
+```
+
+If `numTrained` affects the elo factor, then there will be a problem as this function is spammable.
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/FighterFarm.sol#L283-L295
