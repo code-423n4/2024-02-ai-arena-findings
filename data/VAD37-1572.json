@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "VAD37",
+  "risk": "2",
+  "title": "User can easily trick game server not update their battle record while report opponent lost result in `RankedBattle.sol` by depleted their own energy. Resulted in unfair battle report and rewards distribution.",
+  "issueId": 1572,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1572"
+}
