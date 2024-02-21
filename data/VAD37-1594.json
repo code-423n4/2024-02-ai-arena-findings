@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "VAD37",
+  "risk": "3",
+  "title": "There is no function to update `numElements` array. Mint new NFT always fail after admin call `incrementGeneration()`",
+  "issueId": 1594,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1594"
+}
