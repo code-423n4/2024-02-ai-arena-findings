@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Myd",
+  "risk": "2",
+  "title": "Unverified updateBattleRecord() allows match outcome manipulation, undermining system trust.",
+  "issueId": 1441,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1441"
+}
