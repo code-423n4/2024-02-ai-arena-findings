@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "McToady",
+  "risk": "2",
+  "title": "Precision loss in `RankedBattle::_addResultPoints` breaks stake at risk interaction if user has very small amounts of tokens",
+  "issueId": 1649,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1649"
+}
