@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "denzi_",
+  "risk": "2",
+  "title": "User can pass in their own values for `fighterTypes` and `iconsTypes` and they can mint Dendroids and Icons when calling `FighterFarm::redeemMintPass` function",
+  "issueId": 1620,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1620"
+}
