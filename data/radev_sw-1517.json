@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "radev_sw",
+  "risk": "2",
+  "title": "`GameItems.sol#mint()` function: Malicious user can block stuff other users in order to replenish his `NFT daily allowance` and unfairly obtain the full amount (items) of specific NFTs",
+  "issueId": 1517,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1517"
+}
