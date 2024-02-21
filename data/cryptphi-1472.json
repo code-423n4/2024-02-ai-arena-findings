@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "cryptphi",
+  "risk": "2",
+  "title": "A user can transfer all Neurons in TreasuryAddress when claim amount is set to type(uint256).max",
+  "issueId": 1472,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1472"
+}
