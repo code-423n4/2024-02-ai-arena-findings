@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "juancito",
+  "risk": "2",
+  "title": "`getFighterPoints()` will always revert when querying more than one token",
+  "issueId": 1629,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1629"
+}
