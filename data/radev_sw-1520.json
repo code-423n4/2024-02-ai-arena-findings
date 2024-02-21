@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "radev_sw",
+  "risk": "3",
+  "title": "A user who exceeds the `MAX_FIGHTERS_ALLOWED` constant while claiming their rewards via the `MergingPool.sol#claimRewards()`  function will never be able to claim his rewards",
+  "issueId": 1520,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1520"
+}
