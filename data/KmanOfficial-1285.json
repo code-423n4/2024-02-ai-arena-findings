@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "KmanOfficial",
+  "risk": "2",
+  "title": "If user hasn't claimed rewards after several rounds, the user can experience DoS due to exceeding gas limit from unbounded looping",
+  "issueId": 1285,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1285"
+}
