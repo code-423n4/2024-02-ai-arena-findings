@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Tumelo_Crypto",
+  "risk": "3",
+  "title": "Any User can cause `_addResultPoints` function to revert on underflow if accumulatedPointsPerFighter != accumulatedPointsPerAddress in that current round",
+  "issueId": 1694,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1694"
+}
