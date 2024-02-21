@@ -205,42 +205,30 @@ But the code and comments state that each fight expends 10 voltage units, and th
 ### Recommended Mitigation Steps
 Consider changing the documentation to adhere to the source code values.
 
-## [I-04] Unnecessary if-statement in `RankedBattle::unstakeNRN()`
 
-**Relevant Github Links**
-https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/RankedBattle.sol#L283-L289
-
-**Description:**
-In `RankedBattle::unstakeNRN()`, there is an if-statement `if(success)` to check if `bool success = _neuronInstance.transfer(msg.sender, amount);` returns true. Instead of an if-statement, the function should have a require statement to check if `success` returns true or false. If it returns false, the function will revert and save us from mistakenly updating storage values.
-
-**Recommended Mitigation:**
-Change the following code like so:
-
-```solidity
--    if (success) {
-+    require(success, "Token transfer failed");
-            if (amountStaked[tokenId] == 0) {
-                _fighterFarmInstance.updateFighterStaking(tokenId, false);
-            }
-            emit Unstaked(msg.sender, amount);
--       }
-```
-
-## [I-05] Unnecessary if-statement in `RankedBattle::_addResultPoints`
+## [I-04] If-statements checking return values for bools should be require statements instead
 
 ### Relevant Github Links
 https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/RankedBattle.sol#L494
+https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/RankedBattle.sol#L283-L289
+https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/GameItems.sol#L165
+https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/RankedBattle.sol#L252
+https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/StakeAtRisk.sol#L81
+https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/StakeAtRisk.sol#L101
+
 
 ### Details
-In `RankedBattle::_addResultPoints()`, there is an if-statement `if(success)` to check if `bool success = _neuronInstance.transfer(_stakeAtRiskAddress, curStakeAtRisk);` returns true. Instead of an if-statement, the function should have a require statement to check if `success` returns true or false. If it returns false, the function will revert and save us from mistakenly updating storage values.
+There are several instances throughout the protocol where there is an if-statement `if(success)` to check if `bool success` returns true. Instead of an if-statement, the function should have a require statement to check if `success` returns true or false. If it returns false, the function will revert and save us from mistakenly updating storage values.
+
+### Impact
+Storage variables will get updated mistakenly and provide inaccurate information to devs and users if `success` returns false
 
 ### Recommended Mitigation Steps
-Change the following code:
+Change every instance of `if(success)` to a require statement:
 ```solidity
 -    if (success) {
 +    require(success);
-            _stakeAtRiskInstance.updateAtRiskRecords(curStakeAtRisk, tokenId, fighterOwner);
-            amountStaked[tokenId] -= curStakeAtRisk;
+            //rest of code
 -       }
 ```
 
