@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "VAD37",
+  "risk": "2",
+  "title": "It is possible for Cheater reverse engineer game client. Send `unstake()` faster than game server can update battle result. Missing safety mechanism lock stake while battle is pending.",
+  "issueId": 1576,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1576"
+}
