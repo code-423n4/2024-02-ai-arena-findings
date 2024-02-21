@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "evmboi32",
+  "risk": "2",
+  "title": "Incorrect calculation of how many points to subtract and how much stake to put at risk will result in favor of the user losing",
+  "issueId": 1762,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1762"
+}
