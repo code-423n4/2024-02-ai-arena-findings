@@ -70,6 +70,31 @@ The comparison operator used in the `mint` function is less than (`<`), which pr
     }
 ```
 
+## [L-3] Lack of Input Validation for `modelHash` and `modelType` in `FighterFarm::updateModel`
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/FighterFarm.sol#L283C1-L295C6
+
+The `modelHash` and `modelType` parameters in `FighterFarm::updateModel` are user inputs that lack validation checks. This allows users to input incorrect values, which could lead to the game being unable to read the correct `modelHash` and `modelType`, and consequently, incorrect data being stored on-chain.
+
+```solidity
+function updateModel(
+        uint256 tokenId, 
+        string calldata modelHash,
+        string calldata modelType
+    ) 
+        external
+    {
+        require(msg.sender == ownerOf(tokenId));
+        fighters[tokenId].modelHash = modelHash; //! user can input any arbitrary value
+        fighters[tokenId].modelType = modelType; //! user can input any arbitrary value
+        numTrained[tokenId] += 1;
+        totalNumTrained += 1;
+    }
+```
+
+*Recommended Mitigation* : 
+Consider adding validation checks for `modelHash` and `modelType` to ensure they meet certain criteria before they are assigned to `fighters[tokenId].modelHash` and `fighters[tokenId].modelType` respectively. This could be a predefined list of acceptable values or a pattern that the inputs must match.
+
 ## [I-1] Incorrect Natspec Comment for `MergingPool::fighterPoints`
 
 https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/MergingPool.sol#L50C1-L51C54
