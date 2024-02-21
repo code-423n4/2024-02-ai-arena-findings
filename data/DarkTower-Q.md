@@ -122,7 +122,6 @@ require(Verification.verify(msgHash, signature, _delegatedAddress)); // @audit b
 ```
 
 ## [L-08] These variables can be defined as public instead of private
-
 https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/GameItems.sol#L61C1-L67C28
 
 ```solidity
@@ -256,8 +255,10 @@ function fighterCreatedEmitter(
         emit FighterCreated(id, weight, element, generation);
     }
 ```
+## [NC-01] Player can spam initiate battles without staking anything. 
+Players will spend voltage and not get any points but will accumulate wins or losses will added to the storage. 
 
-## [NC-01] Remove unnecessary inherits
+## [NC-02] Remove unnecessary inherits
 
 The `ERC721` contract does not need to be imported again if it is already imported in the `ERC721Enumerable` from Openzeppelin.
 
