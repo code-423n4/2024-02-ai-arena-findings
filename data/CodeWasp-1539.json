@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "CodeWasp",
+  "risk": "2",
+  "title": "GameItems transferability restriction can be circumvented via ERC1155::safeBatchTransferFrom",
+  "issueId": 1539,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1539"
+}
