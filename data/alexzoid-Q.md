@@ -119,3 +119,22 @@ index b93dde8..851a3ad 100644
          require(msg.sender == _ownerAddress);
          require(probabilities.length == 6, "Invalid number of attribute arrays");
 ```
+
+## `MAX_SUPPLY` unreachable in `Neuron.mint`
+https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/Neuron.sol#L156
+Recommendation:
+```diff
+diff --git a/src/Neuron.sol b/src/Neuron.sol
+index d400a49..cb34441 100644
+--- a/src/Neuron.sol
++++ b/src/Neuron.sol
+@@ -153,7 +153,7 @@ contract Neuron is ERC20, AccessControl {
+     /// @param to The address to which the tokens will be minted.
+     /// @param amount The amount of tokens to be minted.
+     function mint(address to, uint256 amount) public virtual {
+-        require(totalSupply() + amount < MAX_SUPPLY, "Trying to mint more than the max supply");
++        require(totalSupply() + amount <= MAX_SUPPLY, "Trying to mint more than the max supply");
+         require(hasRole(MINTER_ROLE, msg.sender), "ERC20: must have minter role to mint");
+         _mint(to, amount);
+     }
+```
