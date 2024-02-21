@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "mussucal",
+  "risk": "3",
+  "title": "Front running game server updateBattleRecord() call possible.",
+  "issueId": 1569,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1569"
+}
