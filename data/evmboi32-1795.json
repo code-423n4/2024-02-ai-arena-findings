@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "evmboi32",
+  "risk": "3",
+  "title": "The attacker could achieve a state where he has `amountStaked > 0` and `fighterStaked = false` and start earning risk-free rewards.",
+  "issueId": 1795,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1795"
+}
