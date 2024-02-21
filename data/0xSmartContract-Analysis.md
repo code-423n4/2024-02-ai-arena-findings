@@ -118,7 +118,128 @@ Uses Consensys Solidity Metrics
 </br>
 </br>
 
+## MergingPool.sol
 
+This Solidity contract includes a management and reward distribution mechanism that provides a number of special functionalities. Below are brief summaries of the contract's functions and constructor:
+
+### Constructor
+- **Constructor**: The contract owner sets the ranked battle contract and warrior farm contract addresses. The contract identifies the owner as an admin.
+
+### External Functions
+- **transferOwnership**: Transfers contract ownership to another address. Can only be summoned by the current owner.
+- **adjustAdminAccess**: Grants or removes admin access to a specific address. Can only be summoned by its owner.
+- **updateWinnersPerPeriod**: Updates the number of winners per contest period. It can only be called by admins.
+- **pickWinner**: Picks the winners for the current round. The number of winners must match the expected number of winners per period. It can only be called by admins.
+- **claimRewards**: Allows users to collectively claim rewards for multiple rounds. The user can only claim rewards once per round.
+
+### Public Functions
+- **addPoints**: Adds merge pool points to a warrior. It can only be summoned by the ranked battle contract address.
+- **getFighterPoints**: Gets points of fighters up to the specified maximum token ID.
+
+### Architecture Summary
+This contract provides a reward and management system for warriors. Warriors can earn points through ranked battles and other events. Admins can select winners during certain periods, and these winners can claim their rewards to create new fighters with specific model URIs, model types, and special features. Users can view and claim the number of rewards they have earned.
+
+The contract protects management functions with a strict access control mechanism, allowing only certain addresses (owner and admins) to perform management functions and reward distribution. This ensures the security of the contract and the correct use of its functionality. It also offers a mechanism to manage points from ranked battles and other events, rewarding warriors' performance and participation.
+
+![image](https://github.com/code-423n4/2024-02-ai-arena/assets/104318932/d3feebb6-95b4-4338-8b7a-cde09668c284)
+
+##### Note: Please click on the image to enlarge it:
+
+Contract Details -  MergingPool.sol ; 
+
+![image](https://github.com/code-423n4/2024-02-ai-arena/assets/104318932/a395678e-9d63-4be1-a8c4-993d4ea9778c)
+
+##### Note: Please click on the image to enlarge it:
+
+</br>
+</br>
+</br>
+</br>
+
+##  AiArenaHelper.sol
+
+It functions as the AI Arena utility and enables the creation of physical attributes for a particular fighter.
+
+### State Variables
+
+- `attributes`: List of attributes that fighters can have (e.g. "head", "eyes", etc.).
+- `defaultAttributeDivisor`: Default values of each attribute's DNA dividers.
+- `_ownerAddress`: Address of the contract owner.
+- `attributeProbabilities`: A mapping that keeps track of attribute probabilities for each generation.
+- `attributeToDnaDivisor`: A mapping that keeps track of the DNA dividers specific to each attribute.
+
+### Constructor
+
+- When starting the contract, sets the trait probabilities for generation 0 and initializes the DNA splitter of each trait with default values.
+
+### External Functions
+
+- `transferOwnership`: Transfers contract ownership to another address.
+- `addAttributeDivisor`: Adds or updates DNA dividers for each attribute.
+- `createPhysicalAttributes`: Creates a fighter's physical attributes based on the given DNA, lineage, icon type and dendroid status.
+
+###Public Functions
+
+- `addAttributeProbabilities`: Adds attribute probabilities for a given generation.
+- `deleteAttributeProbabilities`: Deletes attribute probabilities for a given generation.
+- `getAttributeProbabilities`: Returns attribute probabilities for a given generation and trait.
+- `dnaToIndex`: Converts the given DNA and its rarity into a trait probability index.
+
+### Architectural Summary
+
+This contract is designed to manage the characteristics of fighters in the AI Arena. The contract contains complex logic used to create fighters' physical attributes. It governs DNA splitters for each trait and trait probabilities that vary across generations.
+
+
+![image](https://github.com/code-423n4/2024-02-ai-arena/assets/104318932/46f4be1e-ecfd-48c0-92a8-9b0d41af5ee4)
+
+##### Note: Please click on the image to enlarge it:
+
+1. **Hard Coded Limitations**: Within the `createPhysicalAttributes` function there are hard coded control structures for some attributes (e.g. special cases based on `iconsType` values). This approach may limit the extensibility and flexibility of the contract.
+    - **Recommendation**: Consider managing such controls through an external configuration or management mechanism to enable more dynamic management of features and behaviors.
+
+
+
+2. **Role Based Access Control**: The contract authorizes the owner to perform administrative functions (e.g. `transferOwnership`, `addAttributeDivisor`). However, this may not be enough for growing projects that may require more complex access control mechanisms.
+    - **Recommendation**: Create a more flexible and secure role-based access control system using OpenZeppelin's `AccessControl` contract.
+
+3. **Data Validation**: Validating input data is important, especially when it comes to outsourced parameters. Functions such as `addAttributeProbabilities` and `addAttributeDivisor` check input lengths, but more extensive validations may be required.
+    - **Recommendation**: Add comprehensive validation mechanisms to ensure accuracy and validity of input data.
+
+
+</br>
+</br>
+</br>
+</br>
+
+##  GameItems.sol
+
+This contract; Provides management of in-game items for AI Arena. It supports multiple token types using the ERC1155 standard.
+
+
+
+1. **DoS by Block Gas Limit**: The `mint` function, especially in combination with the `finiteSupply` control and the `dailyAllowance` control, performs multiple operations in a loop. If these transactions consume too much gas, the block may reach its gas limit and cause transactions to fail.
+    - **Recommendation**: Limit the maximum amount users can mint at once or optimize transactions to reduce gas usage.
+
+2. **Unchecked External Call Return Values**: The return value of the `_neuronInstance.transferFrom` call is not checked in the `mint` function. This could cause the transaction to fail silently if the transfer fails.
+    - **Recommendation**: Check the return value of the ERC20 `transferFrom` function and throw an appropriate error message if the operation fails.
+
+
+3. **Magic Strings and Numbers**: "Magic strings" and "magic numbers" are used in many places in the contract, especially in URI management and time intervals.
+    - **Recommendation**: Make the code easier to read and maintain by replacing magic numbers and strings with constants.
+
+4. **Role-Based Access Control (RBAC)**: Managing roles such as `isAdmin` and `allowedBurningAddresses` may require more complex access control mechanisms.
+    - **Recommendation**: Provide more flexible and secure role-based access control using OpenZeppelin's `AccessControl` contract.
+    - 
+
+![image](https://github.com/code-423n4/2024-02-ai-arena/assets/104318932/1d8d555c-3e84-4fe2-aba5-7746e2578a7d)
+
+##### Note: Please click on the image to enlarge it:
+
+
+</br>
+</br>
+</br>
+</br>
 
 ## c) Test analysis
 ### What did the project do differently? ;
@@ -301,7 +422,6 @@ The entire system can revolve around a single contract, like SystemRegistry. Thi
 
 
 ✅ Analyze the gas usage of each function under various conditions in tests to ensure efficiency and identify potential optimizations.	
-
 
 
 
