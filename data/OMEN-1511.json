@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "OMEN",
+  "risk": "2",
+  "title": "lack of checking for fighter types will lead to unintended behaviour",
+  "issueId": 1511,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1511"
+}
