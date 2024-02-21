@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Zac",
+  "risk": "2",
+  "title": "Attacker can re-enter claimRewards and claim more NFTs than they are entitled to",
+  "issueId": 1334,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1334"
+}
