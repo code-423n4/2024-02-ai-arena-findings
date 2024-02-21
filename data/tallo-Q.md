@@ -1,4 +1,5 @@
-### RankedBattle ```globalStakedAmount``` variable is not correctly tracked
+Low Risk Issues
+### [L-01] RankedBattle ```globalStakedAmount``` variable is not correctly tracked
 ## Impact
 The variable will incorrectly tracked and displayed on the front end and when viewed on the blockchain. It will be perpetually increasing and include an inflated value that will get more and more inaccurate over time.
 
