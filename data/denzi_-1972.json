@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "denzi_",
+  "risk": "3",
+  "title": "Players can transfer a token with stake at risk to another player by calling `RankedBattle::unstakeNRN()` and updating `fightStaked` to false",
+  "issueId": 1972,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1972"
+}
