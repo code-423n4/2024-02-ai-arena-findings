@@ -47,7 +47,7 @@ The line `attributeProbabilities[0][attributes[i]] = probabilities[i]` essential
 Manual Review
 
 ## Recommendation
-It's imperative to remove the redundant function `addAttributeProbabilities(0, probabilities)` to to reduce unnecessary loops for gas usage optimization as shown in the part of Description
+It's imperative to remove the redundant function `addAttributeProbabilities(0, probabilities)` to to reduce unnecessary loops for gas usage optimization as shown in the part of Proof of Concept
 
 ```solidity
 
