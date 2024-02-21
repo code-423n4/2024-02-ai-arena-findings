@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xG0P1",
+  "risk": "3",
+  "title": "The user will not receive the stakeAtRisk NRN upon winning due to the transaction reverting, resulting in the loss of their earned rewards.",
+  "issueId": 1372,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1372"
+}
