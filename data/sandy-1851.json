@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "sandy",
+  "risk": "2",
+  "title": "After burning any gameItem, the itemsRemaining should increase for a tokenID if the gameItem has finite supply.",
+  "issueId": 1851,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1851"
+}
