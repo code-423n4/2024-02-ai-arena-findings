@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xDetermination",
+  "risk": "3",
+  "title": "Transferring a fighter NFT with existing stakeAtRisk can DoS winning for the receiver and prevent reclaiming stakeAtRisk of other NFTs",
+  "issueId": 1789,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1789"
+}
