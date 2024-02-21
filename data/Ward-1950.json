@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Ward",
+  "risk": "3",
+  "title": "User can force `updateBattleRecord` to revert by spending their own voltage",
+  "issueId": 1950,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1950"
+}
