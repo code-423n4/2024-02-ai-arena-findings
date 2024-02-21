@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xblackskull",
+  "risk": "2",
+  "title": "Missing Revocation Mechanism in setAllowedBurningAddresses Function Allows Permanent Authorization ",
+  "issueId": 1885,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1885"
+}
