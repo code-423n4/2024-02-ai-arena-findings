@@ -28,6 +28,10 @@ https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223
 
 Consider using `address(_stakeAtRiskInstance)` to refer to address of the instance instead of storing the address in a storage variable. This can help to reduce gas costs.
 
+```diff
+-   /// The StakeAtRisk contract address.
+-   address _stakeAtRiskAddress;
+```
 
 ```diff
     function setStakeAtRiskAddress(address stakeAtRiskAddress) external {
