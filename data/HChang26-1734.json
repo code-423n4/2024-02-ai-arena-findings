@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "HChang26",
+  "risk": "2",
+  "title": "Potential Silent Failure and NRN Loss in unstakeNRN() Function",
+  "issueId": 1734,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1734"
+}
