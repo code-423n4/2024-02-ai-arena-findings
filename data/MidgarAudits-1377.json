@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "MidgarAudits",
+  "risk": "3",
+  "title": "User can bypass `_ableToTransfer()` by using overloaded function",
+  "issueId": 1377,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1377"
+}
