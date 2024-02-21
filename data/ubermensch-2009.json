@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "ubermensch",
+  "risk": "2",
+  "title": "Exploiting Staking Factor Rounding Up and `curStakeAtRisk` Rounding Down with Minimal NRN Stake and Merging Pool Allocation",
+  "issueId": 2009,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/2009"
+}
