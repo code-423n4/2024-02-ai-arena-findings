@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xDetermination",
+  "risk": "3",
+  "title": "Players can make an NFT with nonzero stake transferable and exploit underflow in RankedBattle.updateBattleRecord() to never lose a battle, accumulating an outsized amount of points in a round to claim an inappropriately large portion of the NRN prize pool and reduce rewards for other players",
+  "issueId": 1786,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1786"
+}
