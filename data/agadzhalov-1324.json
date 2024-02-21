@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "agadzhalov",
+  "risk": "2",
+  "title": "# [M-3] User can update `modelHash` and `modelType` with an already existing ones of other NFTs",
+  "issueId": 1324,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1324"
+}
