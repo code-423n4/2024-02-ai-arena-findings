@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Breeje",
+  "risk": "2",
+  "title": "User can bypass `dailyAllowance` & mint game items more than their daily `allowanceRemaining`",
+  "issueId": 1590,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1590"
+}
