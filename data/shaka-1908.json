@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "shaka",
+  "risk": "2",
+  "title": "`Neuron.burnFrom` decreases the allowance even if it is set to type(uint256).max ",
+  "issueId": 1908,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1908"
+}
