@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "vnavascues",
+  "risk": "3",
+  "title": "updateBattleRecord call can be replayed",
+  "issueId": 1978,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1978"
+}
