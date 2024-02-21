@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Zac",
+  "risk": "2",
+  "title": "totalNumTrained can reach the limit for uint32 blocking anyone else from updating their model",
+  "issueId": 1340,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1340"
+}
