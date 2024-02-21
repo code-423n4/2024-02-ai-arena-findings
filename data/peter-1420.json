@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "peter",
+  "risk": "2",
+  "title": "'FighterFarm::reRoll' allows users to reset all their NFT traits to 1 effectively nerfing their NFT; can destroy value for users in malicious trades",
+  "issueId": 1420,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1420"
+}
