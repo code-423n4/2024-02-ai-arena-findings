@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "nuthan2x",
+  "risk": "3",
+  "title": " `amountStaked[tokenId]` can be manipulated in between battles which results in extra reward/points claimed when battle is won, and zero slashing of staked tokens/points when battle is lost ",
+  "issueId": 1754,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1754"
+}
