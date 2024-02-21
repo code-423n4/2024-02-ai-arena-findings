@@ -9,7 +9,7 @@
 |[L-4](#l-4)|New users to the protocol joining a significant amount of time after project launch will incur huge gas fees when calling `RankedBattle.claimNRN()`|
 |[L-5](#l-5)|`FighterFarm.IncrementGeneration()` should enforce a `fighterType` of 0 or 1|
 |[L-6](#l-6)|`MergingPool.claimRewards()` can mint an NFT with out-of-range fighter weight|
-|[L-7](#l-7)||
+|[L-7](#l-7)|Ensure off-chain validation is performed to check player voltage and prevent the game server from being gas griefed|
 |Info issues|
 |[I-1](#i-1)|Comments for win/lose case can be put on the same line as the conditional statement for clarity|
 |[I-2](#i-2)|Consider calling `GameItems.instantiateNeuronContract()` in the constructor|
