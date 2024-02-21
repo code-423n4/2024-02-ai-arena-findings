@@ -1,16 +1,17 @@
 # Summary
 
-| Severity                 | Issue                                                                                                       | Instance |
-| ------------------------ | ----------------------------------------------------------------------------------------------------------- | -------- |
-| [[L-0](#low-0)]          | `iconsTypes` length should also be checked in `FighterFarm::redeemMintPass(...)`                            | 1        |
-| [[L-1](#low-1)]          | `customAttributes` are not checked for valid ranges when sent using `FighterFarm::mintFromMergingPool(...)` | 1        |
-| [[L-2](#low-2)]          | No check for new Game Item is added in `GameItems::createGameItem(...)`                                     | 1        |
-| [[L-3](#low-3)]          | Add checks for duplicate addresses passed as winners in `MergingPool::pickWinner()`                         | 1        |
-| [[L-4](#low-4)]          | Add Array parameter length checks in `MergingPool::claimRewards(...)`                                       | 1        |
-| [[L-5](#low-5)]          | `Neuron::mint(...)` contract can't mint tokens to the absolute value of `MAX_SUPPLY`                        | 1        |
-| [[L-6](#low-6)]          | `globalStakedAmount` is not updated after the end of each round showing incorrect info.                     | 1        |
-| [[N-0](#non-critical-0)] | No way to remove a staker in `FighterFarm.sol`                                                              | 1        |
-| [[N-1](#non-critical-1)] | Mistake in Natspac of `MergingPool::fighterPoints` mapping.                                                 | 1        |
+| Severity                 | Issue                                                                                                                            | Instance |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| [[L-0](#low-0)]          | `iconsTypes` length should also be checked in `FighterFarm::redeemMintPass(...)`                                                 | 1        |
+| [[L-1](#low-1)]          | `customAttributes` are not checked for valid ranges when sent using `FighterFarm::mintFromMergingPool(...)`                      | 1        |
+| [[L-2](#low-2)]          | No check for new Game Item is added in `GameItems::createGameItem(...)`                                                          | 1        |
+| [[L-3](#low-3)]          | Add checks for duplicate addresses passed as winners in `MergingPool::pickWinner()`                                              | 1        |
+| [[L-4](#low-4)]          | Add Array parameter length checks in `MergingPool::claimRewards(...)`                                                            | 1        |
+| [[L-5](#low-5)]          | `Neuron::mint(...)` contract can't mint tokens to the absolute value of `MAX_SUPPLY`                                             | 1        |
+| [[L-6](#low-6)]          | `globalStakedAmount` is not updated after the end of each round showing incorrect info.                                          | 1        |
+| [[L-7](#low-7)]          | Holder of the tokenId will not be to claim rewards in `RankedBattle::claimNRN(...)` if the NFT is transferred to another address | 1        |
+| [[N-0](#non-critical-0)] | No way to remove a staker in `FighterFarm.sol`                                                                                   | 1        |
+| [[N-1](#non-critical-1)] | Mistake in Natspac of `MergingPool::fighterPoints` mapping.                                                                      | 1        |
 
 ## Lows
 
@@ -192,6 +193,42 @@ File: RankedBattle.sol
         rankedNrnDistribution[roundId] = rankedNrnDistribution[roundId - 1];
     }
 ```
+
+---
+
+### [L-7] Holder of the tokenId will not be to claim rewards in `RankedBattle::claimNRN(...)` if the NFT is transferred to another address <a id="low-7"></a>
+
+If the fighter NFT is transferred to some other address, then the holder of that NFT will not be able to claim the NRN with that new address. Currently the `RankedBattle::claimNRN(...)` only calculates the rewards on the basis of the address of the `msg.sender`, not `tokenId`.
+
+```solidity
+File: RankedBattle.sol
+
+    function claimNRN() external {
+        require(numRoundsClaimed[msg.sender] < roundId, "Already claimed NRNs for this period");
+        uint256 claimableNRN = 0;
+        uint256 nrnDistribution;
+        uint32 lowerBound = numRoundsClaimed[msg.sender];
+        for (uint32 currentRound = lowerBound; currentRound < roundId; currentRound++) {
+            nrnDistribution = getNrnDistribution(currentRound);
+            claimableNRN += (
+@>                accumulatedPointsPerAddress[msg.sender][currentRound] * nrnDistribution
+            ) / totalAccumulatedPoints[currentRound];
+            numRoundsClaimed[msg.sender] += 1;
+        }
+        if (claimableNRN > 0) {
+            amountClaimed[msg.sender] += claimableNRN;
+            _neuronInstance.mint(msg.sender, claimableNRN);
+            emit Claimed(msg.sender, claimableNRN);
+        }
+    }
+
+```
+
+GitHub: [[294-311](https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/RankedBattle.sol#L294C1-L311C6)]
+
+This would not be a problem if the user still has access of initial address. But if the user lost the access to the wallet, then he will not be able to claim his rewards for any previous rounds.
+
+It is recommened to calculate the rewards based on the `accumulatedPointsPerFighter` mapping instead. But this would require whole lot of changes in the function. Make sure those are implemented correctly. Doing this can save the funds of user in various situations.
 
 ---
 
