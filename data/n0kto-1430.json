@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "n0kto",
+  "risk": "2",
+  "title": "Replenish function is not called in VoltageManager::useVoltageBattery which can waste batteries",
+  "issueId": 1430,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1430"
+}
