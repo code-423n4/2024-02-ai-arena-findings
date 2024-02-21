@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "inzinko",
+  "risk": "3",
+  "title": "Permanent DOS of claimRewards, due to fighterFarm contract fighter minting functionality ",
+  "issueId": 1804,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1804"
+}
