@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0brxce",
+  "risk": "2",
+  "title": "Non-use of Two-Step Ownership Transfer and Zero Address Checks can lead to Bricking of Multiple Contracts",
+  "issueId": 1838,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1838"
+}
