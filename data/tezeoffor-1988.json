@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "tezeoffor",
+  "risk": "2",
+  "title": " Single-Step Ownership Transfer in `Voltage::transferOwnership` can lead to Unauthorized ownership changes",
+  "issueId": 1988,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1988"
+}
