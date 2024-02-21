@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "juancito",
+  "risk": "2",
+  "title": "Incrementing a fighter type generation will brick the element attribute selection forever because of a missing function to update `numElements`",
+  "issueId": 1628,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1628"
+}
