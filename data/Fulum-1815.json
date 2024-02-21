@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Fulum",
+  "risk": "3",
+  "title": "A Fighter (ERC721 token) can be transferred to another user even if the token is staked, user can prevents the score update in case of lose",
+  "issueId": 1815,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1815"
+}
