@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "dimulski",
+  "risk": "3",
+  "title": "Invalid validation in redeemMintPass() allows users to mint extremely rare NFTs, instead of type 0 fighters(AR-X Bots)",
+  "issueId": 1626,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1626"
+}
