@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "givn",
+  "risk": "2",
+  "title": "Player can call claimRewards with any value for element/weight",
+  "issueId": 1688,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1688"
+}
