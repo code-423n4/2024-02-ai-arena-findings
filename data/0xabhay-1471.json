@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xabhay",
+  "risk": "3",
+  "title": "Underflow Revert in `RankedBattle.sol`Allowing Users to Avoid Losses and Recover `StakeAtRisk` without Any Risk of losing Tokens.",
+  "issueId": 1471,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1471"
+}
