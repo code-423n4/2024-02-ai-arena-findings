@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Avci",
+  "risk": "3",
+  "title": "Attacker can drain NRN tokens from treasuryAddress.",
+  "issueId": 1710,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1710"
+}
