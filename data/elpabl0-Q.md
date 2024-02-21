@@ -55,6 +55,21 @@ function testRedeemMintPassWithUnmatchedIconTypesLength() public {
 ```
 This test will still pass because there's no check for the length of iconsTypes.
 
+## [L-2] Incorrect Comparison Operator in `Neuron.sol::mint` Prevents `totalSupply` from Reaching `MAX_SUPPLY`
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/Neuron.sol#L155C1-L159C6
+
+The comparison operator used in the `mint` function is less than (`<`), which prevents `totalSupply` from ever reaching `MAX_SUPPLY`.
+
+```diff
+    function mint(address to, uint256 amount) public virtual {
+-        require(totalSupply() + amount < MAX_SUPPLY, "Trying to mint more than the max supply"); 
++        require(totalSupply() + amount <= MAX_SUPPLY, "Trying to mint more than the max supply"); 
+        require(hasRole(MINTER_ROLE, msg.sender), "ERC20: must have minter role to mint");
+        _mint(to, amount);
+    }
+```
+
 ## [I-1] Incorrect Natspec Comment for `MergingPool::fighterPoints`
 
 https://github.com/code-423n4/2024-02-ai-arena/blob/cd1a0e6d1b40168657d1aaee8223dc050e15f8cc/src/MergingPool.sol#L50C1-L51C54
