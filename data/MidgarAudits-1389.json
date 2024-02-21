@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "MidgarAudits",
+  "risk": "3",
+  "title": "Lack of randomness makes it possible to infinitely re-roll until user gets a rare fighter",
+  "issueId": 1389,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1389"
+}
