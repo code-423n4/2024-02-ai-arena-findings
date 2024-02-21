@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "stakog",
+  "risk": "2",
+  "title": "Input argument tokenId in FighterFarm::reRoll is declared uint8, players with tokenId > 255 won’t be able to reroll",
+  "issueId": 1459,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1459"
+}
