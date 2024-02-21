@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "KupiaSec",
+  "risk": "2",
+  "title": "`amountStaked[tokenId]` changes from non-zero to zero or zero to non-zero but the staking status of the fighter doesn't change.",
+  "issueId": 1382,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1382"
+}
