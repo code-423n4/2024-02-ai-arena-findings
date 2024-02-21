@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "jaydhales",
+  "risk": "3",
+  "title": "Fighter NFTs can be transferred to another address using safeTransferFrom(address,address,uint256,bytes)",
+  "issueId": 1291,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1291"
+}
