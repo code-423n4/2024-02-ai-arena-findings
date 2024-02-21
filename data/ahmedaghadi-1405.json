@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "ahmedaghadi",
+  "risk": "2",
+  "title": "An attacker can get arbitrary weight and element for their fighters if win they're winner in `MergingPool`.",
+  "issueId": 1405,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1405"
+}
