@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Ward",
+  "risk": "2",
+  "title": "Possible to disrupt competition by staking/unstaking before updateBattleRecord is called",
+  "issueId": 1826,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1826"
+}
