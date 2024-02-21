@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xanjalit",
+  "risk": "3",
+  "title": "Unintended Double Initialization of Attribute Probabilities for gen 0 in aiArenaHelper.sol constructor",
+  "issueId": 1463,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1463"
+}
