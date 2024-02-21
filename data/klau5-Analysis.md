@@ -2,6 +2,35 @@
 
 AI Arena is a game that you train your Fighter NFT with AI to battle others. AI training and gameplay take place off-chain, while on the blockchain, Fighter NFT ownership and stats are managed, ERC1155 form items are managed, NRN tokens are staked, game results are registered to earn points and rewards are distributed.
 
+## Fighter NFT
+
+This is a character used in game, implemented with ERC721. Each Fighter's appearance, element, and weight are randomly (pseudo-randomly) determined. A Fighter's abilities are calculated based on weight. The heavier they are, the slower and sturdier they are, and the lighter they are, the faster they are but with reduced durability.
+
+In the 0th generation, there are three types of elements: fire, water, and electricity. These may change as generations increase. Fire is strong against electricity, electricity is strong against water, and water is strong against fire.
+
+Appearance consist of six parts: head, eyes, mouth, body, hands, and feet. Each part is randomly selected and combined for each Fighter. Appearance does not affect abilities.
+
+## GameItems NFT
+
+These are various items used in the game, implemented with ERC1155. Currently, only a battery item exists. The battery is used to charge the voltage needed to start the game. It can be purchased using NRN tokens, and there is a limit to the number of items that can be purchased in 24 hours.
+
+## Neuron token (NRN)
+
+This is an ERC20 token used to purchase game items, reroll Fighter’s attributes, and a ranking reward. If users stake NRN, they can earn game points and ranking rewards.
+
+## Game play
+
+Gameplay takes place off-chain. Score are also calculated off-chain using the Elo mechanism. Only the game results are registered in the contract through the game server's account. If a user stakes NRN, they can earn points when they win in the game. The more points a user earns, the more NRN rewards they can receive. If a player loses a game while staked, they lose the staked tokens when there are no more points to lose.
+
+## Voltage
+
+10 voltage is consumed each time the game is started. If there is no voltage, the game cannot be started. Voltage is charged to 100 on a 24-hour cycle. User can charge voltage by using a battery item. 
+
+## MergingPool
+
+The more game points you earn, the higher your chances of receiving a new Fighter NFT as a reward. Some of the points earned in the game are put into the MergingPool to increase the chances of winning. The task of selecting winners is done off-chain, and the administrator registers the winners in the contract.
+
+
 # Approach taken in evaluating the codebase
 
 | Stage | Detail |
@@ -159,6 +188,8 @@ Various settings can be set for the item. Admin can limit the number of purchase
 You don't have to be extra cautious about frontrunning because this project uses the Arbitrum chain. However, because the frontend, game server, and blockchain are integrated, special attention needs to be paid to race conditions between off-chain and on-chain. Problems can occur if NFTs move or changes occur in staking while the game is still being processed. Before starting the game, a transaction should be generated to lock the NFT on the blockchain, and it needs to be unlocked when the game ends to prevent race conditions.
 
 Also, it is important to generate NFTs randomly, but currently, all random values are implemented as pseudo-random. All of these are predictable and manipulable values. It is recommended to use Chainlink VRF or at least use random values generated off-chain and verify it with a signature.
+
+
 
 
 
