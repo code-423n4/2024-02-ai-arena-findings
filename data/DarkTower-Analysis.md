@@ -27,8 +27,6 @@ AI Arena is a GameFi protocol designed to entertain duel competitions onchain. E
 
 ![Excalidraw FlowChart](https://rexjoseph.github.io/images/ai-arena-entry.png)
 
-Please visit the link to the full diagram view: https://rexjoseph.github.io/images/ai-arena-entry.png
-
 This whole protocol has a single entry point from it's launch: the `redeemMintPass()` function.
 
 This function allows users who have already gotten a hold of mint-passes to burn those mint passes in exchange for fighter NFT tokens when the protocol launches. This is a great feature. Unlike what you'd normally expect from a GameFi protocol that allows aggressive minting of NFTs at launch, AI Arena is looking to keep volume of NFTs relatively low at the beginning.
@@ -274,7 +272,6 @@ Consider the following points to judge:
 
 ### Time spent:
 48 hours (High & Medium findings, QA findings, and Analysis report)
-
 
 
 ### Time spent:
