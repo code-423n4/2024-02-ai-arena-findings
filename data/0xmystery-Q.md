@@ -42,3 +42,15 @@ https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/GameItems.sol#L185-
 +        allowedBurningAddresses[newBurningAddress] = isAllowed;
     }
 ```
+## [L-04] Navigating the shift by ensuring fair transaction ordering in a decentralized Arbitrum
+As `Arbitrum` considers moving towards a more decentralized sequencer model, the platform faces the challenge of maintaining its current mitigation of frontrunning risks inherent in a "first come, first served" system. The transition could reintroduce vulnerabilities to transaction ordering manipulation, demanding innovative solutions to uphold transaction fairness. Strategies such as commit-reveal schemes, submarine sends, Fair Sequencing Services (FSS), decentralized MEV mitigation techniques, and the incorporation of time-locks and randomness could play pivotal roles. These measures aim to preserve the integrity of transaction sequencing, ensuring that Arbitrum's evolution towards decentralization enhances its ecosystem without compromising the security and fairness that are crucial for user trust and platform reliability.
+
+## [L-05] Accelerated token minting and sustainability concerns in DAO-governed protocols
+With the Neuron token contract initially designed for a modest minting schedule of [5,000 tokens](https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/RankedBattle.sol#L157) twice a week, an escalated minting proposal to 5 million tokens bi-weekly by a DAO-governed consensus (presuming the protocol is headed to that direction) raises significant sustainability questions. Such an aggressive inflation rate would deplete the remaining 300 million mintable supply:
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/Neuron.sol#L36-L43
+
+```solidity
+    MAX_SUPPLY -= (INITIAL_TREASURY_MINT + INITIAL_CONTRIBUTOR_MINT); 
+```
+within approximately 30 weeks or about 6.9 months, starkly contrasting the centuries-spanning timeline under the original minting pace. This rapid approach to reward distribution underscores the critical need for careful consideration of tokenomics and long-term viability in DAO governance decisions, especially when balancing incentive mechanisms against the risk of premature token supply exhaustion.
