@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xmystery",
+  "risk": "2",
+  "title": "Uninitialized `numElements` Mapping Leading to Potential Division by Zero Error",
+  "issueId": 1290,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1290"
+}
