@@ -1,6 +1,6 @@
 # Summary
 
- Insert graph here
+![.](https://photos.app.goo.gl/Z845Raayvd1hymET8)
 
 **Overview** 
 
@@ -125,6 +125,8 @@ not change, declare them as constants rather than storing them as state variable
 **Conclusion**
 
 The AI Arena ecosystem is a well-designed and innovative NFT platform fighting game offering a wide range of features and capabilities. However, there are areas where improvements could be made, particularly in terms of permission management, gas efficiency, and potential exploitation of certain modules. By addressing these issues,  AI Arena could become even more secure, efficient, and reliable.
+
+
 
 
 ### Time spent:
