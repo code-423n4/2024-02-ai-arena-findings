@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "CodeWasp",
+  "risk": "2",
+  "title": "Unlimited battles due to overflow in VoltageManager replenish timestamp",
+  "issueId": 1561,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1561"
+}
