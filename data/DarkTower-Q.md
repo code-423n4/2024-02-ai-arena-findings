@@ -47,7 +47,7 @@ One of the single-step ownership transfer is referenced below in the `AiArenaHel
 - (RankedBattle.sol#L167)[https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/RankedBattle.sol#L167]
 - (VoltageManager.sol#L64)[https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/VoltageManager.sol#L64]
 
-## [L-03] Players can burn 1 full battery even at 90% voltage.
+## [L-03] Players can burn 1 full battery even at 90% voltage
 
 The function is called when when a voltage battery to replenish voltage for a player in AI Arena. But it allows players to burn his battery even at 90% voltage.
 
@@ -64,7 +64,7 @@ https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/VoltageManager.sol#
 
 ```
 
-## [L-04] Players can only claim one of two signatures given by the server using `claimFighters`.
+## [L-04] Players can only claim one of two signatures given by the server using `claimFighters`
 
 The issue here is that if players get first signature and he doesn't claim and he will get the second one. He can't use both now because `nftclaimed` mapping is changed after first claim. And server uses previous `nftClaimed` mapping state for signature generation.
 
@@ -80,7 +80,7 @@ https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/FighterFarm.sol#L19
         )));
 ```
 
-## [L-05] Redundant attributeProbabilities initialisation in the `AiArenaHelper` contract
+## [L-05] Redundant attributeProbabilities initialization in the `AiArenaHelper` contract
 
 The line `addAttributeProbabilities(0, probabilities);` is doing the same as
 
@@ -109,7 +109,7 @@ constructor(uint8[][] memory probabilities) {
     }
 ```
 
-## [L-06] Player can spend any amount of voltage to replenish and lose `VoltageReplenishTime` when player try to replenish even if his `ownerVoltage` is high.
+## [L-06] Player can spend any amount of voltage to replenish and lose `VoltageReplenishTime` when the player tries to replenish even if his `ownerVoltage` is high
 
 ## [L-07] Use Oppenzeppelin's `erecover` function to avoid signature replay due to duplicate v value
 
@@ -121,7 +121,7 @@ https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/FighterFarm.sol#L20
 require(Verification.verify(msgHash, signature, _delegatedAddress)); // @audit better to use hashstruct for signing data for better readability and security
 ```
 
-## [L-08] These variables can be defined as public instead of private.
+## [L-08] These variables can be defined as public instead of private
 
 https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/GameItems.sol#L61C1-L67C28
 
@@ -136,7 +136,7 @@ address _ownerAddress;
     Neuron _neuronInstance;
 ```
 
-## [L-09] Approval isn't revoked from the contract to spend user's funds if the `transferFrom` fails.
+## [L-09] Approval isn't revoked from the contract to spend user's funds if the `transferFrom` fails
 
 There are many instances of this issue with different impacts.
 
@@ -225,7 +225,9 @@ function stakeNRN(uint256 amount, uint256 tokenId) external {
         }
 ```
 
-## [L-10] If `totalSupply()` is reached and no more NRN can be minted to fuel in the Games.
+## [L-10] If `totalSupply()` is reached fast no more NRN tokens can be minted to fuel the Games
+
+It will take approximately 60k rounds to reach 300 million NRN tokens at which point there will be no more tokens left to fuel game rewards. While the current reward being set at 5000 NRN tokens is great, it can be further reduced the more the supply gets diluted so that the number of maximum rounds can go past 60k.
 
 https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/Neuron.sol#L155
 
@@ -236,7 +238,7 @@ https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/Neuron.sol#L155
         _mint(to, amount);
     }
 ```
-## [L-11] `fighterCreatedEmitter` can be called by everyone spamming the ` FighterCreated` event.
+## [L-11] `fighterCreatedEmitter` can be called by everyone spamming the ` FighterCreated` event
 
 With the current implementation, anyone can call the fighterCreatedEmitter function of the FighterOps contract. Even though the events are not used offchain right now, they could be in the future which would fool off-chain services that a fighter has been created when in fact it wasn't created. The function lacks access control and can be called directly on-chain.
 
