@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "vnavascues",
+  "risk": "3",
+  "title": "A battle initiator fighter owner can DoS game server calls to updateBattleRecord for an owned token",
+  "issueId": 1984,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1984"
+}
