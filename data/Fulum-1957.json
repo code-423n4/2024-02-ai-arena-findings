@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Fulum",
+  "risk": "3",
+  "title": "User which lose a fight can frontrun the AiArena server to prevent his scores update",
+  "issueId": 1957,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1957"
+}
