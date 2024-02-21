@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "DeFiHackLabs",
+  "risk": "2",
+  "title": "FighterFarm.claimFighters(): signature replay attack on other chains",
+  "issueId": 1589,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1589"
+}
