@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xSmartContractSamurai",
+  "risk": "2",
+  "title": "`Neuron::mint()` - L156: `MAX_SUPPLY` represents a valid max value, but `require(totalSupply() + amount < MAX_SUPPLY` check implies that its not. Should use `<=` instead.",
+  "issueId": 2029,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/2029"
+}
