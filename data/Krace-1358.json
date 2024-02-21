@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Krace",
+  "risk": "3",
+  "title": "`updateBattleRecord` is susceptible to front-running attacks, enabling attackers to obtain more favorable NRN rewards",
+  "issueId": 1358,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1358"
+}
