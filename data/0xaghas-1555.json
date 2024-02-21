@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xaghas",
+  "risk": "2",
+  "title": "Possible replay attack in signature verification due to non-compliance with EIP-712",
+  "issueId": 1555,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1555"
+}
