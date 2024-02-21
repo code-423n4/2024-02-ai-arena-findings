@@ -54,3 +54,14 @@ https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/StakeAtRisk.sol#L11
 When the user in question has lost the fight, if they have no points it is intended that stake at risk is deducted instead. If all of their users initially proposed staked, is now at risk, there is no more NRN to add to the staked at risk balance for the fighter NFT for that current round. The function will perform a 0 transfer which will result in success and then call `stakeAtRisk.updateAtRiskRecords` which will emit an `IncreasedStakeAtRisk` event. Although it has no huge consequences, it is against best practice as the stake at risk has not increased and has in fact stayed the same.
 
 Recommendation: Modify the if statement before calling `stakeAtRisk.updateStakeAtRisk` from `if (success)` to `if (success && curStakeAtRisk > 0)` At L494 in `RankedBattle.sol`
+
+--
+### [05] User can spend their voltage in a direct transaction despite not fighting.
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/VoltageManager.sol#L105-L112
+
+spendVoltage can be operated by the msg.sender themselves or via an authorised spender such as the Ranked Battle contract. It is too be spent for actions in the game such as the user who initiates a battle regardless of the outcome. The user is able to directly post a transaction to the blockchain with this function and spend any amount of voltage. Although there is no benefit to a user doing this, it is still unintended behaviour where a user could accidentally spend all voltage and have to wait until their replenish time before they use the game again.
+
+Recommendation: Don't allow spend voltage to be called directly by the msg.sender as there is no need. Any interaction with the protocol can handle the voltage spending directly as authorised spenders on behalf of users of the game.
+
+`require(spender == msg.sender || allowedVoltageSpenders[msg.sender]);` to `require(allowedVoltageSpenders[msg.sender]);` instead. 
