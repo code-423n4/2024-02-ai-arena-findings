@@ -1,3 +1,5 @@
+# Low Risk and Non-Critical Issues
+
 # [01] missing document of `generation` @param
 
 ```solidity
@@ -27,4 +29,63 @@ File: src\FighterFarm.sol
 387:                 fighters[tokenId].dendroidBool
 388:             );
 
+```
+
+# [03] Unchecked return value of `transferFrom`
+
+It is crucial to adhere to best practices by verifying the return value when transferFrom() encounters failures in specific scenarios.
+
+```solidity
+File: src\Neuron.sol
+136:     /// @notice Claims the specified amount of tokens from the treasury address to the caller's address.
+137:     /// @param amount The amount to be claimed
+138:     function claim(uint256 amount) external {
+139:         require(
+140:             allowance(treasuryAddress, msg.sender) >= amount, 
+141:             "ERC20: claim amount exceeds allowance"
+142:         );
+143:         transferFrom(treasuryAddress, msg.sender, amount);
+144:         emit TokensClaimed(msg.sender, amount);
+145:     }
+
+```
+
+
+# [04] Bypass the emission of the event `TokensClaimed` 
+
+The current implementation does not enforce users to utilize the `claim()` function to receive their airdrops. Instead, they can directly invoke the `transferFrom()` function, thereby bypassing the emission of the TokensClaimed event. It is important to notify upstream applications that rely on this event about this behavior.
+
+```solidity
+File: src\Neuron.sol
+136:     /// @notice Claims the specified amount of tokens from the treasury address to the caller's address.
+137:     /// @param amount The amount to be claimed
+138:     function claim(uint256 amount) external {
+139:         require(
+140:             allowance(treasuryAddress, msg.sender) >= amount, 
+141:             "ERC20: claim amount exceeds allowance"
+142:         );
+143:         transferFrom(treasuryAddress, msg.sender, amount);
+144:         emit TokensClaimed(msg.sender, amount);
+145:     }
+
+```
+
+# [05] No access control on emitting `FighterCreated` event
+
+Sincde the function is public, anybody can trigger this event. It is important to notify upstream applications that rely on this event about this behavior.
+
+```solidity
+File: src\FighterOps.sol
+52:     /// @notice Emits a FighterCreated event.
+53:     function fighterCreatedEmitter(
+54:         uint256 id,
+55:         uint256 weight,
+56:         uint256 element,
+57:         uint8 generation
+58:     ) 
+59:         public 
+60:     {
+61:         emit FighterCreated(id, weight, element, generation);
+62:     }
+63: 
 ```
