@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Kaiziron",
+  "risk": "3",
+  "title": "Players who are the initiator can prevent their fighter from losing by frontrunning the server's call to updateBattleRecord() and spend all of their voltage so updateBattleRecord() will revert ",
+  "issueId": 1888,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1888"
+}
