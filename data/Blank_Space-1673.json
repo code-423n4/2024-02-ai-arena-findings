@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Blank_Space",
+  "risk": "2",
+  "title": "Truncation in divide could nett a player points by staking 1 wei of NRN tokens",
+  "issueId": 1673,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1673"
+}
