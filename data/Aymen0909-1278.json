@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Aymen0909",
+  "risk": "3",
+  "title": "Risk of Reentrancy Attack in `MergingPool.claimRewards`",
+  "issueId": 1278,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1278"
+}
