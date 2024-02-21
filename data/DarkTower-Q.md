@@ -84,7 +84,7 @@ function reRoll(uint8 tokenId, uint8 fighterType) public { //@note can you give 
 
 2. https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/RankedBattle.sol#L270
 
-In this case, if call fails, it can actually lock the user's funds in the contract since the `amountStaked` is updated before. Plus the user will not be able to transfer or sell his fighter NFT until next round.
+In this case, if call fails, it can actually lock the user's funds in the contract since the `amountStaked` is updated before.
 
 ```solidity
     function unstakeNRN(uint256 amount, uint256 tokenId) external {
