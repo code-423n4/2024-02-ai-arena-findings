@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "immeas",
+  "risk": "3",
+  "title": "winner in multiple rounds can mint more than intended from merging pool using reentry",
+  "issueId": 1265,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1265"
+}
