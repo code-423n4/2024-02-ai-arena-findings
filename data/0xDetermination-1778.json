@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xDetermination",
+  "risk": "2",
+  "title": "Fighter rarity attributes are set deterministically and can be predicted/calculated to mint higher rarity fighters",
+  "issueId": 1778,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1778"
+}
