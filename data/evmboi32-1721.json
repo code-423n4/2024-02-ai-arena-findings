@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "evmboi32",
+  "risk": "3",
+  "title": "claimRewards function can be reentered by users who won in more than 1 round",
+  "issueId": 1721,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1721"
+}
