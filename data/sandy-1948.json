@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "sandy",
+  "risk": "3",
+  "title": "No new fighter can be created and no reRoll will be possible if generation[fighterType] is incremented.",
+  "issueId": 1948,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1948"
+}
