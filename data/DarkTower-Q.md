@@ -236,6 +236,24 @@ https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/Neuron.sol#L155
         _mint(to, amount);
     }
 ```
+## [L-11] `fighterCreatedEmitter` can be called by everyone spamming the ` FighterCreated` event.
+
+With the current implementation, anyone can call the fighterCreatedEmitter function of the FighterOps contract. Even though the events are not used offchain right now, they could be in the future which would fool off-chain services that a fighter has been created when in fact it wasn't created. The function lacks access control and can be called directly on-chain.
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/FighterFarm.sol#L530
+
+```
+function fighterCreatedEmitter(
+        uint256 id,
+        uint256 weight,
+        uint256 element,
+        uint8 generation
+    ) 
+@>      public // @audit accessible to anyone
+    {
+        emit FighterCreated(id, weight, element, generation);
+    }
+```
 
 ## [NC-01] Remove unnecessary inherits
 
