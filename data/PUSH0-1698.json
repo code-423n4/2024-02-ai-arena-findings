@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "PUSH0",
+  "risk": "3",
+  "title": "`reRoll()` 's RNG can be manipulated to set a fighter's element and weight to an arbitrary value",
+  "issueId": 1698,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1698"
+}
