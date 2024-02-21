@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xDetermination",
+  "risk": "2",
+  "title": "A user will not be able to claim any fighter NFTs with `MergingPool.claimRewards()` if the amount of NFTs to claim is greater than `FighterFarm.MAX_FIGHTERS_ALLOWED`",
+  "issueId": 1781,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1781"
+}
