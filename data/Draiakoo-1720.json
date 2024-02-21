@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Draiakoo",
+  "risk": "2",
+  "title": "`redeemMintPass` will not work if user does not approve `FighterFarm` contract to move his mint pass",
+  "issueId": 1720,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1720"
+}
