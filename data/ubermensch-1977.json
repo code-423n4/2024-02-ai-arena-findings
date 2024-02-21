@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "ubermensch",
+  "risk": "3",
+  "title": "Players Can Prevent Losses by Causing an Underflow in the RankedBattle::updateBattleRecord Calls",
+  "issueId": 1977,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1977"
+}
