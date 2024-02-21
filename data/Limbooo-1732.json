@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Limbooo",
+  "risk": "2",
+  "title": "FighterFarm Contract Allows Bypassing Maximum Token Ownership and Staking Restrictions via Incomplete Override of OZ's ERC721 Transfer Functions",
+  "issueId": 1732,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1732"
+}
