@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Silvermist",
+  "risk": "3",
+  "title": "MergingPool.sol#claimRewards() Users that win can set custom weight and element when claiming fighters",
+  "issueId": 1799,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1799"
+}
