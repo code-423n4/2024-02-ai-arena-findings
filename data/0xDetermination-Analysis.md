@@ -27,5 +27,7 @@ There are a few concerns that I have regarding the game balance of the protocol.
 
 I found the sqrt `stakingFactor` calculation to be a very nice mechanism, and other than the main area of systemic concern, I didn't spot any 'problem areas' in the codebase's architecture, which is very good. Most of the H/M issues I found are easily fixed and do not stem from deep design problems.
 
+
+
 ### Time spent:
-45 hours
+40 hours
