@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xGreyWolf",
+  "risk": "3",
+  "title": "Wrong array creation and loop logic in `MergingPool::getFighterPoints` will cause revert",
+  "issueId": 1574,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1574"
+}
