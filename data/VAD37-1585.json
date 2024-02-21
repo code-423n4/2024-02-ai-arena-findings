@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "VAD37",
+  "risk": "2",
+  "title": "Forgot update `RankedBattle.globalStakedAmount` when admin sweep token after new round",
+  "issueId": 1585,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1585"
+}
