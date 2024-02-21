@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "pontifex",
+  "risk": "2",
+  "title": "Fighters with `tokenId` more than type(uint8).max can't be re-rolled",
+  "issueId": 1902,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1902"
+}
