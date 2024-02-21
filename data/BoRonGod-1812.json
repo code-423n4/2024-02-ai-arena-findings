@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "BoRonGod",
+  "risk": "3",
+  "title": "Attacker can reenter claimRewards to mint infinity NFTs from Merging pool.",
+  "issueId": 1812,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1812"
+}
