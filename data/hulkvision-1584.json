@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "hulkvision",
+  "risk": "3",
+  "title": "Missing AccessControl on safeBatchTransferFrom function allows a user  to transfer a NON-TRANSFERABLE gameItem token to different address",
+  "issueId": 1584,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1584"
+}
