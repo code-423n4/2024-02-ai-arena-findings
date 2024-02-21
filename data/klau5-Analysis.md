@@ -16,7 +16,7 @@ AI Arena is a game that you train your Fighter NFT with AI to battle others. AI 
 
 # Architecture recommendations
 
-![Architecture](https://gist.github.com/assets/70058709/32807796-9e88-4ab9-9d41-5db6e6e3222b)
+![Architecture](https://gist.github.com/assets/70058709/6f8885cd-7a2e-4656-bcdc-c0b3c8f1ce9d)
 
 This is architecture of the contract. It mainly involves NFT minting and management, staking, game results updates, and game item usage. Major management tasks such as updating the game results, selecting winners, or updating rounds are performed with the administrator EOA account.
 
@@ -90,6 +90,16 @@ User can request NFT minting by receiving a signature from the signer. User can 
 
 Winners of MergingPool are selected and registered by admin every round. Winners can mint NFTs in the number they won. Users can customize the weight and element.
 
+### DNA and attributes
+
+Fighter NFTs have unique attributes. Except reward of MergingPool, these are pseudo-randomly set by DNA values. There are three elements, and weight is set between 65 and 95. FighterFarm generates element and weight, while AiArenaHelper is responsible for generating the appearance attributes.
+
+![DNA and attributes](https://gist.github.com/assets/70058709/610d00eb-08b5-4e34-8bb3-9074b56673ec)
+
+Users can also reroll attributes by paying NRN tokens. When a reroll is requested, a new DNA is assigned, and the attributes of the NFT are changed to new pseudo-random values. Each NFT has a limit on the number of rerolls, so infinite changes are not possible.
+
+
+
 ## Staking and rewards
 
 You need to stake NRN tokens to get points when you win. The more you stake and the higher your Elo score, the more points you can get when you win. When the game round ends, you can claim rewards proportional to the points you have. Rewards are provided by minting NRN tokens.
@@ -149,6 +159,8 @@ Various settings can be set for the item. Admin can limit the number of purchase
 You don't have to be extra cautious about frontrunning because this project uses the Arbitrum chain. However, because the frontend, game server, and blockchain are integrated, special attention needs to be paid to race conditions between off-chain and on-chain. Problems can occur if NFTs move or changes occur in staking while the game is still being processed. Before starting the game, a transaction should be generated to lock the NFT on the blockchain, and it needs to be unlocked when the game ends to prevent race conditions.
 
 Also, it is important to generate NFTs randomly, but currently, all random values are implemented as pseudo-random. All of these are predictable and manipulable values. It is recommended to use Chainlink VRF or at least use random values generated off-chain and verify it with a signature.
+
+
 
 ### Time spent:
 40 hours
