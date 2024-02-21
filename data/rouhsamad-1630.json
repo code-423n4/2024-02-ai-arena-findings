@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "rouhsamad",
+  "risk": "3",
+  "title": "When burning an item using \"GameItems::burn\", remaining supply of the item is not updated",
+  "issueId": 1630,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1630"
+}
