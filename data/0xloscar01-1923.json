@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xloscar01",
+  "risk": "2",
+  "title": "Custom check in `FighterFarm::transferFrom` puts NFT fighter owners at risk of losing their NFT when rented out",
+  "issueId": 1923,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1923"
+}
