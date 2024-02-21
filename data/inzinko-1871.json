@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "inzinko",
+  "risk": "2",
+  "title": "Inability to Handle Failure in token transfers will lead to loss of funds for users",
+  "issueId": 1871,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1871"
+}
