@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xPluto",
+  "risk": "3",
+  "title": "Use uint32 to store the block.timestamp in VoltageManager.sol",
+  "issueId": 1519,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1519"
+}
