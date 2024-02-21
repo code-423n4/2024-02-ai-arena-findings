@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xGreyWolf",
+  "risk": "2",
+  "title": "Wrong max supply validation on `Neuron::mint()` may cause some `amount` of tokens to not get minted.",
+  "issueId": 1454,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1454"
+}
