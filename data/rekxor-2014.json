@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "rekxor",
+  "risk": "2",
+  "title": "FighterFarm.sol::`claimFighters()`  is vulnerable to signature replay attack ",
+  "issueId": 2014,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/2014"
+}
