@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "niser93",
+  "risk": "3",
+  "title": "Many values of physical attributes are incompatible with each other when a new fighter is created and FighterFarm._createNewFighter() is called",
+  "issueId": 1456,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1456"
+}
