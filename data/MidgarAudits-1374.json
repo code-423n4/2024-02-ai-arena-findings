@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "MidgarAudits",
+  "risk": "3",
+  "title": " User can make `updateBattleRecord()` revert to avoid losing points / NRN at risk",
+  "issueId": 1374,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1374"
+}
