@@ -1,6 +1,6 @@
 ## `RankedBattle.totalBattles` Double Counting
-https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/RankedBattle.sol#L345-L348
-The `totalBattles` count inaccurately increments for both initiator and opponent. Recommendation:
+- https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/RankedBattle.sol#L345-L348
+- The `totalBattles` count inaccurately increments for both initiator and opponent. Recommendation:
 ```diff
 diff --git a/src/RankedBattle.sol b/src/RankedBattle.sol
 index 53a89ca..fd2a2bb 100644
@@ -17,8 +17,8 @@ index 53a89ca..fd2a2bb 100644
 ```
 
 ## Incorrect `globalStakedAmount` Calculation
-https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/RankedBattle.sol#L496
-`globalStakedAmount` fails to account for battle risks, leading to inaccurate totals. Recommendation:
+- https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/RankedBattle.sol#L496
+- `globalStakedAmount` fails to account for battle risks, leading to inaccurate totals. Recommendation:
 ```diff
 diff --git a/src/RankedBattle.sol b/src/RankedBattle.sol
 index 53a89ca..4eb1c8e 100644
@@ -40,8 +40,8 @@ index 53a89ca..4eb1c8e 100644
 ```
 
 ## `AiArenaHelper.dnaToIndex` Documentation
-https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/AiArenaHelper.sol#L165-L168
-The function description for `dnaToIndex` is misleading. Recommendation:
+- https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/AiArenaHelper.sol#L165-L168
+- The function description for `dnaToIndex` is misleading. Recommendation:
 ```diff
 diff --git a/src/AiArenaHelper.sol b/src/AiArenaHelper.sol
 index b93dde8..5034500 100644
@@ -62,8 +62,8 @@ index b93dde8..5034500 100644
 ```
 
 ## Inflexible `_delegatedAddress` in `FighterFarm`
-https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/FighterFarm.sol#L108
-The inability to change `_delegatedAddress` limits administrative actions. Recommendation:
+- https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/FighterFarm.sol#L108
+- The inability to change `_delegatedAddress` limits administrative actions. Recommendation:
 ```diff
 diff --git a/src/FighterFarm.sol b/src/FighterFarm.sol
 index 06ee3e6..20faee0 100644
@@ -82,8 +82,8 @@ index 06ee3e6..20faee0 100644
 ```
 
 ## No Event on `reRoll` URL Clearing in `FighterFarm`
-https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/FighterFarm.sol#L389
-Clearing a token URL during `reRoll` without an event disrupts market visibility. Set new URL as soon as possible. Recommendation:
+- https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/FighterFarm.sol#L389
+- Clearing a token URL during `reRoll` without an event disrupts market visibility. Set new URL as soon as possible. Recommendation:
 ```diff
 diff --git a/src/FighterFarm.sol b/src/FighterFarm.sol
 index 06ee3e6..33e4743 100644
@@ -99,12 +99,12 @@ index 06ee3e6..33e4743 100644
 ```
 
 ## Front-running `RankedBattle.updateBattleRecord()`
-https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/RankedBattle.sol#L313-L349
-The potential for front-running updateBattleRecord() could allow users to unfairly increase stakes on winning battles. Recommendation: Consider mechanisms to prevent stake changes during battle processing, such as admin controls to lock staking during critical periods.
+- https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/RankedBattle.sol#L313-L349
+- The potential for front-running updateBattleRecord() could allow users to unfairly increase stakes on winning battles. Recommendation: Consider mechanisms to prevent stake changes during battle processing, such as admin controls to lock staking during critical periods.
 
 ## Invalid Data Type in `AiArenaHelper.addAttributeProbabilities`
-https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/AiArenaHelper.sol#L131
-`generation` should consistently use `uint8` for compatibility. Recommendation:
+- https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/AiArenaHelper.sol#L131
+- `generation` should consistently use `uint8` for compatibility. Recommendation:
 ```diff
 diff --git a/src/AiArenaHelper.sol b/src/AiArenaHelper.sol
 index b93dde8..851a3ad 100644
@@ -121,8 +121,8 @@ index b93dde8..851a3ad 100644
 ```
 
 ## `MAX_SUPPLY` unreachable in `Neuron.mint`
-https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/Neuron.sol#L156
-Recommendation:
+- https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/Neuron.sol#L156
+- Recommendation:
 ```diff
 diff --git a/src/Neuron.sol b/src/Neuron.sol
 index d400a49..cb34441 100644
