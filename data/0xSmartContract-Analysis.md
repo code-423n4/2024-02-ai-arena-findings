@@ -236,6 +236,48 @@ This contract; Provides management of in-game items for AI Arena. It supports mu
 ##### Note: Please click on the image to enlarge it:
 
 
+
+```solidity
+/// @notice Returns the URI where the contract metadata is stored.
+    /// @return URI where the contract metadata is stored.
+    function contractURI() public pure returns (string memory) {
+        return "ipfs://bafybeih3witscmml3padf4qxbea5jh4rl2xp67aydqvqsxmyuzipwtpnii";
+    }
+
+
+function return value;
+{
+  "name": "AI Arena Game Items",
+  "description": "In-game items to be used while playing AI Arena",
+  "image": "https://ipfs.fleek.co/ipfs/bafybeic3p46ben4yqgwikt5bnz4qmqasbmrnnd6jrgamth7jk47xjwfq7q",
+  "external_link": "https://gaming.aiarena.io/",
+  "seller_fee_basis_points": 800,
+  "fee_recipient": "0xd82F671a08DBb96Fff1334EE7992ce2E1A219c7C"
+}
+```
+
+Both IPFS and Arweave store data immutably, but Arweave guarantees permanent storage with a one-time fee.
+
+IPFS (InterPlanetary File System) and Arweave offer decentralized file storage solutions, but with key differences and security benefits that vary depending on use cases. The importance of using Arweave from a security perspective is particularly evident in persistent storage and data integrity issues.
+
+### Security Benefits of Arweave
+
+1. **Persistent Storage**: Arweave permanently stores data in a structure called a "block mesh". This means that once uploaded to Arweave, it is not possible for data to be deleted or lost. This feature provides a significant security benefit for data that must not be deleted or altered, such as copyright material, legal documents, or historical records.
+
+2. **Data Integrity**: Arweave guarantees data integrity by using the hash value of each stored item. This means that stored data cannot be modified or corrupted over time. Users can be assured that the data they store is original and will remain unchanged.
+
+3. **Economic Incentives**: Arweave offers economic incentives for data storage and access. Payment is made for storing data, and this payment guarantees that the data is permanently stored on the network. This solves the problem that data encountered in IPFS can be lost over time, because in IPFS nodes must actively host and pin data for data to remain constantly accessible.
+
+4. **Greater Security and Durability**: Arweave's persistent storage model offers an extra layer of protection against data being censored or altered. This is especially important in situations where censorship or data manipulation is a concern.
+
+### To compare
+
+- **IPFS** stores and shares data in a decentralized manner, but nodes must actively host that data for it to remain constantly accessible. Extra steps (e.g. using pinning services) may be required to permanently store data in IPFS.
+- **Arweave** differs from IPFS in storing data persistently and providing high data integrity. Arweave guarantees that once you store data, it will be retained forever.
+
+As a result, Arweave's security relevance is particularly evident in areas such as persistent storage, data integrity, and censorship resistance.
+
+
 </br>
 </br>
 </br>
