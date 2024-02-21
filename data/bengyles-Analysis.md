@@ -8,5 +8,7 @@
 - Add reentrancy guard and stick to the checks-effects-interactions pattern to protect against reentrancy attacks, I haven't found anything that could be exploited but you will be more at ease knowing an attack like this is not possible.
   
 
+
+
 ### Time spent:
-11 hours
+12 hours
