@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "KupiaSec",
+  "risk": "3",
+  "title": "`FighterFarm.numElements` is never updated and this will make `_createFighterBase` always revert after the `generation` is updated.",
+  "issueId": 1378,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1378"
+}
