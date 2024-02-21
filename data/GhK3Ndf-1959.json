@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "GhK3Ndf",
+  "risk": "2",
+  "title": "Missing ERC1155:safeBatchTransferFrom override in GameItems allows AGI tokens to be traded while marked as non-transferable",
+  "issueId": 1959,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1959"
+}
