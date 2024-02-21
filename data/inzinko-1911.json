@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "inzinko",
+  "risk": "3",
+  "title": "When all Battle in a round results in a tie, the setNewRound function will be DOSed",
+  "issueId": 1911,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1911"
+}
