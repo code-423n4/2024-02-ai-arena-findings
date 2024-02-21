@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "MidgarAudits",
+  "risk": "2",
+  "title": "Rounding down in favor of the player when they lose might allow them to avoid losing NRNs",
+  "issueId": 1421,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1421"
+}
