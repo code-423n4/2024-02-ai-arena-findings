@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xaghas",
+  "risk": "3",
+  "title": "Potential exploit in FighterFarm contract allows attacker-controlled generation of fighters",
+  "issueId": 1400,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1400"
+}
