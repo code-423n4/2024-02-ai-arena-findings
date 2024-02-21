@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "vnavascues",
+  "risk": "2",
+  "title": "claimRewards is affected by the Solidity compiler bug SOL-2022-06",
+  "issueId": 1989,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1989"
+}
