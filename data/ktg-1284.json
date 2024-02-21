@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "ktg",
+  "risk": "2",
+  "title": "Improper handling of cases when totalAccumulatedPoints is zero",
+  "issueId": 1284,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1284"
+}
