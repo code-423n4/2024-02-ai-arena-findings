@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "CodeWasp",
+  "risk": "2",
+  "title": "getFighterPoints() impossible due to out-of-bounds array assignment",
+  "issueId": 1565,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1565"
+}
