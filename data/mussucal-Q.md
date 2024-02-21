@@ -1,1 +1,2 @@
-In FighterFarm.sol, the function redeemMintPass() does not check for the length of the iconsTypes.length. If there is a mismatch with the other array lengths, it may cause index out of bound error and revert.
+1. In FighterFarm.sol, the function redeemMintPass() does not check for the length of the iconsTypes.length. If there is a mismatch with the other array lengths, it may cause index out of bound error and revert.
+2. In MergingPool.sol, mapping fighterPoints is (uint256 => uint256) instaed of (address => uint256).
