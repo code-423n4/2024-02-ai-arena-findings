@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Greed",
+  "risk": "3",
+  "title": "The number of generations is capped to `252` resulting in less variety of fighter's attributes and a permanent DOS of the `incrementGeneration()` function",
+  "issueId": 1664,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1664"
+}
