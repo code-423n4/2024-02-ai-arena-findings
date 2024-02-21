@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Greed",
+  "risk": "2",
+  "title": "All `GameItems` can be transfered, even those marked as **non-transferable**, using the `safeBatchTransferFrom()` function from `ERC1155`",
+  "issueId": 1660,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1660"
+}
