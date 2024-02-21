@@ -43,3 +43,14 @@ https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/GameItems.sol#L147-
 The missing require statement on the quantity allows for unchecked execution of the mint function leading to 0 value transfers and mint and the emitting of the boughtItem event with a quantity - despite no harm to the protocol. It is against best practice for recording unnecessary state data.
 
 Recommendation: add an require statement at the top of the function before main exeuction - `require(amount > 0, "Mint at least one item");`
+
+-- 
+### [04] If the user has all their stake converted to stakeAtRisk and are still participating in battles, upon updating their battle record the emitting of IncreasedStakeAtRisk events takes place despite the user have 0 non risk NRN tokens to add.
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/RankedBattle.sol#L491-L498
+
+https://github.com/code-423n4/2024-02-ai-arena/blob/main/src/StakeAtRisk.sol#L115-L127
+
+When the user in question has lost the fight, if they have no points it is intended that stake at risk is deducted instead. If all of their users initially proposed staked, is now at risk, there is no more NRN to add to the staked at risk balance for the fighter NFT for that current round. The function will perform a 0 transfer which will result in success and then call `stakeAtRisk.updateAtRiskRecords` which will emit an `IncreasedStakeAtRisk` event. Although it has no huge consequences, it is against best practice as the stake at risk has not increased and has in fact stayed the same.
+
+Recommendation: Modify the if statement before calling `stakeAtRisk.updateStakeAtRisk` from `if (success)` to `if (success && curStakeAtRisk > 0)` At L494 in `RankedBattle.sol`
