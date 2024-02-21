@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "0xSmartContractSamurai",
+  "risk": "2",
+  "title": "`MergingPool::getFighterPoints()` - The points array is initialized with a length of 1 instead of the length of `maxId`.",
+  "issueId": 1318,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1318"
+}
