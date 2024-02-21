@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "iberry",
+  "risk": "3",
+  "title": "Signature malleability of EVM's `ecrecover` in `verify()`",
+  "issueId": 1926,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1926"
+}
