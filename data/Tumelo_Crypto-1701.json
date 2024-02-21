@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "Tumelo_Crypto",
+  "risk": "2",
+  "title": "`transferFrom` will not revert on failed transaction",
+  "issueId": 1701,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1701"
+}
