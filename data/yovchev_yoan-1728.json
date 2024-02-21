@@ -1,0 +1,8 @@
+{
+  "contest": 328,
+  "handle": "yovchev_yoan",
+  "risk": "2",
+  "title": "Looping through and minting Fighter NFTs in `MegingPool::claimRewards` is a potential denails of service (DoS)",
+  "issueId": 1728,
+  "issueUrl": "https://github.com/code-423n4/2024-02-ai-arena-findings/issues/1728"
+}
