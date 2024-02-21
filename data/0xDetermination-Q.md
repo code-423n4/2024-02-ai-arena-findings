@@ -23,7 +23,6 @@
 |[I-10](#i-10)|Consider using interfaces instead of importing contracts directly|
 |[I-11](#i-11)|`FighterFarm.sol` doesn't need to inherit `ERC721` since it already inherits `ERC721Enumerable`|
 |[I-12](#i-12)|Fighter NFT properties may change unexpectedly after being transferred to a buyer (for example, if the fighter entered a match just before the sale)|
-|[I-13](#i-13)||
 
 ## [L-1]<a name="l-1"></a> Discrepancy between docs and code- false `initiatorBool` argument for `RankedBattle.updateBattleRecord()` should not change a fighter's points according to docs 
 ### Links
